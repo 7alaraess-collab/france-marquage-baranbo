@@ -1,0 +1,71 @@
+Please implement the detailed "Services" section for "Compagnie France Marquage Baranbo" based on the established layout and color scheme (Dark Charcoal #1E293B, Safety Yellow #F59E0B, and Off-White #F8FAFC).
+
+Layout & Responsive Design Instructions:
+1. Grid Structure: Display 6 interactive service cards in a responsive grid (1 column on mobile, 2 columns on iPad/Tablet, 3 columns on Desktop/Laptop).
+2. Card UI: Each card should have:
+   - A distinct, highly relevant contextual icon or illustration (e.g., road/crossing icon, parking space icon, EV plug/accessible icon, bicycle icon, playground/field icon, and heavy sweeping machine icon).
+   - Clear bold service title.
+   - A short 2-line summary preview.
+   - A Safety Yellow interactive button: "View Technical Details".
+3. Interactive Modal / Expanded View: Clicking any card opens a clean popup (Modal) containing:
+   - Full Service Title
+   - Detailed Overview
+   - Key Scope of Work (Bullet points highlighting field precision and night-time retroreflective visibility)
+   - Technical Specifications & Quality Standards
+   - Action Button: "Request a Quote for this Service" (scrolls to/opens the contact form with this service pre-selected).
+
+Here is the exact technical content in English for the 6 services:
+
+Service 1: Road Marking & Pedestrian Crossings
+- Short Preview: Field application of road lane markings and pedestrian crossings engineered for maximum daytime clarity and high night-time retroreflectivity.
+- Full Description: Comprehensive on-site road line marking services for highways, municipal roads, and intersections adhering strictly to international traffic safety standards.
+- Scope of Work:
+  * Application of continuous, broken centerlines, directional arrows, and zebra pedestrian crossings.
+  * Integration of high-index Reflective Glass Beads embedded into the paint to maximize night-time headlight retroreflection.
+  * Intersection safety enhancement and speed hump warning line marking.
+- Technical Specs: Premium heavy-duty thermoplastic and cold-applied acrylic road paints engineered for high abrasion resistance, weather durability, and optimal night visibility.
+
+Service 2: Parking Lot Marking & Traffic Flow Layout
+- Short Preview: Precision parking space layout and lane organization for open-air and underground facilities using high-contrast, luminous paints.
+- Full Description: Turnkey layout, line painting, and space optimization for commercial, residential, and corporate parking facilities to maximize capacity and traffic flow.
+- Scope of Work:
+  * Layout of stall boundaries, directional arrows, and entry/exit navigation lanes.
+  * Application of reflective safety paint on concrete pillars, curbs, and clearance zones for safe night parking.
+  * Numbering, lettering, and reservation marking for private/VIP spaces.
+- Technical Specs: Oil- and rubber-resistant, high-contrast yellow and white pavement markings formulated for high adhesion in enclosed or low-light parking structures.
+
+Service 3: Specialized & EV Charging Station Parking
+- Short Preview: Color-coded and retroreflective markings for accessible handicap spaces and electric vehicle (EV) charging stations.
+- Full Description: High-visibility surface coatings and internationally recognized symbols for designated parking zones, ensuring clear compliance and night accessibility.
+- Scope of Work:
+  * Full-surface blue background coating for accessible (handicapped) bays featuring reflective international symbols.
+  * Vibrant green background markings for EV Charging / Tesla stalls for instant night identification.
+  * Anti-slip aggregate application within painted bays to prevent pedestrian and driver slipping.
+- Technical Specs: UV-resistant epoxy/acrylic formulations designed to prevent color fading, combined with anti-slip micro-textures.
+
+Service 4: Dedicated Cycle Lanes & Colored Paths
+- Short Preview: High-visibility red and green surface treatments for bicycle pathways and hazard zones to protect cyclists during night travel.
+- Full Description: Custom color coating and demarcation for urban cycle tracks, scooter lanes, and high-risk pedestrian interaction areas.
+- Scope of Work:
+  * Full-width color application (traffic red and green) embedded with reflective compounds for night driving awareness.
+  * Stenciling of bicycle symbols and directional travel indicators.
+  * Highlighting transition zones, speed bumps, and dangerous intersections to alert drivers in advance.
+- Technical Specs: High-friction, coarse-textured anti-skid coatings delivering superior grip in wet weather and optimal luminescent reflection under vehicle headlights.
+
+Service 5: Schools, Sports Facilities & Specialized Venues
+- Short Preview: Bright, safe floor markings for school playgrounds, sports courts, industrial facilities, and airport aprons.
+- Full Description: Tailored line marking for recreational, educational, industrial, and aviation environments requiring extreme precision and specialized paint standards.
+- Scope of Work:
+  * Educational and colorful floor games for schoolyards and public parks (hopscotch, fun geometric paths).
+  * Precision geometric line painting for athletic courts (basketball, tennis, running tracks).
+  * Industrial safety zones, forklift lanes, factory walkways, and airfield/helipad reflective ground markings.
+- Technical Specs: Non-toxic, eco-friendly, wear-resistant coatings engineered for heavy foot and equipment traffic while maintaining color brightness.
+
+Service 6: Hydraulic Surface Preparation & Sweeping
+- Short Preview: High-pressure washing, mechanical sweeping, and surface cleaning to ensure maximum adhesion of reflective road coatings.
+- Full Description: Essential field preparation services to clean asphalt and concrete surfaces from oil, debris, and old paint prior to line application.
+- Scope of Work:
+  * Mechanical sweeping and high-vacuum cleaning of dust, sand, and petroleum residues.
+  * Utilization of specialized motorized sweeping trucks for large-scale field readiness.
+  * Hydro-blasting and removal of old, degraded road lines to prevent driver confusion at night.
+- Technical Specs: High-pressure hydraulic washing equipment preparing the pavement surface to achieve optimal mechanical bond strength with retroreflective coatings.

@@ -4,23 +4,25 @@ import {
   ArrowRight,
   ArrowUpRight,
   Award,
+  BatteryCharging,
+  Bike,
+  Brush,
   Check,
   ChevronDown,
   CircleDot,
   Clock3,
-  Compass,
   FileCheck2,
-  Hammer,
   Languages,
   Mail,
   MapPin,
   Menu,
   Minus,
+  ParkingCircle,
   Phone,
-  Ruler,
-  ShieldCheck,
+  Route,
   Sparkles,
   Truck,
+  Trophy,
   X,
 } from 'lucide-react';
 
@@ -35,30 +37,86 @@ const navItems = [
 const services = [
   {
     number: '01',
-    title: 'Road & pathway marking',
-    text: 'Durable center lines, edge lines, arrows and symbols that make movement legible in every weather condition.',
-    icon: Ruler,
+    title: 'Road Marking & Pedestrian Crossings',
+    text: 'Field application of road lane markings and pedestrian crossings engineered for maximum daytime clarity and high night-time retroreflectivity.',
+    overview: 'Comprehensive on-site road line marking services for highways, municipal roads, and intersections adhering strictly to international traffic safety standards.',
+    scope: [
+      'Application of continuous, broken centerlines, directional arrows, and zebra pedestrian crossings.',
+      'Integration of high-index Reflective Glass Beads embedded into the paint to maximize night-time headlight retroreflection.',
+      'Intersection safety enhancement and speed hump warning line marking.',
+    ],
+    specs: 'Premium heavy-duty thermoplastic and cold-applied acrylic road paints engineered for high abrasion resistance, weather durability, and optimal night visibility.',
+    icon: Route,
     tone: 'dark',
   },
   {
     number: '02',
-    title: 'Parking & access plans',
-    text: 'Complete layouts for retail, workplace and residential sites — from first vehicle path to final bay.',
-    icon: Compass,
+    title: 'Parking Lot Marking & Traffic Flow Layout',
+    text: 'Precision parking space layout and lane organization for open-air and underground facilities using high-contrast, luminous paints.',
+    overview: 'Turnkey layout, line painting, and space optimization for commercial, residential, and corporate parking facilities to maximize capacity and traffic flow.',
+    scope: [
+      'Layout of stall boundaries, directional arrows, and entry/exit navigation lanes.',
+      'Application of reflective safety paint on concrete pillars, curbs, and clearance zones for safe night parking.',
+      'Numbering, lettering, and reservation marking for private/VIP spaces.',
+    ],
+    specs: 'Oil- and rubber-resistant, high-contrast yellow and white pavement markings formulated for high adhesion in enclosed or low-light parking structures.',
+    icon: ParkingCircle,
     tone: 'yellow',
   },
   {
     number: '03',
-    title: 'Safety & accessibility',
-    text: 'Accessible bays, crossings, tactile guidance and high-visibility zones designed around people first.',
-    icon: ShieldCheck,
+    title: 'Specialized & EV Charging Station Parking',
+    text: 'Color-coded and retroreflective markings for accessible handicap spaces and electric vehicle (EV) charging stations.',
+    overview: 'High-visibility surface coatings and internationally recognized symbols for designated parking zones, ensuring clear compliance and night accessibility.',
+    scope: [
+      'Full-surface blue background coating for accessible (handicapped) bays featuring reflective international symbols.',
+      'Vibrant green background markings for EV Charging / Tesla stalls for instant night identification.',
+      'Anti-slip aggregate application within painted bays to prevent pedestrian and driver slipping.',
+    ],
+    specs: 'UV-resistant epoxy/acrylic formulations designed to prevent color fading, combined with anti-slip micro-textures.',
+    icon: BatteryCharging,
     tone: 'paper',
   },
   {
     number: '04',
-    title: 'Site preparation',
-    text: 'Surface removal, cleaning and precise setting-out before a single metre of new marking is applied.',
-    icon: Hammer,
+    title: 'Dedicated Cycle Lanes & Colored Paths',
+    text: 'High-visibility red and green surface treatments for bicycle pathways and hazard zones to protect cyclists during night travel.',
+    overview: 'Custom color coating and demarcation for urban cycle tracks, scooter lanes, and high-risk pedestrian interaction areas.',
+    scope: [
+      'Full-width color application (traffic red and green) embedded with reflective compounds for night driving awareness.',
+      'Stenciling of bicycle symbols and directional travel indicators.',
+      'Highlighting transition zones, speed bumps, and dangerous intersections to alert drivers in advance.',
+    ],
+    specs: 'High-friction, coarse-textured anti-skid coatings delivering superior grip in wet weather and optimal luminescent reflection under vehicle headlights.',
+    icon: Bike,
+    tone: 'paper',
+  },
+  {
+    number: '05',
+    title: 'Schools, Sports Facilities & Specialized Venues',
+    text: 'Bright, safe floor markings for school playgrounds, sports courts, industrial facilities, and airport aprons.',
+    overview: 'Tailored line marking for recreational, educational, industrial, and aviation environments requiring extreme precision and specialized paint standards.',
+    scope: [
+      'Educational and colorful floor games for schoolyards and public parks (hopscotch, fun geometric paths).',
+      'Precision geometric line painting for athletic courts (basketball, tennis, running tracks).',
+      'Industrial safety zones, forklift lanes, factory walkways, and airfield/helipad reflective ground markings.',
+    ],
+    specs: 'Non-toxic, eco-friendly, wear-resistant coatings engineered for heavy foot and equipment traffic while maintaining color brightness.',
+    icon: Trophy,
+    tone: 'dark',
+  },
+  {
+    number: '06',
+    title: 'Hydraulic Surface Preparation & Sweeping',
+    text: 'High-pressure washing, mechanical sweeping, and surface cleaning to ensure maximum adhesion of reflective road coatings.',
+    overview: 'Essential field preparation services to clean asphalt and concrete surfaces from oil, debris, and old paint prior to line application.',
+    scope: [
+      'Mechanical sweeping and high-vacuum cleaning of dust, sand, and petroleum residues.',
+      'Utilization of specialized motorized sweeping trucks for large-scale field readiness.',
+      'Hydro-blasting and removal of old, degraded road lines to prevent driver confusion at night.',
+    ],
+    specs: 'High-pressure hydraulic washing equipment preparing the pavement surface to achieve optimal mechanical bond strength with retroreflective coatings.',
+    icon: Brush,
     tone: 'paper',
   },
 ];
@@ -109,11 +167,30 @@ function Home() {
   const [languageOpen, setLanguageOpen] = useState(false);
   const [language, setLanguage] = useState('EN');
   const [submitted, setSubmitted] = useState(false);
+  const [selectedService, setSelectedService] = useState<(typeof services)[number] | null>(null);
+  const [quoteService, setQuoteService] = useState('');
   useReveal();
 
   const goTo = (href: string) => {
     setMobileOpen(false);
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    if (!selectedService) return;
+    const closeOnEscape = (event: KeyboardEvent) => event.key === 'Escape' && setSelectedService(null);
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [selectedService]);
+
+  const requestServiceQuote = (serviceTitle: string) => {
+    setQuoteService(serviceTitle);
+    setSelectedService(null);
+    window.setTimeout(() => goTo('#contact'), 50);
   };
 
   return (
@@ -172,6 +249,59 @@ function Home() {
         </div>
       )}
 
+      {selectedService && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center overflow-y-auto bg-[#171b1d]/80 p-4 backdrop-blur-sm sm:p-8"
+          role="presentation"
+          onMouseDown={(event) => event.target === event.currentTarget && setSelectedService(null)}
+          data-testid="service-modal-backdrop"
+        >
+          <div
+            className="relative my-auto w-full max-w-3xl overflow-hidden bg-[#f4f0e6] text-[#171b1d] shadow-2xl"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="service-modal-title"
+            data-testid="service-modal"
+          >
+            <div className="flex items-start justify-between gap-6 bg-[#171b1d] p-6 text-[#f6f1e6] sm:p-9">
+              <div>
+                <span className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#f3c742]">Service {selectedService.number}</span>
+                <h2 id="service-modal-title" className="mt-4 max-w-2xl font-display text-4xl font-extrabold leading-[.92] tracking-[-.06em] sm:text-6xl">{selectedService.title}</h2>
+              </div>
+              <button onClick={() => setSelectedService(null)} className="grid h-11 w-11 shrink-0 place-items-center border border-[#59605e] text-[#f6f1e6] transition-colors hover:border-[#f3c742] hover:text-[#f3c742]" aria-label="Close service details" data-testid="button-close-service-modal">
+                <X size={20} />
+              </button>
+            </div>
+            <div className="max-h-[min(620px,calc(100vh-210px))] overflow-y-auto p-6 sm:p-9">
+              <p className="max-w-2xl text-base leading-7 text-[#27302f]">{selectedService.overview}</p>
+              <div className="mt-9 grid gap-9 border-t border-[#cfc7b8] pt-8 sm:grid-cols-[1.15fr_.85fr]">
+                <div>
+                  <h3 className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Key scope of work</h3>
+                  <ul className="mt-5 space-y-4">
+                    {selectedService.scope.map((item) => (
+                      <li key={item} className="flex gap-3 text-sm leading-6 text-[#59605e]">
+                        <Check size={16} className="mt-1 shrink-0 text-[#d9673f]" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="border-l-0 border-[#cfc7b8] sm:border-l sm:pl-7">
+                  <h3 className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Technical specifications</h3>
+                  <p className="mt-5 text-sm leading-6 text-[#59605e]">{selectedService.specs}</p>
+                  <div className="mt-7 flex items-center gap-2 border-t border-[#cfc7b8] pt-5 font-mono-site text-[9px] font-bold uppercase tracking-[.1em] text-[#27302f]">
+                    <CircleDot size={14} className="text-[#d9673f]" /> Field-ready quality
+                  </div>
+                </div>
+              </div>
+              <button onClick={() => requestServiceQuote(selectedService.title)} className="group mt-9 flex w-full items-center justify-between bg-[#F59E0B] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#1E293B] transition-colors hover:bg-[#fbbf24]" data-testid="button-service-quote">
+                Request a Quote for this Service <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <main>
         <section className="relative isolate flex min-h-[720px] items-end overflow-hidden bg-[#171b1d] text-[#f6f1e6] lg:min-h-[calc(100vh-108px)]" aria-labelledby="hero-heading">
           <div className="hero-road absolute inset-0 overflow-hidden opacity-90" />
@@ -221,15 +351,24 @@ function Home() {
               <div className="reveal"><SectionKicker index="02" children="What we do" /><h2 className="max-w-2xl font-display text-5xl font-extrabold leading-[.9] tracking-[-.06em] sm:text-7xl">From first layout<br /><span className="text-[#d9673f]">to final line.</span></h2></div>
               <p className="max-w-xs text-sm leading-6 text-[#59605e] reveal reveal-delay-1">One team for the full marking scope. Clear communication, tidy sites, and a finished result you can sign off with confidence.</p>
             </div>
-            <div className="mt-16 grid gap-4 md:grid-cols-2">
+            <div className="mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {services.map((service, index) => {
                 const Icon = service.icon;
                 const isDark = service.tone === 'dark';
                 const isYellow = service.tone === 'yellow';
                 return (
-                  <article key={service.number} className={`service-card reveal reveal-delay-${(index % 3) + 1} flex min-h-[305px] flex-col justify-between p-7 sm:p-9 ${isDark ? 'bg-[#171b1d] text-[#f6f1e6]' : isYellow ? 'bg-[#f3c742] text-[#171b1d]' : 'bg-[#f4f0e6] text-[#171b1d]'}`} data-testid={`card-service-${service.number}`}>
-                    <div className="flex items-start justify-between"><span className={`font-mono-site text-[10px] font-bold ${isDark ? 'text-[#f3c742]' : 'text-[#d9673f]'}`}>{service.number}</span><Icon size={28} strokeWidth={1.2} /></div>
-                    <div><div className="flex items-center justify-between gap-5"><h3 className="max-w-xs font-display text-3xl font-extrabold leading-[.95] tracking-[-.05em] sm:text-4xl">{service.title}</h3><ArrowUpRight className="service-arrow shrink-0" size={21} /></div><p className={`mt-5 max-w-md text-sm leading-6 ${isDark ? 'text-[#b9bbb1]' : 'text-[#59605e]'}`}>{service.text}</p></div>
+                  <article key={service.number} className={`service-card reveal reveal-delay-${(index % 3) + 1} flex min-h-[390px] flex-col justify-between p-7 sm:p-9 ${isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`} data-testid={`card-service-${service.number}`}>
+                    <div className="flex items-start justify-between">
+                      <span className={`font-mono-site text-[10px] font-bold ${isDark ? 'text-[#f3c742]' : 'text-[#d9673f]'}`}>{service.number}</span>
+                      <span className={`grid h-14 w-14 place-items-center border ${isDark ? 'border-[#59605e] text-[#f3c742]' : 'border-[#cfc7b8] text-[#d9673f]'}`}><Icon size={29} strokeWidth={1.2} /></span>
+                    </div>
+                    <div>
+                      <h3 className="max-w-xs font-display text-3xl font-extrabold leading-[.95] tracking-[-.05em] sm:text-4xl">{service.title}</h3>
+                      <p className={`service-preview mt-5 max-w-md text-sm leading-6 ${isDark ? 'text-[#dbe4ee]' : 'text-[#475569]'}`}>{service.text}</p>
+                      <button onClick={() => setSelectedService(service)} className={`group mt-7 inline-flex items-center gap-3 px-4 py-3 font-mono-site text-[10px] font-bold uppercase tracking-[.1em] transition-colors ${isYellow ? 'bg-[#1E293B] text-[#F8FAFC] hover:bg-[#334155]' : 'bg-[#F59E0B] text-[#1E293B] hover:bg-[#fbbf24]'}`} data-testid={`button-service-details-${service.number}`}>
+                        View Technical Details <ArrowUpRight size={15} className="service-arrow" />
+                      </button>
+                    </div>
                   </article>
                 );
               })}
@@ -307,7 +446,7 @@ function Home() {
                     <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">Your name</span><input required name="name" className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder="Name" data-testid="input-name" /></label>
                     <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">Organisation</span><input required name="organisation" className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder="Company / municipality" data-testid="input-organisation" /></label>
                     <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">Email</span><input required type="email" name="email" className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder="you@organisation.com" data-testid="input-email" /></label>
-                    <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">Project type</span><select name="project" defaultValue="" className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none focus:border-[#d9673f]" data-testid="select-project"><option value="" disabled>Select one</option><option>Roads & pathways</option><option>Parking & access</option><option>School or campus</option><option>Other site</option></select></label>
+                     <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">Project type</span><select name="project" value={quoteService} onChange={(event) => setQuoteService(event.target.value)} className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none focus:border-[#d9673f]" data-testid="select-project"><option value="" disabled>Select one</option>{services.map((service) => <option key={service.title}>{service.title}</option>)}<option>Other site</option></select></label>
                   </div>
                   <label className="mt-7 block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">Tell us about the site</span><textarea required name="message" rows={3} className="mt-2 w-full resize-none border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder="Location, timing, what needs marking..." data-testid="textarea-message" /></label>
                   <button type="submit" className="group mt-9 flex w-full items-center justify-between bg-[#171b1d] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.14em] text-[#f6f1e6] transition-colors hover:bg-[#d9673f]" data-testid="button-submit-quote">Send project enquiry <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></button>

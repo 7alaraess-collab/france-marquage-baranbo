@@ -367,6 +367,7 @@ body { min-width: 320px; overflow-x: hidden; }
 .service-card:hover { transform: translateY(-7px); }
 .service-card:hover .service-arrow { transform: translate(4px,-4px); }
 .service-arrow { transition: transform .35s ease; }
+.service-preview { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .fleet-line { position: relative; }
 .fleet-line::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; border-left: 1px dashed rgba(23,27,29,.25); }
 .field-frame { box-shadow: 16px 16px 0 #f3c742; }
