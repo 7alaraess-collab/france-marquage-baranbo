@@ -6,7 +6,6 @@ import {
   Award,
   BatteryCharging,
   Bike,
-  Brush,
   Check,
   ChevronDown,
   CircleDot,
@@ -17,12 +16,12 @@ import {
   MapPin,
   Menu,
   Minus,
-  ParkingCircle,
   Phone,
   Route,
+  SquareParking,
   Sparkles,
   Truck,
-  Trophy,
+  LayoutGrid,
   X,
 } from 'lucide-react';
 
@@ -60,7 +59,7 @@ const services = [
       'Numbering, lettering, and reservation marking for private/VIP spaces.',
     ],
     specs: 'Oil- and rubber-resistant, high-contrast yellow and white pavement markings formulated for high adhesion in enclosed or low-light parking structures.',
-    icon: ParkingCircle,
+    icon: SquareParking,
     tone: 'yellow',
   },
   {
@@ -102,7 +101,7 @@ const services = [
       'Industrial safety zones, forklift lanes, factory walkways, and airfield/helipad reflective ground markings.',
     ],
     specs: 'Non-toxic, eco-friendly, wear-resistant coatings engineered for heavy foot and equipment traffic while maintaining color brightness.',
-    icon: Trophy,
+    icon: LayoutGrid,
     tone: 'dark',
   },
   {
@@ -116,7 +115,7 @@ const services = [
       'Hydro-blasting and removal of old, degraded road lines to prevent driver confusion at night.',
     ],
     specs: 'High-pressure hydraulic washing equipment preparing the pavement surface to achieve optimal mechanical bond strength with retroreflective coatings.',
-    icon: Brush,
+    icon: Truck,
     tone: 'paper',
   },
 ];
@@ -359,13 +358,13 @@ function Home() {
                 return (
                   <article key={service.number} className={`service-card reveal reveal-delay-${(index % 3) + 1} flex min-h-[390px] flex-col justify-between p-7 sm:p-9 ${isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`} data-testid={`card-service-${service.number}`}>
                     <div className="flex items-start justify-between">
-                      <span className={`font-mono-site text-[10px] font-bold ${isDark ? 'text-[#f3c742]' : 'text-[#d9673f]'}`}>{service.number}</span>
-                      <span className={`grid h-14 w-14 place-items-center border ${isDark ? 'border-[#59605e] text-[#f3c742]' : 'border-[#cfc7b8] text-[#d9673f]'}`}><Icon size={29} strokeWidth={1.2} /></span>
+                      <span className={`text-[10px] font-bold ${isDark ? 'text-[#f3c742]' : isYellow ? 'text-[#1E293B]' : 'text-[#d9673f]'}`}>{service.number}</span>
+                      <span className={`grid h-14 w-14 place-items-center border ${isDark ? 'border-[#59605e] text-[#f3c742]' : isYellow ? 'border-[#1E293B] text-[#1E293B]' : 'border-[#cfc7b8] text-[#d9673f]'}`}><Icon size={29} strokeWidth={1.2} /></span>
                     </div>
                     <div>
-                      <h3 className="max-w-xs font-display text-3xl font-extrabold leading-[.95] tracking-[-.05em] sm:text-4xl">{service.title}</h3>
-                      <p className={`service-preview mt-5 max-w-md text-sm leading-6 ${isDark ? 'text-[#dbe4ee]' : 'text-[#475569]'}`}>{service.text}</p>
-                      <button onClick={() => setSelectedService(service)} className={`group mt-7 inline-flex items-center gap-3 px-4 py-3 font-mono-site text-[10px] font-bold uppercase tracking-[.1em] transition-colors ${isYellow ? 'bg-[#1E293B] text-[#F8FAFC] hover:bg-[#334155]' : 'bg-[#F59E0B] text-[#1E293B] hover:bg-[#fbbf24]'}`} data-testid={`button-service-details-${service.number}`}>
+                      <h3 className="max-w-xs text-3xl font-extrabold leading-[.95] tracking-[-.05em] sm:text-4xl">{service.title}</h3>
+                      <p className={`service-preview mt-5 max-w-md text-sm leading-6 ${isDark ? 'text-[#dbe4ee]' : 'text-[#334155]'}`}>{service.text}</p>
+                      <button onClick={() => setSelectedService(service)} className={`group mt-7 inline-flex items-center gap-3 px-4 py-3 text-[10px] font-bold uppercase tracking-[.1em] transition-colors ${isYellow ? 'bg-[#1E293B] text-[#F8FAFC] hover:bg-[#334155]' : 'bg-[#F59E0B] text-[#1E293B] hover:bg-[#fbbf24]'}`} data-testid={`button-service-details-${service.number}`}>
                         View Technical Details <ArrowUpRight size={15} className="service-arrow" />
                       </button>
                     </div>

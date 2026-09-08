@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -144,6 +144,7 @@
   --app-font-sans: 'DM Sans', sans-serif;
   --app-font-serif: 'Bricolage Grotesque', sans-serif;
   --app-font-mono: 'Space Mono', monospace;
+  --app-font-service: 'Inter', sans-serif;
   --radius: 0.25rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0); /*replace with H S L */
   --shadow-xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0); /*replace with H S L */
@@ -363,7 +364,7 @@ body { min-width: 320px; overflow-x: hidden; }
   inset: 0;
   background: linear-gradient(110deg, rgba(23,27,29,.96) 8%, rgba(23,27,29,.54) 48%, rgba(23,27,29,.12) 100%);
 }
-.service-card { transition: transform .35s ease, background-color .35s ease, color .35s ease; }
+.service-card { font-family: var(--app-font-service); transition: transform .35s ease, background-color .35s ease, color .35s ease; }
 .service-card:hover { transform: translateY(-7px); }
 .service-card:hover .service-arrow { transform: translate(4px,-4px); }
 .service-arrow { transition: transform .35s ease; }
