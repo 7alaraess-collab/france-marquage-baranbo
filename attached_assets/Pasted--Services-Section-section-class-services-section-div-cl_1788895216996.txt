@@ -1,0 +1,236 @@
+<!-- Services Section -->
+<section class="services-section">
+  <div class="container">
+    
+    <!-- Main Section Header -->
+    <div class="section-header text-center">
+      <h2 class="main-title">Road Marking & Pedestrian Crossings</h2>
+      <p class="main-subtitle">Comprehensive on-site road line marking services for highways, municipal roads, and intersections adhering strictly to international traffic safety standards.</p>
+    </div>
+
+    <!-- 6 Services Grid -->
+    <div class="services-grid">
+      
+      <!-- Service 1: Featured Card with the 3 Images & Descriptions -->
+      <div class="service-card main-triple-service">
+        <div class="card-content-top">
+          <h3>Field Execution & Technical Specifications</h3>
+          <p class="section-intro">Professional execution combining specialized crews, durable thermoplastic paints, and reflective precision.</p>
+        </div>
+
+        <!-- Triple Images Grid with Text Underneath -->
+        <div class="triple-images-grid">
+          
+          <!-- Image 1 -->
+          <div class="sub-item">
+            <div class="img-wrap">
+              <img src="1000143014.png" alt="Field Work Crews">
+            </div>
+            <h4>Field Crews & Execution</h4>
+            <p>Application of continuous, broken centerlines, directional arrows, and zebra pedestrian crossings.</p>
+          </div>
+
+          <!-- Image 2 -->
+          <div class="sub-item">
+            <div class="img-wrap">
+              <img src="1000143029.jpg" alt="Road Striping">
+            </div>
+            <h4>Lines & Pathways</h4>
+            <p>Integration of high-index Reflective Glass Beads embedded into the paint to maximize night-time headlight retroreflection.</p>
+          </div>
+
+          <!-- Image 3 -->
+          <div class="sub-item">
+            <div class="img-wrap">
+              <img src="1000143044.png" alt="Intersections & Signs">
+            </div>
+            <h4>Intersections & Markings</h4>
+            <p>Intersection safety enhancement and speed hump warning line marking with field-ready quality.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Remaining 5 Standard Services -->
+      <div class="service-card standard-service">
+         thermoplastic road paints and cold-applied acrylics engineered for high abrasion resistance and durability.</p>
+        </div>
+      </div>
+
+      <div class="service-card standard-service">
+        <div class="card-content">
+          <h3>Thermoplastic Materials</h3>
+          <p>Premium heavy-duty thermoplastic and cold-applied acrylic road paints engineered for high abrasion resistance.</p>
+        </div>
+      </div>
+
+      <div class="service-card standard-service">
+        <div class="card-content">
+          <h3>Safety & Signage</h3>
+          <p>Comprehensive traffic safety solutions meeting global standards for maximum night visibility.</p>
+        </div>
+      </div>
+
+      <div class="service-card standard-service">
+        <div class="card-content">
+          <h3>Highway Markings</h3>
+          <p>Large-scale lane striping and directional marking for highways and high-speed roads.</p>
+        </div>
+      </div>
+
+      <div class="service-card standard-service">
+        <div class="card-content">
+          <h3>Municipal Roads</h3>
+          <p>Specialized urban road markings designed for optimal traffic flow in municipal areas.</p>
+        </div>
+      </div>
+
+      <div class="service-card standard-service">
+        <div class="card-content">
+          <h3>Maintenance & Inspection</h3>
+          <p>Regular maintenance, safety audits, and recoating services to ensure long-lasting visibility.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* CSS Styles for Replit */
+  .services-section {
+    padding: 60px 20px;
+    background-color: #f4f6f9;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .main-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* Grid Layout */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+
+  .service-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease;
+  }
+
+  /* Featured First Card Spanning Full Width */
+  .main-triple-service {
+    grid-column: 1 / -1; 
+    padding: 30px;
+  }
+
+  .card-content-top h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 8px;
+  }
+
+  .section-intro {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+  }
+
+  /* Triple Images Sub-Grid */
+  .triple-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .sub-item {
+    background: #fafbfc;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .sub-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  }
+
+  .img-wrap {
+    width: 100%;
+    height: 160px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+
+  .img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .sub-item:hover .img-wrap img {
+    transform: scale(1.06);
+  }
+
+  .sub-item h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  .sub-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* Standard Remaining Cards */
+  .standard-service {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .standard-service h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .standard-service p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+</style>

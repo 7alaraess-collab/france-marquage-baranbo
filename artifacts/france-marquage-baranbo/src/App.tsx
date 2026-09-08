@@ -46,6 +46,26 @@ const services = [
     ],
     specs: 'Premium heavy-duty thermoplastic and cold-applied acrylic road paints engineered for high abrasion resistance, weather durability, and optimal night visibility.',
     icon: Route,
+    gallery: [
+      {
+        src: '/images/services/field-crews.jpg',
+        alt: 'Road marking crew applying a bright yellow line',
+        title: 'Field Crews & Execution',
+        text: 'Application of continuous, broken centerlines, directional arrows, and zebra pedestrian crossings.',
+      },
+      {
+        src: '/images/services/reflective-lines.jpg',
+        alt: 'Reflective white road lines beside traffic cones',
+        title: 'Lines & Pathways',
+        text: 'Integration of high-index reflective glass beads to maximize night-time headlight retroreflection.',
+      },
+      {
+        src: '/images/services/road-layout.jpg',
+        alt: 'Freshly marked road intersection viewed from above',
+        title: 'Intersections & Markings',
+        text: 'Intersection safety enhancement and speed hump warning line marking with field-ready quality.',
+      },
+    ],
     tone: 'dark',
   },
   {
@@ -356,7 +376,7 @@ function Home() {
                 const isDark = service.tone === 'dark';
                 const isYellow = service.tone === 'yellow';
                 return (
-                  <article key={service.number} className={`service-card reveal reveal-delay-${(index % 3) + 1} flex min-h-[390px] flex-col justify-between p-7 sm:p-9 ${isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`} data-testid={`card-service-${service.number}`}>
+                  <article key={service.number} className={`service-card reveal reveal-delay-${(index % 3) + 1} flex min-h-[390px] flex-col justify-between p-7 sm:p-9 ${index === 0 ? 'md:col-span-2 xl:col-span-3' : ''} ${isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`} data-testid={`card-service-${service.number}`}>
                     <div className="flex items-start justify-between">
                       <span className={`text-[10px] font-bold ${isDark ? 'text-[#f3c742]' : isYellow ? 'text-[#1E293B]' : 'text-[#d9673f]'}`}>{service.number}</span>
                       <span className={`grid h-14 w-14 place-items-center border ${isDark ? 'border-[#59605e] text-[#f3c742]' : isYellow ? 'border-[#1E293B] text-[#1E293B]' : 'border-[#cfc7b8] text-[#d9673f]'}`}><Icon size={29} strokeWidth={1.2} /></span>
@@ -364,6 +384,21 @@ function Home() {
                     <div>
                       <h3 className="max-w-xs text-3xl font-extrabold leading-[.95] tracking-[-.05em] sm:text-4xl">{service.title}</h3>
                       <p className={`service-preview mt-5 max-w-md text-sm leading-6 ${isDark ? 'text-[#dbe4ee]' : 'text-[#334155]'}`}>{service.text}</p>
+                      {service.gallery && (
+                        <div className="service-gallery mt-8 grid gap-3 sm:grid-cols-3">
+                          {service.gallery.map((item) => (
+                            <figure key={item.title} className="overflow-hidden border border-[#475569] bg-[#0f172a]">
+                              <div className="service-gallery-image">
+                                <img src={item.src} alt={item.alt} loading="lazy" />
+                              </div>
+                              <figcaption className="p-4">
+                                <h4 className="text-sm font-extrabold leading-tight text-[#F8FAFC]">{item.title}</h4>
+                                <p className="mt-2 text-xs leading-5 text-[#cbd5e1]">{item.text}</p>
+                              </figcaption>
+                            </figure>
+                          ))}
+                        </div>
+                      )}
                       <button onClick={() => setSelectedService(service)} className={`group mt-7 inline-flex items-center gap-3 px-4 py-3 text-[10px] font-bold uppercase tracking-[.1em] transition-colors ${isYellow ? 'bg-[#1E293B] text-[#F8FAFC] hover:bg-[#334155]' : 'bg-[#F59E0B] text-[#1E293B] hover:bg-[#fbbf24]'}`} data-testid={`button-service-details-${service.number}`}>
                         View Technical Details <ArrowUpRight size={15} className="service-arrow" />
                       </button>
