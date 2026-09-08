@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "France Marquage Baranbo"
+description = "A professional responsive website for a road marking and traffic safety contractor serving municipalities, commercial centers, schools, and private developers."
+version = "1.0.0"
+id = "artifacts/france-marquage-baranbo"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20721
+
+[services.development]
+run = "pnpm --filter @workspace/france-marquage-baranbo run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/france-marquage-baranbo", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/france-marquage-baranbo/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20721"
+BASE_PATH = "/"

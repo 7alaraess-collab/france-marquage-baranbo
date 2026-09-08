@@ -1,0 +1,30 @@
+Build a modern, professional, single-page scrollable website for a road marking and traffic safety contracting company named "Compagnie France Marquage Baranbo".
+
+Company & Design Context:
+- Industry: Road marking, parking lot organization, safety line painting, and field surface preparation services (NOT selling equipment).
+- Target Audience: B2B clients, municipalities, commercial centers, schools, and private developers.
+- Color Palette: Dark Charcoal/Asphalt Gray (#1E293B), Safety/Caution Yellow (#F59E0B), and Soft Off-White (#F8FAFC) for backgrounds and clean contrast.
+- Language Architecture: English primary layout for initial setup, structured with multi-language readiness (EN / FR / AR) for future translation toggles.
+
+Responsive & Screen Optimization Requirements:
+- Mobile & Tablet First Flexibility: Ensure 100% responsiveness across all devices (Mobile phones, iPads/Tablets, and Desktop laptops).
+- On Mobile & iPad/Tablet: Navigation links must gracefully collapse into a touch-friendly Mobile Drawer / Hamburger Menu (☰).
+- Layout Adaptation: Grid layouts must automatically adjust (1 column on mobile, 2 columns on iPad/tablets, and 3 columns on desktop laptops).
+
+Website Structure Required:
+1. Header & Navigation:
+   - Logo placeholder: "Compagnie France Marquage Baranbo"
+   - Smooth-scroll navigation links: Home, About Us, Services, Equipment & Fleet, Certifications, Contact.
+   - Language Switcher dropdown (EN | FR | AR) in the top-right corner.
+   - Prominent Call-to-Action button in Safety Yellow: "Get a Free Quote".
+
+2. Hero Section (Top Section):
+   - High-impact headline: "Precision Road Marking & Advanced Traffic Safety Solutions"
+   - Sub-headline: "Professional field contracting services for roads, highways, parking facilities, and specialized venues using high-visibility reflective technology."
+   - Background: Charcoal Gray overlay with a high-quality field work placeholder image.
+   - Two CTAs: Primary "Request a Quote" (Safety Yellow button) and Secondary "Explore Services".
+
+3. Placeholder Sections:
+   - Clean Off-White and Gray container blocks for: About Us, Services, Equipment, Certifications, and Contact Us.
+
+Please build a clean, responsive layout using modern CSS/Tailwind and standard Web UI components with the specified Charcoal Gray, Safety Yellow, and Off-White palette.
