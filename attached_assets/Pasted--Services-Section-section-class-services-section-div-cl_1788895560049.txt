@@ -1,0 +1,332 @@
+<!-- Services Section -->
+<section class="services-section">
+  <div class="container">
+    
+    <!-- Main Section Header -->
+    <div class="section-header text-center">
+      <h2 class="main-title">Road Marking & Pedestrian Crossings</h2>
+      <p class="main-subtitle">Comprehensive on-site road line marking services for highways, municipal roads, and intersections adhering strictly to international traffic safety standards.</p>
+    </div>
+
+    <!-- Uniform 6 Services Grid (All cards same size) -->
+    <div class="services-grid">
+      
+      <!-- Service 1: Standard Card in Grid -->
+      <div class="service-card dark-card">
+        <div class="card-content">
+          <span class="service-num">01</span>
+          <h3>Road Marking & Pedestrian Crossings</h3>
+          <p>Field application of road lane markings and pedestrian crossings engineered for maximum daytime clarity and high night-time visibility.</p>
+          <!-- Clicking this opens the modal with the 3 images -->
+          <button class="details-btn" onclick="openModal()">VIEW TECHNICAL DETAILS &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card orange-card">
+        <div class="card-content">
+          <span class="service-num">02</span>
+          <h3>Parking Lot Striping & Traffic Layout</h3>
+          <p>Custom parking space layout and lane organization for open-air and covered facilities using high-contrast, luminous paints.</p>
+          <a href="#" class="details-btn">VIEW TECHNICAL DETAILS &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card light-card">
+        <div class="card-content">
+          <span class="service-num">03</span>
+          <h3>Specialized & EV Charging Station Parking</h3>
+          <p>Color-coded and retroreflective markings for accessible handicap spaces and electric vehicle (EV) charging stations.</p>
+          <a href="#" class="details-btn">VIEW TECHNICAL DETAILS &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card light-card">
+        <div class="card-content">
+          <span class="service-num">04</span>
+          <h3>Dedicated Cycle & Colored Lanes</h3>
+          <p>High-durability red and green surface treatments for bicycle lanes and safety zones to protect cyclists during night travel.</p>
+          <a href="#" class="details-btn">VIEW TECHNICAL DETAILS &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card dark-card">
+        <div class="card-content">
+          <span class="service-num">05</span>
+          <h3>Schools, Sports Facilities & Specialized Venues</h3>
+          <p>Bright, safe floor markings for school playgrounds, sports courts, industrial facilities, and airport aprons.</p>
+          <a href="#" class="details-btn">VIEW TECHNICAL DETAILS &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card light-card">
+        <div class="card-content">
+          <span class="service-num">06</span>
+          <h3>Road Safety Audits & Maintenance</h3>
+          <p>Periodic inspection, safety auditing, and recoating services to ensure continuous compliance with traffic regulations.</p>
+          <a href="#" class="details-btn">VIEW TECHNICAL DETAILS &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal Popup for Service 1 (Contains the 3 images & details) -->
+<div id="serviceModal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="close-modal" onclick="closeModal()">&times;</button>
+    
+    <h2 class="modal-title">Road Marking - Technical Details</h2>
+    <p class="modal-subtitle">Comprehensive breakdown of field execution, materials, and safety measures.</p>
+    
+    <!-- The 3 Images & Details Grid inside the Modal -->
+    <div class="modal-images-grid">
+      
+      <!-- Image 1 -->
+      <div class="modal-sub-item">
+        <img src="1000143014.png" alt="Field Work Crews">
+        <h4>Field Crews & Execution</h4>
+        <p>Application of continuous, broken centerlines, directional arrows, and zebra pedestrian crossings.</p>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="modal-sub-item">
+        <img src="1000143029.jpg" alt="Road Striping">
+        <h4>Lines & Pathways</h4>
+        <p>Integration of high-index Reflective Glass Beads embedded into the paint to maximize night-time headlight retroreflection.</p>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="modal-sub-item">
+        <img src="1000143044.png" alt="Intersections & Signs">
+        <h4>Intersections & Markings</h4>
+        <p>Intersection safety enhancement and speed hump warning line marking with field-ready quality.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  /* CSS Styles */
+  .services-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .main-title {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .main-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* 6 Uniform Cards Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+  }
+
+  .service-card {
+    border-radius: 12px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 280px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  }
+
+  /* Card Color Variations matching your theme */
+  .dark-card {
+    background-color: #111d2e;
+    color: #fff;
+  }
+
+  .orange-card {
+    background-color: #f39c12;
+    color: #fff;
+  }
+
+  .light-card {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #eaeaea;
+  }
+
+  .service-num {
+    font-size: 0.9rem;
+    font-weight: 700;
+    opacity: 0.7;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-bottom: 25px;
+  }
+
+  .details-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    letter-spacing: 0.5px;
+  }
+
+  .details-btn:hover {
+    opacity: 0.7;
+  }
+
+  /* Modal Styling */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .modal-content {
+    background: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 16px;
+    padding: 40px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    line-height: 1;
+  }
+
+  .modal-title {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .modal-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1rem;
+  }
+
+  .modal-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  .modal-sub-item {
+    background: #f8f9fa;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .modal-sub-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .modal-sub-item h4 {
+    font-size: 1.05rem;
+    color: #222;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .modal-sub-item p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+  }
+</style>
+
+<script>
+  /* JavaScript to control the popup modal */
+  function openModal() {
+    document.getElementById('serviceModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('serviceModal').style.display = 'none';
+  }
+
+  /* Close modal when clicking outside the box */
+  window.onclick = function(event) {
+    var modal = document.getElementById('serviceModal');
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>

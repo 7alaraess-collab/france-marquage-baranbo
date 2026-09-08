@@ -37,7 +37,7 @@ const services = [
   {
     number: '01',
     title: 'Road Marking & Pedestrian Crossings',
-    text: 'Field application of road lane markings and pedestrian crossings engineered for maximum daytime clarity and high night-time retroreflectivity.',
+    text: 'Field application of road lane markings and pedestrian crossings engineered for maximum daytime clarity and high night-time visibility.',
     overview: 'Comprehensive on-site road line marking services for highways, municipal roads, and intersections adhering strictly to international traffic safety standards.',
     scope: [
       'Application of continuous, broken centerlines, directional arrows, and zebra pedestrian crossings.',
@@ -70,8 +70,8 @@ const services = [
   },
   {
     number: '02',
-    title: 'Parking Lot Marking & Traffic Flow Layout',
-    text: 'Precision parking space layout and lane organization for open-air and underground facilities using high-contrast, luminous paints.',
+    title: 'Parking Lot Striping & Traffic Layout',
+    text: 'Custom parking space layout and lane organization for open-air and covered facilities using high-contrast, luminous paints.',
     overview: 'Turnkey layout, line painting, and space optimization for commercial, residential, and corporate parking facilities to maximize capacity and traffic flow.',
     scope: [
       'Layout of stall boundaries, directional arrows, and entry/exit navigation lanes.',
@@ -98,8 +98,8 @@ const services = [
   },
   {
     number: '04',
-    title: 'Dedicated Cycle Lanes & Colored Paths',
-    text: 'High-visibility red and green surface treatments for bicycle pathways and hazard zones to protect cyclists during night travel.',
+    title: 'Dedicated Cycle & Colored Lanes',
+    text: 'High-durability red and green surface treatments for bicycle lanes and safety zones to protect cyclists during night travel.',
     overview: 'Custom color coating and demarcation for urban cycle tracks, scooter lanes, and high-risk pedestrian interaction areas.',
     scope: [
       'Full-width color application (traffic red and green) embedded with reflective compounds for night driving awareness.',
@@ -126,15 +126,15 @@ const services = [
   },
   {
     number: '06',
-    title: 'Hydraulic Surface Preparation & Sweeping',
-    text: 'High-pressure washing, mechanical sweeping, and surface cleaning to ensure maximum adhesion of reflective road coatings.',
-    overview: 'Essential field preparation services to clean asphalt and concrete surfaces from oil, debris, and old paint prior to line application.',
+    title: 'Road Safety Audits & Maintenance',
+    text: 'Periodic inspection, safety auditing, and recoating services to ensure continuous compliance with traffic regulations.',
+    overview: 'Ongoing inspection and maintenance services that keep road markings visible, compliant, and ready for daily traffic.',
     scope: [
-      'Mechanical sweeping and high-vacuum cleaning of dust, sand, and petroleum residues.',
-      'Utilization of specialized motorized sweeping trucks for large-scale field readiness.',
-      'Hydro-blasting and removal of old, degraded road lines to prevent driver confusion at night.',
+      'Inspection of worn, faded, or damaged markings across roads, crossings, parking areas, and safety zones.',
+      'Review of lane arrows, pedestrian crossings, directional markings, and night-time visibility conditions.',
+      'Recoating and corrective marking work planned around traffic flow to keep sites clear and operational.',
     ],
-    specs: 'High-pressure hydraulic washing equipment preparing the pavement surface to achieve optimal mechanical bond strength with retroreflective coatings.',
+    specs: 'Maintenance-grade thermoplastic and cold-applied acrylic systems selected for durable adhesion, consistent visibility, and repeat recoating cycles.',
     icon: Truck,
     tone: 'paper',
   },
@@ -293,6 +293,21 @@ function Home() {
             </div>
             <div className="max-h-[min(620px,calc(100vh-210px))] overflow-y-auto p-6 sm:p-9">
               <p className="max-w-2xl text-base leading-7 text-[#27302f]">{selectedService.overview}</p>
+              {selectedService.gallery && (
+                <div className="service-gallery mt-8 grid gap-3 sm:grid-cols-3">
+                  {selectedService.gallery.map((item) => (
+                    <figure key={item.title} className="overflow-hidden border border-[#cfc7b8] bg-[#1E293B]">
+                      <div className="service-gallery-image">
+                        <img src={item.src} alt={item.alt} />
+                      </div>
+                      <figcaption className="p-4">
+                        <h3 className="text-sm font-extrabold leading-tight text-[#F8FAFC]">{item.title}</h3>
+                        <p className="mt-2 text-xs leading-5 text-[#cbd5e1]">{item.text}</p>
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              )}
               <div className="mt-9 grid gap-9 border-t border-[#cfc7b8] pt-8 sm:grid-cols-[1.15fr_.85fr]">
                 <div>
                   <h3 className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Key scope of work</h3>
@@ -366,9 +381,10 @@ function Home() {
 
         <section id="services" className="scroll-mt-20 bg-[#e8e1d3] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
           <div className="mx-auto max-w-[1380px]">
-            <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-              <div className="reveal"><SectionKicker index="02" children="What we do" /><h2 className="max-w-2xl font-display text-5xl font-extrabold leading-[.9] tracking-[-.06em] sm:text-7xl">From first layout<br /><span className="text-[#d9673f]">to final line.</span></h2></div>
-              <p className="max-w-xs text-sm leading-6 text-[#59605e] reveal reveal-delay-1">One team for the full marking scope. Clear communication, tidy sites, and a finished result you can sign off with confidence.</p>
+            <div className="mx-auto max-w-4xl text-center reveal">
+              <div className="flex justify-center"><SectionKicker index="02" children="What we do" /></div>
+              <h2 className="font-display text-5xl font-extrabold leading-[.9] tracking-[-.06em] sm:text-7xl">Road Marking &<br /><span className="text-[#d9673f]">Pedestrian Crossings.</span></h2>
+              <p className="mx-auto mt-7 max-w-3xl text-base leading-7 text-[#334155]">Comprehensive on-site road line marking services for highways, municipal roads, and intersections adhering strictly to international traffic safety standards.</p>
             </div>
             <div className="mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {services.map((service, index) => {
@@ -376,7 +392,7 @@ function Home() {
                 const isDark = service.tone === 'dark';
                 const isYellow = service.tone === 'yellow';
                 return (
-                  <article key={service.number} className={`service-card reveal reveal-delay-${(index % 3) + 1} flex min-h-[390px] flex-col justify-between p-7 sm:p-9 ${index === 0 ? 'md:col-span-2 xl:col-span-3' : ''} ${isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`} data-testid={`card-service-${service.number}`}>
+                  <article key={service.number} className={`service-card reveal reveal-delay-${(index % 3) + 1} flex min-h-[390px] flex-col justify-between p-7 sm:p-9 ${isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`} data-testid={`card-service-${service.number}`}>
                     <div className="flex items-start justify-between">
                       <span className={`text-[10px] font-bold ${isDark ? 'text-[#f3c742]' : isYellow ? 'text-[#1E293B]' : 'text-[#d9673f]'}`}>{service.number}</span>
                       <span className={`grid h-14 w-14 place-items-center border ${isDark ? 'border-[#59605e] text-[#f3c742]' : isYellow ? 'border-[#1E293B] text-[#1E293B]' : 'border-[#cfc7b8] text-[#d9673f]'}`}><Icon size={29} strokeWidth={1.2} /></span>
@@ -384,21 +400,6 @@ function Home() {
                     <div>
                       <h3 className="max-w-xs text-3xl font-extrabold leading-[.95] tracking-[-.05em] sm:text-4xl">{service.title}</h3>
                       <p className={`service-preview mt-5 max-w-md text-sm leading-6 ${isDark ? 'text-[#dbe4ee]' : 'text-[#334155]'}`}>{service.text}</p>
-                      {service.gallery && (
-                        <div className="service-gallery mt-8 grid gap-3 sm:grid-cols-3">
-                          {service.gallery.map((item) => (
-                            <figure key={item.title} className="overflow-hidden border border-[#475569] bg-[#0f172a]">
-                              <div className="service-gallery-image">
-                                <img src={item.src} alt={item.alt} loading="lazy" />
-                              </div>
-                              <figcaption className="p-4">
-                                <h4 className="text-sm font-extrabold leading-tight text-[#F8FAFC]">{item.title}</h4>
-                                <p className="mt-2 text-xs leading-5 text-[#cbd5e1]">{item.text}</p>
-                              </figcaption>
-                            </figure>
-                          ))}
-                        </div>
-                      )}
                       <button onClick={() => setSelectedService(service)} className={`group mt-7 inline-flex items-center gap-3 px-4 py-3 text-[10px] font-bold uppercase tracking-[.1em] transition-colors ${isYellow ? 'bg-[#1E293B] text-[#F8FAFC] hover:bg-[#334155]' : 'bg-[#F59E0B] text-[#1E293B] hover:bg-[#fbbf24]'}`} data-testid={`button-service-details-${service.number}`}>
                         View Technical Details <ArrowUpRight size={15} className="service-arrow" />
                       </button>
