@@ -947,18 +947,18 @@ function useReveal() {
 
 function Logo({ light = false, official = false }: { light?: boolean; official?: boolean }) {
   return (
-    <a href="#top" className="flex items-center gap-3" data-testid="link-logo">
+    <a href="#top" className="flex min-w-0 items-center gap-2.5 sm:gap-3" data-testid="link-logo">
       {official ? (
-        <img src="/images/brand/company-logo-transparent.png" alt="FRANCE MARQUAGE BARANBO" className="h-12 w-12 shrink-0 object-contain" />
+        <img src="/images/brand/company-logo-transparent.png" alt="FRANCE MARQUAGE BARANBO" className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16" />
       ) : (
         <span className={`relative grid h-10 w-10 place-items-center border-2 ${light ? 'border-[#f3c742]' : 'border-[#171b1d]'}`}>
           <span className={`h-4 w-4 ${light ? 'bg-[#f3c742]' : 'bg-[#171b1d]'}`} />
           <span className={`absolute -right-1 -top-1 h-2 w-2 ${light ? 'bg-[#f3c742]' : 'bg-[#d9673f]'}`} />
         </span>
       )}
-      <span className={`leading-[.9] ${light ? 'text-[#f6f1e6]' : 'text-[#171b1d]'}`}>
-        <span className="block font-display text-[17px] font-extrabold tracking-[-.04em]">FRANCE</span>
-        <span className={`block font-mono-site text-[8px] uppercase tracking-[.21em] ${light ? 'text-[#b9bbb1]' : 'text-[#59605e]'}`}>MARQUAGE BARANBO</span>
+      <span className={`min-w-0 leading-[.9] ${light ? 'text-[#f6f1e6]' : 'text-[#171b1d]'}`}>
+        <span className="block whitespace-nowrap font-display text-[19px] font-extrabold tracking-[-.04em] sm:text-[21px] lg:text-[22px]">FRANCE</span>
+        <span className={`block whitespace-nowrap font-mono-site text-[8px] uppercase tracking-[.21em] sm:text-[9px] ${light ? 'text-[#b9bbb1]' : 'text-[#59605e]'}`}>MARQUAGE BARANBO</span>
       </span>
     </a>
   );
@@ -1096,7 +1096,7 @@ function Home() {
       </div>
 
       <header className="sticky top-0 z-30 border-b border-[#d8d1c2] bg-[#f4f0e6]/95 backdrop-blur-md">
-        <div className="mx-auto flex h-[76px] max-w-[1380px] items-center justify-between gap-3 px-4 sm:px-8 lg:px-12">
+        <div className="mx-auto flex h-[84px] max-w-[1380px] items-center justify-between gap-3 px-4 sm:h-[88px] sm:px-8 lg:px-12">
           <Logo official />
           <nav className="hidden items-center gap-7 lg:flex" aria-label={copy.mainNavigation}>
             {navItems.map((item) => (
