@@ -241,86 +241,83 @@ function SectionKicker({ index, children, light = false }: { index: string; chil
   );
 }
 
-function TechnicalServiceIllustration({ serviceNumber, tone }: { serviceNumber: string; tone: string }) {
+function TechnicalServiceIllustration({ serviceNumber, tone, large = false }: { serviceNumber: string; tone: string; large?: boolean }) {
   const toneClass = tone === 'dark' ? 'service-technical-mark-dark' : tone === 'yellow' ? 'service-technical-mark-yellow' : 'service-technical-mark-paper';
 
   return (
-    <div className={`service-technical-mark ${toneClass}`} aria-hidden="true">
+    <div className={`service-technical-mark ${toneClass} ${large ? 'service-technical-mark-large' : ''}`} aria-hidden="true">
       <span className="service-technical-number">{serviceNumber}</span>
       <svg viewBox="0 0 210 126" fill="none" role="presentation">
-        <path d="M8 106.5H202" className="technical-guide" />
+        <path d="M7 106.5H203" className="technical-guide" />
         {serviceNumber === '01' && (
           <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M22 96h166M37 96 69 38h72l32 58" strokeWidth="1.5" />
-            <path d="M53 96 79 47M96 96l8-49M139 96l-8-49M174 96l-27-49" strokeWidth="1.15" />
-            <path d="M62 57h75M58 63h83M54 69h91" strokeWidth="1.05" />
-            <path d="M105 76v13m0 0-4-5m4 5 4-5" strokeWidth="1.35" />
-            <g className="technical-accent" strokeWidth="2.15">
-              <path d="M76 41h11M101 41h11M126 41h11" />
+            <path d="M31 96 70 35h73l36 61" strokeWidth="1.7" />
+            <path d="M46 95 79 46M76 95l23-49M111 95l-2-49M146 95l-16-49M177 95l-31-49" strokeWidth="1.35" />
+            <g className="technical-accent" strokeWidth="2.6">
+              <path d="M76 39h13M105 39h13M134 39h12" />
+              <path d="M79 72h12M109 72h12M139 72h12" />
             </g>
           </g>
         )}
         {serviceNumber === '02' && (
           <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M18 24h149v78H18zM57 24v78M103 24v78" strokeWidth="1.5" />
-            <path d="M26 35h23v24H26zM65 35h23v24H65zM111 35h23v24h-23zM26 68h23v24H26zM65 68h23v24H65zM111 68h23v24h-23z" strokeWidth="1.05" />
-            <circle cx="37.5" cy="45" r="4.5" strokeWidth="1.05" />
-            <path d="M34 48l7 7m-7 0 7-7" strokeWidth="1.05" />
-            <path d="M177 39v36M168 39h18M168 75h18M177 75c0 10-10 10-17 10" strokeWidth="1.35" />
-            <path d="M160 86h-10v-12" strokeWidth="1.15" />
-            <g className="technical-accent" strokeWidth="2.1">
-              <path d="M176 29v7M172 32h8" />
+            <path d="M22 22h166v82H22z" strokeWidth="1.7" />
+            <path d="M64 22v82M105 22v82M146 22v82" strokeWidth="1.2" />
+            <path d="M30 35h24v19H30zM30 70h24v19H30zM112 35h24v19h-24zM112 70h24v19h-24z" strokeWidth="1.15" />
+            <path d="m78 63 9 9 17-21" strokeWidth="1.5" />
+            <g className="technical-accent" strokeWidth="2.6">
+              <path d="M154 38h24M154 73h24" />
+              <path d="m168 32 7 6-7 6M168 67l7 6-7 6" />
             </g>
           </g>
         )}
         {serviceNumber === '03' && (
           <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M18 95h174M28 38v57M28 38h122l18 18v39H28" strokeWidth="1.5" />
-            <path d="M48 56h42l10 12H42zM52 56l7-12h25l7 12M48 83h10M106 83h10" strokeWidth="1.25" />
-            <circle cx="59" cy="83" r="7" strokeWidth="1.15" />
-            <circle cx="105" cy="83" r="7" strokeWidth="1.15" />
-            <path d="M171 33v34M164 33h14M164 67h14M171 67c0 9-9 11-16 11" strokeWidth="1.35" />
-            <path d="M155 78h-10v-11" strokeWidth="1.15" />
-            <g className="technical-accent" strokeWidth="2.15">
-              <path d="M166 43h10M166 50h10" />
-              <path d="M139 59h11" />
+            <path d="M23 94V29h102v65zM125 49h54v45h-54z" strokeWidth="1.7" />
+            <path d="M137 49V34h26v15M150 34v-9M145 25h10" strokeWidth="1.35" />
+            <circle cx="74" cy="62" r="20" strokeWidth="1.25" />
+            <path d="M66 62h16M74 54v16" strokeWidth="1.35" />
+            <g className="technical-accent" strokeWidth="2.5">
+              <path d="M38 42h22M38 82h22" />
+              <path d="M139 72h25" />
             </g>
           </g>
         )}
         {serviceNumber === '04' && (
           <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M16 32h178v70H16zM16 66h178M39 32v70M171 32v70" strokeWidth="1.5" />
-            <circle cx="79" cy="67" r="9" strokeWidth="1.15" />
-            <circle cx="123" cy="67" r="9" strokeWidth="1.15" />
-            <path d="m79 67 13-17 16 17H79l8-17M92 50l13-1M105 49l7 9" strokeWidth="1.2" />
-            <path d="M92 84h17m-8-8v16" strokeWidth="1.05" />
-            <g className="technical-accent" strokeWidth="2.1">
-              <path d="M25 42h9M25 52h9M176 42h9M176 52h9" />
+            <path d="M17 39h176M17 97h176" strokeWidth="1.7" />
+            <path d="M34 39v58M176 39v58M17 68h176" strokeWidth="1.1" />
+            <circle cx="77" cy="70" r="10" strokeWidth="1.35" />
+            <circle cx="128" cy="70" r="10" strokeWidth="1.35" />
+            <path d="m77 70 15-20 18 20H77l9-20M92 50l12-1M103 49l8 11" strokeWidth="1.35" />
+            <g className="technical-accent" strokeWidth="2.5">
+              <path d="M40 50h22M148 50h22" />
+              <path d="M40 86h22M148 86h22" />
             </g>
           </g>
         )}
         {serviceNumber === '05' && (
           <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M18 24h174v78H18zM105 24v78M18 63h174" strokeWidth="1.5" />
-            <circle cx="105" cy="63" r="16" strokeWidth="1.1" />
-            <path d="M36 45h24v36H36zM150 45h24v36h-24zM28 63h15M167 63h15" strokeWidth="1.1" />
-            <path d="M173 38v-9h12v9M37 38v-9h12v9" strokeWidth="1.15" />
-            <g className="technical-accent" strokeWidth="2.1">
-              <path d="M46 89v8M164 89v8" />
+            <path d="M18 20h174v85H18zM105 20v85M18 62.5h174" strokeWidth="1.7" />
+            <circle cx="105" cy="62.5" r="18" strokeWidth="1.25" />
+            <path d="M36 44h24v37H36zM150 44h24v37h-24z" strokeWidth="1.2" />
+            <path d="M30 62.5h12M168 62.5h12" strokeWidth="1.35" />
+            <g className="technical-accent" strokeWidth="2.6">
+              <path d="M46 28v13M164 28v13" />
+              <path d="M46 84v13M164 84v13" />
             </g>
           </g>
         )}
         {serviceNumber === '06' && (
           <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M16 96h178M25 84h160" strokeWidth="1.5" />
-            <path d="M42 96 67 84M78 96l12-12M112 96l8-12M144 96l2-12" strokeWidth="1.05" />
-            <path d="M62 50h91l17 18H45zM76 50V37h43v13M54 68v16h108V68" strokeWidth="1.4" />
-            <circle cx="70" cy="91" r="8" strokeWidth="1.2" />
-            <circle cx="151" cy="91" r="8" strokeWidth="1.2" />
-            <path d="M84 84c2 12 10 18 21 18s19-6 21-18M89 88v10M100 86v14M111 86v14M122 88v10" strokeWidth="1.05" />
-            <g className="technical-accent" strokeWidth="2.1">
-              <path d="M31 40h20M155 40h22" />
-              <path d="m45 35 6 5-6 5M171 35l6 5-6 5" />
+            <path d="M18 96h174M31 82h148" strokeWidth="1.7" />
+            <path d="M42 96 72 82M70 96 91 82M102 96l12-14M133 96l6-14" strokeWidth="1.1" />
+            <path d="M72 48h67l18 19H54zM83 48V35h43v13M61 67v15h91V67" strokeWidth="1.5" />
+            <path d="M91 82c3 13 11 19 22 19s19-6 22-19" strokeWidth="1.3" />
+            <path d="M86 86v13M97 84v16M108 83v17M119 84v16M130 86v13" strokeWidth="1.1" />
+            <g className="technical-accent" strokeWidth="2.5">
+              <path d="M43 39h23M147 39h20" />
+              <path d="m58 34 7 5-7 5M160 34l7 5-7 5" />
             </g>
           </g>
         )}
@@ -480,7 +477,7 @@ function Home() {
                     </>
                   ) : (
                     <div className="service-detail-placeholder flex aspect-[16/10] min-h-[280px] items-center justify-center border border-[#cfc7b8] bg-[#e9e3d7] p-10 text-center sm:min-h-[380px]">
-                      <TechnicalServiceIllustration serviceNumber={selectedService.number} tone={selectedService.tone} />
+                      <TechnicalServiceIllustration serviceNumber={selectedService.number} tone={selectedService.tone} large />
                     </div>
                   )}
                 </div>
