@@ -130,8 +130,8 @@ const services = [
   },
   {
     number: '03',
-    title: 'Specialized & EV Charging Station Parking',
-    text: 'Color-coded and retroreflective markings for accessible handicap spaces and electric vehicle (EV) charging stations.',
+    title: 'Accessible & EV Charging Parking',
+    text: 'Color-coded and retroreflective markings for accessible parking spaces and EV charging stations, designed for clear identification and visibility.',
     overview: 'High-visibility surface coatings and internationally recognized symbols for designated parking zones, ensuring clear compliance and night accessibility.',
     scope: [
       'Full-surface blue background coating for accessible (handicapped) bays featuring reflective international symbols.',
@@ -158,8 +158,8 @@ const services = [
   },
   {
     number: '04',
-    title: 'Dedicated Cycle & Colored Lanes',
-    text: 'High-durability red and green surface treatments for bicycle lanes and safety zones to protect cyclists during night travel.',
+    title: 'Dedicated Bike & Colored Lanes',
+    text: 'Durable surface markings and color treatments for dedicated bike lanes, shared paths, and traffic safety zones.',
     overview: 'Custom color coating and demarcation for urban cycle tracks, scooter lanes, and high-risk pedestrian interaction areas.',
     scope: [
       'Full-width color application (traffic red and green) embedded with reflective compounds for night driving awareness.',
@@ -187,12 +187,12 @@ const services = [
   {
     number: '05',
     title: 'Schools, Sports Facilities & Specialized Venues',
-    text: 'Bright, safe floor markings for school playgrounds, sports courts, industrial facilities, and airport aprons.',
-    overview: 'Tailored line marking for recreational, educational, industrial, and aviation environments requiring extreme precision and specialized paint standards.',
+    text: 'Durable and highly visible markings for school playgrounds, sports courts, industrial facilities, and specialized sites.',
+    overview: 'Tailored line marking for recreational, educational, and industrial environments requiring extreme precision and specialized paint standards.',
     scope: [
       'Educational and colorful floor games for schoolyards and public parks (hopscotch, fun geometric paths).',
       'Precision geometric line painting for athletic courts (basketball, tennis, running tracks).',
-      'Industrial safety zones, forklift lanes, factory walkways, and airfield/helipad reflective ground markings.',
+      'Industrial safety zones, forklift lanes, factory walkways, and specialized reflective ground markings.',
     ],
     specs: 'Non-toxic, eco-friendly, wear-resistant coatings engineered for heavy foot and equipment traffic while maintaining color brightness.',
     icon: LayoutGrid,
@@ -215,7 +215,7 @@ const services = [
   {
     number: '06',
     title: 'Mechanical Street Sweeping & Road Cleaning',
-    text: 'Professional mechanical street and road cleaning using specialized sweeping equipment to remove debris and keep paved surfaces clear.',
+    text: 'Professional mechanical street and road sweeping using specialized equipment to remove dirt, debris, and surface buildup, helping keep paved areas clean and well maintained.',
     overview: 'Mechanical sweeping services for municipal roads, highways, parking areas, industrial sites, and other paved surfaces before, during, and after road works.',
     scope: [
       'Rotary-brush sweeping to remove dust, sand, dirt, debris, and accumulated roadside material.',
@@ -536,8 +536,8 @@ function Home() {
           <div className="mx-auto max-w-[1380px]">
             <div className="mx-auto max-w-4xl text-center reveal">
               <div className="flex justify-center"><SectionKicker index="02" children="What we do" /></div>
-              <h2 className="font-display text-5xl font-extrabold leading-[.9] tracking-[-.06em] sm:text-7xl">Road Marking &<br /><span className="text-[#d9673f]">Traffic Safety.</span></h2>
-              <p className="mx-auto mt-7 max-w-3xl text-base leading-7 text-[#334155]">Professional road marking and traffic layout services for highways, municipal roads, intersections, and pedestrian areas, designed for clear visibility, safe traffic flow, and long-lasting performance.</p>
+              <h2 className="font-display text-5xl font-extrabold leading-[.9] tracking-[-.06em] sm:text-7xl">Our<br /><span className="text-[#d9673f]">Services</span></h2>
+              <p className="mx-auto mt-7 max-w-3xl text-base leading-7 text-[#334155]">Professional marking, traffic layout, and surface maintenance solutions for roads, parking facilities, commercial properties, industrial sites, and specialized areas.</p>
             </div>
             <div className="mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {services.map((service, index) => {

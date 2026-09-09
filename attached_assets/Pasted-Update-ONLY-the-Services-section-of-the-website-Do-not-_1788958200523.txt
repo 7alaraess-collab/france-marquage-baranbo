@@ -1,0 +1,76 @@
+Update ONLY the Services section of the website.
+
+Do not change the overall design, layout, colors, typography, animations, navigation, header, hero section, or any other section of the website.
+
+Make the following content updates:
+
+1. Change the main Services section heading to:
+
+"Our Services"
+
+Replace the current main Services description with:
+
+"Professional marking, traffic layout, and surface maintenance solutions for roads, parking facilities, commercial properties, industrial sites, and specialized areas."
+
+2. Service 01
+
+Keep the title:
+
+"Road Marking & Pedestrian Crossings"
+
+Replace the description with:
+
+"Professional application of lane lines, directional markings, stop lines, arrows, symbols, and pedestrian crossings for roads and intersections."
+
+3. Service 02
+
+Keep the title:
+
+"Parking Lot Striping & Traffic Layout"
+
+Replace the description with:
+
+"Professional parking space striping and traffic layouts for commercial, industrial, and private facilities, designed for clear vehicle flow, organized parking, and high visibility."
+
+4. Service 03
+
+Replace the current title with:
+
+"Accessible & EV Charging Parking"
+
+Replace the description with:
+
+"Color-coded and retroreflective markings for accessible parking spaces and EV charging stations, designed for clear identification and visibility."
+
+5. Service 04
+
+Replace the current title with:
+
+"Dedicated Bike & Colored Lanes"
+
+Replace the description with:
+
+"Durable surface markings and color treatments for dedicated bike lanes, shared paths, and traffic safety zones."
+
+6. Service 05
+
+Keep the title:
+
+"Schools, Sports Facilities & Specialized Venues"
+
+Replace the description with:
+
+"Durable and highly visible markings for school playgrounds, sports courts, industrial facilities, and specialized sites."
+
+IMPORTANT:
+- Remove any reference to airports, airport aprons, aircraft, or aviation from Service 05.
+- Do not claim that the company has certifications or follows international standards unless explicitly stated elsewhere on the website.
+- Do not add new services.
+- Do not change the order of the six services.
+- Keep the existing numbering 01–06.
+- Keep all existing icons, card designs, colors, spacing, typography, hover effects, and "VIEW DETAILS" buttons unchanged.
+- For Service 06, keep the current title and use the following description:
+
+"Professional mechanical street and road sweeping using specialized equipment to remove dirt, debris, and surface buildup, helping keep paved areas clean and well maintained."
+
+Only update the specified text. Do not make any other changes.
