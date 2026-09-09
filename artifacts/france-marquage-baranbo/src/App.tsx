@@ -170,6 +170,20 @@ const services = [
     ],
     specs: 'Non-toxic, eco-friendly, wear-resistant coatings engineered for heavy foot and equipment traffic while maintaining color brightness.',
     icon: LayoutGrid,
+    gallery: [
+      {
+        src: '/images/services/sports-court-10.jpg',
+        alt: 'Outdoor red basketball court with crisp multi-sport line markings',
+        title: 'Multi-Sport Court Markings',
+        text: 'Precise basketball and multi-sport line systems that keep court geometry clear, consistent, and ready for play.',
+      },
+      {
+        src: '/images/services/sports-court-11.jpg',
+        alt: 'Colorful numbered playground stencil painted on pavement',
+        title: 'Specialized Ground Stencils',
+        text: 'Bright, durable numbered and educational markings for schoolyards, playgrounds, and custom activity zones.',
+      },
+    ],
     tone: 'dark',
   },
   {
