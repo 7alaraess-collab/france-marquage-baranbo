@@ -33,6 +33,36 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ];
 
+function StreetSweeperIcon({
+  size = 24,
+  strokeWidth = 2,
+  className,
+}: {
+  size?: number;
+  strokeWidth?: number;
+  className?: string;
+}) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M4 24.5H28" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" />
+      <path d="M7.5 21V12.5C7.5 11.4 8.4 10.5 9.5 10.5H20.5L24 14V21" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M10.5 10.5V8.5H18L20.5 10.5" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M24 15H27L28.5 18.5V21H24" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M11 21.5C11 23.4 9.5 25 7.5 25C5.5 25 4 23.4 4 21.5" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" />
+      <path d="M24 21.5C24 23.4 22.5 25 20.5 25C18.5 25 17 23.4 17 21.5" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" />
+      <path d="M15.5 21.5C15.5 23.8 13.8 25.5 11.5 25.5M14 23.5L11.5 26M16 24L14 27" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" />
+    </svg>
+  );
+}
+
 const services = [
   {
     number: '01',
@@ -198,7 +228,7 @@ const services = [
       'Project-based or scheduled operations to improve roadway cleanliness, visibility, and overall condition.',
     ],
     specs: 'Professional road-sweeping machinery with adjustable rotary brushes, debris collection, and dust-control or water-assisted sweeping where site conditions require it. Suitable for efficient coverage of paved road surfaces without relying on fixed machine-capacity claims.',
-    icon: Truck,
+    icon: StreetSweeperIcon,
     gallery: [
       {
         src: '/images/services/street-sweeping-12.jpg',
