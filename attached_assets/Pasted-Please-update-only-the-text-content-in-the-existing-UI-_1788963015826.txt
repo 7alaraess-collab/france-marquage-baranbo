@@ -1,0 +1,64 @@
+Please update only the text content in the existing UI section shown in the screenshots (the "Schools, Sports Facilities & Specialized Venues" service detail page). Do NOT change any design, layout, colors, fonts, or element placements.
+
+Here are the exact corrected texts for each language version:
+
+1. Top Breadcrumb / Small Label:
+- English: SERVICE 05 / FIELD DELIVERY
+- French: SERVICE 05 / ÉQUIPE TERRAIN
+- Arabic: SERVICE 05 / تنفيذ ميداني
+
+2. Main Heading:
+- English: Schools, Sports Facilities & Specialized Venues
+- French: Écoles, équipements sportifs et sites spécialisés
+- Arabic: المدارس، المنشآت الرياضية والمواقع المتخصصة
+
+3. Sub-description / Paragraph under heading:
+- English: Durable and highly visible markings for school playgrounds, sports courts, recreational areas, and specialized facilities.
+- French: Marquages durables et très visibles pour les cours d'école, terrains de sport, espaces de loisirs et équipements spécialisés.
+- Arabic: تخطيطات متينة وعالية الوضوح لساحات المدارس والملاعب الرياضية ومناطق الترفيه والمنشآت المتخصصة.
+
+4. Overview Block (Right side):
+- Heading:
+  - English: OVERVIEW
+  - French: PRÉSENTATION
+  - Arabic: نظرة عامة
+- Body:
+  - English: Professional line marking and surface marking services for sports courts, schoolyards, recreational areas, and other specialized facilities, with a focus on clear layouts, accurate lines, and long-lasting results.
+  - French: Prestations professionnelles de traçage de lignes et de marquage de surface pour terrains de sport, cours d'école, espaces de loisirs...
+  - Arabic: خدمات احترافية لتخطيط الخطوط والأسطح للملاعب الرياضية، وساحات المدارس، ومناطق الترفيه، وغيرها من المنشآت المتخصصة، مع التركيز على التصاميم الواضحة والخطوط الدقيقة والنتائج طويلة الأمد.
+
+5. Key Scope of Work (Checklist):
+- Item 1:
+  - English: Educational and colorful floor markings for schoolyards, playgrounds, and activity areas.
+  - French: Marquages de sol éducatifs et colorés pour les cours d'école, aires de jeux et zones d'activités.
+  - Arabic: علامات أرضية تعليمية وملونة لساحات المدارس، ومناطق اللعب، ومناطق الأنشطة.
+- Item 2:
+  - English: Precision line marking for athletic courts, including basketball and tennis courts.
+  - French: Traçage de lignes de précision pour les terrains de sport, y compris les terrains de basket et de tennis.
+  - Arabic: تخطيط دقيق للخطوط الخاصة بالملاعب الرياضية، بما في ذلك ملاعب كرة السلة والتنس.
+- Item 3:
+  - English: Safety zones, walkways, and customized ground markings for specialized facilities.
+  - French: Zones de sécurité, chemins piétonniers et marquages au sol personnalisés pour les équipements spécialisés.
+  - Arabic: مناطق الأمان، الممرات، والعلامات الأرضية المخصصة للمنشآت المتخصصة.
+
+6. Technical Specifications:
+- Heading:
+  - English: TECHNICAL SPECIFICATIONS
+  - French: CARACTÉRISTIQUES TECHNIQUES
+  - Arabic: المواصفات الفنية
+- Body:
+  - English: Durable surface marking solutions selected according to the application, surface condition, and project requirements, with a focus on adhesion, visibility, and wear resistance.
+  - French: Solutions de marquage de surface durables sélectionnées en fonction de l'application, de l'état de la surface et des exigences...
+  - Arabic: حلول تخطيط أسطح متينة يتم اختيارها وفقاً للتطبيق، وحالة السطح، ومتطلبات المشروع، مع التركيز على الالتصاق والوضوح ومقاومة التآكل.
+
+7. Badge / Footer Label:
+- English: FIELD-READY QUALITY
+- French: QUALITÉ PRÊTE POUR LE TERRAIN
+- Arabic: جودة جاهزة للتنفيذ
+
+8. Action Button:
+- English: REQUEST A QUOTE
+- French: DEMANDER UN DEVIS
+- Arabic: اطلب عرض سعر
+
+Make sure no visual elements, structure, or formatting are altered—only update the text content accurately as specified above.

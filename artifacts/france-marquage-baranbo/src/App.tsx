@@ -298,6 +298,7 @@ type SiteCopy = {
     serviceTwoLabel: string;
     serviceThreeLabel: string;
     serviceFourLabel: string;
+    serviceFiveLabel: string;
     overview: string;
     scope: string;
     specifications: string;
@@ -411,6 +412,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       serviceTwoLabel: 'OUTDOOR PARKING LAYOUT',
       serviceThreeLabel: 'EV CHARGING BAYS',
       serviceFourLabel: 'PROTECTED JUNCTION MARKINGS',
+      serviceFiveLabel: 'SERVICE 05 / FIELD DELIVERY',
       overview: 'Overview',
       scope: 'Key scope of work',
       specifications: 'Technical specifications',
@@ -526,6 +528,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       serviceTwoLabel: 'AMÉNAGEMENT DE PARKING EXTÉRIEUR',
       serviceThreeLabel: 'EMPLACEMENTS DE RECHARGE POUR VÉHICULES ÉLECTRIQUES',
       serviceFourLabel: 'MARQUAGES DE CARREFOUR SÉCURISÉS',
+      serviceFiveLabel: 'SERVICE 05 / ÉQUIPE TERRAIN',
       overview: 'Présentation',
       scope: 'Périmètre d’intervention',
       specifications: 'Caractéristiques techniques',
@@ -641,6 +644,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       serviceTwoLabel: 'تخطيط مواقف السيارات الخارجية',
       serviceThreeLabel: 'مواقف شحن المركبات الكهربائية',
       serviceFourLabel: 'تخطيط التقاطعات المحمية',
+      serviceFiveLabel: 'SERVICE 05 / تنفيذ ميداني',
       overview: 'نظرة عامة',
       scope: 'نطاق العمل الرئيسي',
       specifications: 'المواصفات الفنية',
@@ -774,14 +778,14 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
     },
     '05': {
       title: 'Écoles, équipements sportifs et sites spécialisés',
-      text: 'Marquages durables et très visibles pour les cours d’école, terrains de sport, espaces de loisirs et équipements spécialisés.',
-      overview: 'Prestations professionnelles de marquage de lignes et de surfaces pour les terrains de sport, cours d’école, espaces de loisirs et autres sites spécialisés, avec une attention portée à la lisibilité et à la durabilité.',
+      text: "Marquages durables et très visibles pour les cours d'école, terrains de sport, espaces de loisirs et équipements spécialisés.",
+      overview: "Prestations professionnelles de traçage de lignes et de marquage de surface pour terrains de sport, cours d'école, espaces de loisirs...",
       scope: [
-        'Marquages pédagogiques et colorés au sol pour les cours d’école, aires de jeux et espaces d’activités.',
-        'Traçage de précision des terrains sportifs, notamment pour le basketball et le tennis.',
-        'Zones de sécurité, cheminements et marquages personnalisés au sol pour les équipements spécialisés.',
+        "Marquages de sol éducatifs et colorés pour les cours d'école, aires de jeux et zones d'activités.",
+        'Traçage de lignes de précision pour les terrains de sport, y compris les terrains de basket et de tennis.',
+        'Zones de sécurité, chemins piétonniers et marquages au sol personnalisés pour les équipements spécialisés.',
       ],
-      specs: 'Solutions de marquage de surface durables sélectionnées selon l’usage, l’état du support et les exigences du projet, avec une attention portée à l’adhérence, à la visibilité et à la résistance à l’usure.',
+      specs: "Solutions de marquage de surface durables sélectionnées en fonction de l'application, de l'état de la surface et des exigences...",
       gallery: [
         { src: '/images/services/sports-court-10.jpg', alt: 'Terrain extérieur de basketball rouge avec lignes multisports nettes', title: 'Marquage multisports', text: 'Lignes de basketball et multisports précises pour conserver une géométrie claire, régulière et prête à l’usage.' },
         { src: '/images/services/sports-court-11.jpg', alt: 'Pochoir coloré numéroté peint sur le sol d’une aire de jeux', title: 'Pochoirs au sol spécialisés', text: 'Marquages numérotés et pédagogiques, colorés et durables, pour les cours d’école, aires de jeux et zones d’activités.' },
@@ -868,13 +872,13 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
     '05': {
       title: 'المدارس والمنشآت الرياضية والمواقع المتخصصة',
       text: 'تخطيطات متينة وعالية الوضوح لساحات المدارس والملاعب الرياضية ومناطق الترفيه والمنشآت المتخصصة.',
-      overview: 'خدمات احترافية لتخطيط الخطوط والأسطح في الملاعب الرياضية وساحات المدارس ومناطق الترفيه والمواقع المتخصصة، مع التركيز على وضوح التخطيط ودقته وطول عمره.',
+      overview: 'خدمات احترافية لتخطيط الخطوط والأسطح للملاعب الرياضية، وساحات المدارس، ومناطق الترفيه، وغيرها من المنشآت المتخصصة، مع التركيز على التصاميم الواضحة والخطوط الدقيقة والنتائج طويلة الأمد.',
       scope: [
-        'علامات أرضية تعليمية وملونة لساحات المدارس والملاعب ومناطق الأنشطة.',
-        'تخطيط دقيق للملاعب الرياضية، بما في ذلك ملاعب كرة السلة والتنس.',
-        'مناطق سلامة وممرات وعلامات أرضية مخصصة للمنشآت المتخصصة.',
+        'علامات أرضية تعليمية وملونة لساحات المدارس، ومناطق اللعب، ومناطق الأنشطة.',
+        'تخطيط دقيق للخطوط الخاصة بالملاعب الرياضية، بما في ذلك ملاعب كرة السلة والتنس.',
+        'مناطق الأمان، الممرات، والعلامات الأرضية المخصصة للمنشآت المتخصصة.',
       ],
-      specs: 'حلول تخطيط أسطح متينة يتم اختيارها وفق الاستخدام وحالة السطح ومتطلبات المشروع، مع التركيز على الالتصاق والرؤية ومقاومة التآكل.',
+      specs: 'حلول تخطيط أسطح متينة يتم اختيارها وفقاً للتطبيق، وحالة السطح، ومتطلبات المشروع، مع التركيز على الالتصاق والوضوح ومقاومة التآكل.',
       gallery: [
         { src: '/images/services/sports-court-10.jpg', alt: 'ملعب كرة سلة خارجي أحمر بخطوط رياضية متعددة واضحة', title: 'تخطيط الملاعب متعددة الرياضات', text: 'خطوط دقيقة لكرة السلة والرياضات المتعددة تحافظ على هندسة الملعب واضحة ومتناسقة وجاهزة للعب.' },
         { src: '/images/services/sports-court-11.jpg', alt: 'قالب أرضي ملون ومرقم مطلي على رصيف ملعب للأطفال', title: 'القوالب الأرضية المتخصصة', text: 'علامات مرقمة وتعليمية ملونة ومتينة لساحات المدارس والملاعب ومناطق الأنشطة المخصصة.' },
@@ -1146,7 +1150,7 @@ function Home() {
                 </div>
 
                 <div className="order-2 lg:order-none lg:pt-2">
-                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">{selectedService.number === '01' ? copy.detail.serviceOneLabel : selectedService.number === '02' ? copy.detail.serviceTwoLabel : selectedService.number === '03' ? copy.detail.serviceThreeLabel : selectedService.number === '04' ? copy.detail.serviceFourLabel : `Service ${selectedService.number} / ${copy.detail.fieldDelivery}`}</div>
+                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">{selectedService.number === '01' ? copy.detail.serviceOneLabel : selectedService.number === '02' ? copy.detail.serviceTwoLabel : selectedService.number === '03' ? copy.detail.serviceThreeLabel : selectedService.number === '04' ? copy.detail.serviceFourLabel : selectedService.number === '05' ? copy.detail.serviceFiveLabel : `Service ${selectedService.number} / ${copy.detail.fieldDelivery}`}</div>
                   <h2 id="service-modal-title" className="mt-5 max-w-2xl font-display text-[clamp(3rem,6vw,5.8rem)] font-extrabold leading-[.9] tracking-[-.065em]">{selectedServiceCopy.title}</h2>
                   <p className="mt-8 max-w-xl text-lg leading-8 text-[#334155] sm:text-xl">{selectedServiceCopy.text}</p>
 
