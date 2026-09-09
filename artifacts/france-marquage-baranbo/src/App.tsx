@@ -142,6 +142,20 @@ const services = [
     ],
     specs: 'High-friction, coarse-textured anti-skid coatings delivering superior grip in wet weather and optimal luminescent reflection under vehicle headlights.',
     icon: Bike,
+    gallery: [
+      {
+        src: '/images/services/cycle-lanes-9.jpg',
+        alt: 'Red cycle lane crossing a signalized urban intersection',
+        title: 'Protected Junction Markings',
+        text: 'High-visibility cycle crossings and directional symbols that make movement through busy intersections easier to read.',
+      },
+      {
+        src: '/images/services/cycle-lanes-13.jpg',
+        alt: 'Red dedicated cycle lane with white bicycle and directional markings',
+        title: 'Dedicated Cycle Lanes',
+        text: 'Durable red surfacing, bicycle symbols, and edge markings that clearly separate cycle traffic from vehicles.',
+      },
+    ],
     tone: 'paper',
   },
   {
