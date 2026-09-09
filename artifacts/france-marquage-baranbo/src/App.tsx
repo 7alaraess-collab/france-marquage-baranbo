@@ -98,13 +98,13 @@ const services = [
     number: '02',
     title: 'Parking Lot Striping & Traffic Layout',
     text: 'Professional parking space striping and traffic layouts for commercial, industrial, and private facilities, designed for clear vehicle flow, organized parking, and high visibility.',
-    overview: 'Turnkey layout, line painting, and space optimization for commercial, residential, and corporate parking facilities to maximize capacity and traffic flow.',
+    overview: 'Complete parking lot layout, line painting, and space organization for commercial, residential, and corporate facilities, designed for efficient use of space and smooth traffic flow.',
     scope: [
-      'Layout of stall boundaries, directional arrows, and entry/exit navigation lanes.',
-      'Application of reflective safety paint on concrete pillars, curbs, and clearance zones for safe night parking.',
-      'Numbering, lettering, and reservation marking for private/VIP spaces.',
+      'Layout of parking stall boundaries, directional arrows, and entry and exit lanes for clear and organized vehicle movement.',
+      'Marking of concrete pillars, curbs, clearance zones, and other safety areas to improve visibility and support safer parking operations.',
+      'Numbering, lettering, and reserved-space markings for private, designated, and special-use parking spaces.',
     ],
-    specs: 'Oil- and rubber-resistant, high-contrast yellow and white pavement markings formulated for high adhesion in enclosed or low-light parking structures.',
+    specs: '',
     icon: SquareParking,
     gallery: [
       {
@@ -461,13 +461,15 @@ function Home() {
                     </ul>
                   </div>
 
-                  <div className="mt-10 border-t border-[#cfc7b8] pt-8">
-                    <h3 className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Technical specifications</h3>
-                    <p className="mt-4 max-w-xl text-[17px] leading-8 text-[#334155]">{selectedService.specs}</p>
-                    <div className="mt-6 flex items-center gap-2 border-t border-[#cfc7b8] pt-5 font-mono-site text-[9px] font-bold uppercase tracking-[.1em] text-[#27302f]">
-                      <CircleDot size={14} className="text-[#d9673f]" /> Field-ready quality
+                   {selectedService.specs && (
+                     <div className="mt-10 border-t border-[#cfc7b8] pt-8">
+                       <h3 className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Technical specifications</h3>
+                       <p className="mt-4 max-w-xl text-[17px] leading-8 text-[#334155]">{selectedService.specs}</p>
+                       <div className="mt-6 flex items-center gap-2 border-t border-[#cfc7b8] pt-5 font-mono-site text-[9px] font-bold uppercase tracking-[.1em] text-[#27302f]">
+                         <CircleDot size={14} className="text-[#d9673f]" /> Field-ready quality
+                       </div>
                     </div>
-                  </div>
+                   )}
 
                   <button onClick={() => requestServiceQuote(selectedService.title)} className="group mt-10 flex w-full items-center justify-between bg-[#F59E0B] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#1E293B] transition-colors hover:bg-[#fbbf24]" data-testid="button-service-quote">
                     Request a Quote <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
