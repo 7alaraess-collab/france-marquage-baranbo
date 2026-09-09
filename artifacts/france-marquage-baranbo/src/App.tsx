@@ -3,14 +3,12 @@ import {
   ArrowDownRight,
   ArrowRight,
   ArrowUpRight,
-  Award,
   BatteryCharging,
   Bike,
   Check,
   ChevronDown,
   CircleDot,
   Clock3,
-  FileCheck2,
   Languages,
   Mail,
   MapPin,
@@ -595,18 +593,21 @@ function Home() {
         <section id="certifications" className="scroll-mt-20 site-grid px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
           <div className="mx-auto max-w-[1380px]">
             <div className="reveal"><SectionKicker index="04" children="Certifications & trust" /><h2 className="max-w-3xl font-display text-5xl font-extrabold leading-[.9] tracking-[-.06em] sm:text-7xl">Standards are not<br /><span className="text-[#d9673f]">a finishing touch.</span></h2></div>
-            <div className="mt-16 grid gap-10 lg:grid-cols-[.8fr_1.2fr]">
-              <div className="reveal reveal-delay-1 flex items-start gap-5 border-t border-[#cfc7b8] pt-6"><Award size={33} strokeWidth={1.2} className="text-[#d9673f]" /><div><h3 className="font-display text-2xl font-bold tracking-[-.04em]">Documented from brief to handover.</h3><p className="mt-4 max-w-sm text-sm leading-6 text-[#59605e]">A reliable finish begins with reliable process: clear scope, approved materials, safe work zones and a clean close-out.</p></div></div>
-              <div className="grid gap-3 sm:grid-cols-2">
-                {[
-                  ['ISO 9001', 'Quality management'],
-                  ['ISO 14001', 'Environmental care'],
-                  ['EN 1436', 'Road marking performance'],
-                  ['QHSE', 'Site safety culture'],
-                ].map(([title, text], index) => <div key={title} className={`reveal reveal-delay-${(index % 3) + 1} flex min-h-[140px] flex-col justify-between border border-[#cfc7b8] bg-[#f4f0e6] p-6 transition-colors hover:border-[#d9673f]`} data-testid={`certification-${index}`}><FileCheck2 size={21} className="text-[#d9673f]" /><div><h3 className="font-mono-site text-sm font-bold tracking-[.06em]">{title}</h3><p className="mt-1 text-xs text-[#59605e]">{text}</p></div></div>)}
+            <div className="mt-16 grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-start lg:gap-20">
+              <div className="reveal reveal-delay-1 border-t border-[#cfc7b8] pt-6">
+                <p className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Official Membership</p>
+                <h3 className="mt-5 max-w-md font-display text-3xl font-bold leading-[.98] tracking-[-.05em] sm:text-4xl">Registered with the Damascus Chamber of Commerce.</h3>
+                <p className="mt-6 max-w-sm text-sm leading-6 text-[#59605e]">This official membership reflects the company&apos;s formal registration and professional presence.</p>
               </div>
+              <figure className="reveal reveal-delay-2">
+                <a href="/images/certifications/damascus-chamber-membership.jpg" target="_blank" rel="noreferrer" aria-label="Open the Damascus Chamber of Commerce certificate">
+                  <div className="border border-[#cfc7b8] bg-[#e9e3d7] p-3 transition-colors hover:border-[#d9673f] sm:p-5">
+                    <img src="/images/certifications/damascus-chamber-membership.jpg" alt="Damascus Chamber of Commerce membership certificate for Baranbo Marquage Roads" className="mx-auto block h-auto w-full max-w-2xl" />
+                  </div>
+                </a>
+                <figcaption className="mt-4 font-mono-site text-[9px] uppercase tracking-[.12em] text-[#77796e]">Damascus Chamber of Commerce / Membership 2026</figcaption>
+              </figure>
             </div>
-            <div className="mt-20 border-y border-[#cfc7b8] py-8 reveal"><div className="flex flex-col justify-between gap-7 sm:flex-row sm:items-center"><div className="flex items-center gap-4"><CircleDot size={25} className="text-[#d9673f]" /><span className="font-display text-2xl font-bold tracking-[-.04em]">Precise work. Safer places.</span></div><p className="max-w-md text-sm leading-6 text-[#59605e]">For the people who plan the site, manage the site and rely on the site every day.</p></div></div>
           </div>
         </section>
 

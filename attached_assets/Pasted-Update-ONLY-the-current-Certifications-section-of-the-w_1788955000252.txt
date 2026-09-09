@@ -1,0 +1,52 @@
+Update ONLY the current Certifications section of the website. Do not modify the Navbar, Hero section, Services section, Equipment & Fleet section, Contact section, global typography, colors, spacing system, or any other existing section.
+
+I will attach ONE certificate image. Use that exact uploaded image as the only certificate/credential shown in this section.
+
+Important:
+- Do NOT create or invent any additional certificates.
+- Do NOT add ISO 9001, ISO 14001, EN 1436, QHSE, or any other certification that is not provided.
+- Do NOT alter, redraw, recreate, or modify the certificate itself.
+- Keep the certificate image exactly as provided.
+
+Change the section from a grid of multiple certification cards into a clean, premium single-credential presentation.
+
+Section structure:
+1. Keep the existing section numbering/style consistent with the rest of the website.
+2. Keep a strong large headline in the same visual style as the current website:
+   "Standards are not
+   a finishing touch."
+3. Under the headline, create a two-column layout:
+   - LEFT: a short professional text block introducing the company's official membership/registration.
+   - RIGHT: the uploaded certificate image displayed prominently.
+
+Text:
+Small heading:
+"Official Membership"
+
+Main supporting text:
+"Registered with the Damascus Chamber of Commerce."
+
+Add a short, elegant supporting sentence explaining that this official membership reflects the company's formal registration and professional presence. Keep it concise and professional.
+
+Certificate presentation:
+- Display the uploaded certificate large enough to clearly recognize it.
+- Preserve its original proportions.
+- Do not crop any important part of it.
+- Place it inside a subtle, elegant frame/container that fits the existing website's minimal industrial aesthetic.
+- Avoid excessive shadows, rounded cards, or decorative effects.
+- The certificate should feel like an important official document, while still matching the website design.
+- If appropriate, allow the image to open in a larger view when clicked, but keep the interaction subtle.
+
+Design direction:
+- Minimal, premium, architectural/industrial aesthetic.
+- Match the existing site's black, off-white, and muted orange visual language.
+- Keep generous whitespace.
+- Maintain strong typography hierarchy.
+- The section should feel intentional and polished, not like a generic certification-card grid.
+
+Responsive behavior:
+- On desktop: two columns, text on the left and certificate on the right.
+- On mobile: stack the text above the certificate.
+- Make sure the certificate remains fully visible and readable without breaking the layout.
+
+Again: modify ONLY this Certifications section and leave everything else unchanged.
