@@ -1,0 +1,68 @@
+Please update only the text content in the existing UI section shown in the screenshots (the "Mechanical Street Sweeping & Road Cleaning" service detail page). Do NOT change any design, layout, colors, fonts, or element placements.
+
+Here are the exact corrected texts for each language version:
+
+1. Top Breadcrumb / Small Label:
+- English: SERVICE 06 / FIELD DELIVERY
+- French: SERVICE 06 / ÉQUIPE TERRAIN
+- Arabic: SERVICE 06 / تنفيذ ميداني
+
+2. Main Heading:
+- English: Mechanical Street Sweeping & Road Cleaning
+- French: Balayage mécanique et nettoyage des routes
+- Arabic: الكنس الميكانيكي وتنظيف الطرق
+
+3. Sub-description / Paragraph under heading:
+- English: Professional mechanical street and road sweeping services to remove dust, dirt, debris, and accumulated material from paved surfaces, helping keep roads and paved areas clean and well maintained.
+- French: Prestations professionnelles de balayage mécanique des rues et des routes pour éliminer poussières, saletés, débris et dépôts des surfaces...
+- Arabic: خدمات احترافية للكنس الميكانيكي للشوارع والطرق لإزالة الغبار والأوساخ والمخلفات والمواد المتراكمة عن الأسطح المعبدة، للمساعدة في الحفاظ على الطرق والمسطحات نظيفة وبحالة ممتازة.
+
+4. Overview Block (Right side):
+- Heading:
+  - English: OVERVIEW
+  - French: PRÉSENTATION
+  - Arabic: نظرة عامة
+- Body:
+  - English: Mechanical sweeping services for municipal roads, highways, parking areas, industrial sites, and other paved surfaces, supporting clean and well-maintained areas before, during, and after road works.
+  - French: Prestations de balayage mécanique pour routes municipales, autoroutes, parkings, sites industriels et autres surfaces pavées...
+  - Arabic: خدمات الكنس الميكانيكي للطرق البلدية، الطرق السريعة، مواقف السيارات، المواقع الصناعية، وغيرها من الأسطح المعبدة، مما يدعم الحفاظ على نظافة وجاهزية المناطق قبل وأثناء وبعد أعمال الطرق.
+
+5. Key Scope of Work (Checklist):
+- Item 1:
+  - English: Mechanical sweeping to remove dust, sand, dirt, debris, and accumulated roadside material.
+  - French: Balayage mécanique pour éliminer la poussière, le sable, la saleté, les débris et les matériaux accumulés sur les accotements.
+  - Arabic: الكنس الميكانيكي لإزالة الغبار، الرمال، الأوساخ، المخلفات، والمواد المتراكمة على جوانب الطرق.
+- Item 2:
+  - English: Cleaning paved surfaces before and after road marking, resurfacing, and maintenance works.
+  - French: Nettoyage des surfaces pavées avant et après les travaux de marquage routier, de réfection et de maintenance.
+  - Arabic: تنظيف الأسطح المعبدة قبل وبعد أعمال تخطيط الطرق، إعادة الرصف، وأعمال الصيانة.
+- Item 3:
+  - English: Routine cleaning around road markings, curbs, drainage edges, and traffic infrastructure.
+  - French: Nettoyage régulier autour du marquage routier, des bordures, des bords de drainage et des infrastructures de circulation.
+  - Arabic: التنظيف الروتيني حول تخطيطات الطرق، الأرصفة، حواف التصريف، والبنية التحتية المرورية.
+- Item 4:
+  - English: Project-based or scheduled sweeping operations to maintain roadway cleanliness and overall surface condition.
+  - French: Opérations de balayage par projet ou planifiées pour maintenir la propreté de la chaussée et l'état général de la surface.
+  - Arabic: عمليات كنس قائمة على المشاريع أو مجدولة للحفاظ على نظافة الطرق والحالة العامة للأسطح.
+
+6. Technical Specifications:
+- Heading:
+  - English: TECHNICAL SPECIFICATIONS
+  - French: CARACTÉRISTIQUES TECHNIQUES
+  - Arabic: المواصفات الفنية
+- Body:
+  - English: Professional mechanical sweeping equipment selected according to the project requirements and site conditions, providing efficient cleaning of paved and surface areas.
+  - French: Équipement professionnel de balayage mécanique sélectionné selon les exigences du projet et les conditions du site...
+  - Arabic: معدات كنس ميكانيكي احترافية يتم اختيارها وفقاً لمتطلبات المشروع ظروف الموقع، لتوفير تنظيف فعال للأسطح والمناطق المعبدة.
+
+7. Badge / Footer Label:
+- English: FIELD-READY QUALITY
+- French: QUALITÉ PRÊTE POUR LE TERRAIN
+- Arabic: جودة جاهزة للتنفيذ
+
+8. Action Button:
+- English: REQUEST A QUOTE
+- French: DEMANDER UN DEVIS
+- Arabic: اطلب عرض سعر
+
+Make sure no visual elements, structure, or formatting are altered—only update the text content accurately as specified above.

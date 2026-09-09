@@ -224,7 +224,7 @@ const services = [
       'Routine cleaning around road markings, curbs, drainage edges, and traffic infrastructure.',
       'Project-based or scheduled sweeping operations to maintain roadway cleanliness and overall surface condition.',
     ],
-    specs: 'Professional mechanical sweeping equipment selected according to the project requirements and site conditions, providing efficient cleaning of paved road and surface areas.',
+    specs: 'Professional mechanical sweeping equipment selected according to the project requirements and site conditions, providing efficient cleaning of paved and surface areas.',
     icon: CleaningBrushIcon,
     gallery: [
       {
@@ -299,6 +299,7 @@ type SiteCopy = {
     serviceThreeLabel: string;
     serviceFourLabel: string;
     serviceFiveLabel: string;
+    serviceSixLabel: string;
     overview: string;
     scope: string;
     specifications: string;
@@ -413,6 +414,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       serviceThreeLabel: 'EV CHARGING BAYS',
       serviceFourLabel: 'PROTECTED JUNCTION MARKINGS',
       serviceFiveLabel: 'SERVICE 05 / FIELD DELIVERY',
+      serviceSixLabel: 'SERVICE 06 / FIELD DELIVERY',
       overview: 'Overview',
       scope: 'Key scope of work',
       specifications: 'Technical specifications',
@@ -529,6 +531,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       serviceThreeLabel: 'EMPLACEMENTS DE RECHARGE POUR VÉHICULES ÉLECTRIQUES',
       serviceFourLabel: 'MARQUAGES DE CARREFOUR SÉCURISÉS',
       serviceFiveLabel: 'SERVICE 05 / ÉQUIPE TERRAIN',
+      serviceSixLabel: 'SERVICE 06 / ÉQUIPE TERRAIN',
       overview: 'Présentation',
       scope: 'Périmètre d’intervention',
       specifications: 'Caractéristiques techniques',
@@ -645,6 +648,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       serviceThreeLabel: 'مواقف شحن المركبات الكهربائية',
       serviceFourLabel: 'تخطيط التقاطعات المحمية',
       serviceFiveLabel: 'SERVICE 05 / تنفيذ ميداني',
+      serviceSixLabel: 'SERVICE 06 / تنفيذ ميداني',
       overview: 'نظرة عامة',
       scope: 'نطاق العمل الرئيسي',
       specifications: 'المواصفات الفنية',
@@ -793,15 +797,15 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
     },
     '06': {
       title: 'Balayage mécanique et nettoyage des routes',
-      text: 'Prestations professionnelles de balayage mécanique des rues et des routes pour éliminer poussières, saletés, débris et dépôts accumulés sur les surfaces revêtues, et maintenir des espaces propres et bien entretenus.',
-      overview: 'Services de balayage mécanique pour les routes communales, autoroutes, parkings, sites industriels et autres surfaces revêtues, avant, pendant et après les travaux routiers.',
+      text: 'Prestations professionnelles de balayage mécanique des rues et des routes pour éliminer poussières, saletés, débris et dépôts des surfaces...',
+      overview: 'Prestations de balayage mécanique pour routes municipales, autoroutes, parkings, sites industriels et autres surfaces pavées...',
       scope: [
-        'Balayage mécanique pour retirer poussières, sable, terre, débris et dépôts accumulés en bord de chaussée.',
-        'Nettoyage des surfaces revêtues avant et après les travaux de marquage, de réfection et d’entretien routier.',
-        'Nettoyage courant autour des marquages, bordures, rives d’évacuation et équipements de circulation.',
-        'Opérations de balayage ponctuelles ou planifiées pour maintenir la propreté et l’état général des chaussées.',
+        'Balayage mécanique pour éliminer la poussière, le sable, la saleté, les débris et les matériaux accumulés sur les accotements.',
+        'Nettoyage des surfaces pavées avant et après les travaux de marquage routier, de réfection et de maintenance.',
+        'Nettoyage régulier autour du marquage routier, des bordures, des bords de drainage et des infrastructures de circulation.',
+        "Opérations de balayage par projet ou planifiées pour maintenir la propreté de la chaussée et l'état général de la surface.",
       ],
-      specs: 'Équipements professionnels de balayage mécanique sélectionnés selon les exigences du projet et les conditions du site, pour un nettoyage efficace des routes et surfaces revêtues.',
+      specs: 'Équipement professionnel de balayage mécanique sélectionné selon les exigences du projet et les conditions du site...',
       gallery: [
         { src: '/images/services/street-sweeping-12.jpg', alt: 'Balayeuse mécanique nettoyant une surface routière revêtue', title: 'Nettoyage mécanique des routes', text: 'Équipement de balayage mécanique retirant les dépôts accumulés avant les travaux routiers et l’entretien courant.' },
       ],
@@ -886,15 +890,15 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
     },
     '06': {
       title: 'الكنس الميكانيكي وتنظيف الطرق',
-      text: 'خدمات احترافية للكنس الميكانيكي للشوارع والطرق لإزالة الغبار والأوساخ والمخلفات والمواد المتراكمة من الأسطح المعبدة والحفاظ على نظافة الطرق والمناطق المرصوفة.',
-      overview: 'خدمات كنس ميكانيكي للطرق البلدية والطرق السريعة ومواقف السيارات والمواقع الصناعية وغيرها من الأسطح المعبدة، قبل أعمال الطرق وأثناءها وبعدها.',
+      text: 'خدمات احترافية للكنس الميكانيكي للشوارع والطرق لإزالة الغبار والأوساخ والمخلفات والمواد المتراكمة عن الأسطح المعبدة، للمساعدة في الحفاظ على الطرق والمسطحات نظيفة وبحالة ممتازة.',
+      overview: 'خدمات الكنس الميكانيكي للطرق البلدية، الطرق السريعة، مواقف السيارات، المواقع الصناعية، وغيرها من الأسطح المعبدة، مما يدعم الحفاظ على نظافة وجاهزية المناطق قبل وأثناء وبعد أعمال الطرق.',
       scope: [
-        'الكنس الميكانيكي لإزالة الغبار والرمل والأتربة والمخلفات والمواد المتراكمة على جوانب الطرق.',
-        'تنظيف الأسطح المعبدة قبل وبعد أعمال تخطيط الطرق وإعادة التأهيل والصيانة.',
-        'التنظيف الدوري حول التخطيطات والأرصفة وحواف تصريف المياه وتجهيزات المرور.',
-        'عمليات كنس دورية أو حسب المشروع للحفاظ على نظافة الطريق وحالة السطح العامة.',
+        'الكنس الميكانيكي لإزالة الغبار، الرمال، الأوساخ، المخلفات، والمواد المتراكمة على جوانب الطرق.',
+        'تنظيف الأسطح المعبدة قبل وبعد أعمال تخطيط الطرق، إعادة الرصف، وأعمال الصيانة.',
+        'التنظيف الروتيني حول تخطيطات الطرق، الأرصفة، حواف التصريف، والبنية التحتية المرورية.',
+        'عمليات كنس قائمة على المشاريع أو مجدولة للحفاظ على نظافة الطرق والحالة العامة للأسطح.',
       ],
-      specs: 'معدات كنس ميكانيكي احترافية يتم اختيارها وفق متطلبات المشروع وظروف الموقع لتنظيف الطرق والأسطح المعبدة بكفاءة.',
+      specs: 'معدات كنس ميكانيكي احترافية يتم اختيارها وفقاً لمتطلبات المشروع ظروف الموقع، لتوفير تنظيف فعال للأسطح والمناطق المعبدة.',
       gallery: [
         { src: '/images/services/street-sweeping-12.jpg', alt: 'مكنسة شوارع ميكانيكية تنظف سطح طريق معبداً', title: 'التنظيف الميكانيكي للطرق', text: 'معدات كنس ميكانيكي تزيل المواد المتراكمة من الأسطح المعبدة قبل أعمال الطرق والصيانة الدورية.' },
       ],
@@ -1150,7 +1154,7 @@ function Home() {
                 </div>
 
                 <div className="order-2 lg:order-none lg:pt-2">
-                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">{selectedService.number === '01' ? copy.detail.serviceOneLabel : selectedService.number === '02' ? copy.detail.serviceTwoLabel : selectedService.number === '03' ? copy.detail.serviceThreeLabel : selectedService.number === '04' ? copy.detail.serviceFourLabel : selectedService.number === '05' ? copy.detail.serviceFiveLabel : `Service ${selectedService.number} / ${copy.detail.fieldDelivery}`}</div>
+                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">{selectedService.number === '01' ? copy.detail.serviceOneLabel : selectedService.number === '02' ? copy.detail.serviceTwoLabel : selectedService.number === '03' ? copy.detail.serviceThreeLabel : selectedService.number === '04' ? copy.detail.serviceFourLabel : selectedService.number === '05' ? copy.detail.serviceFiveLabel : selectedService.number === '06' ? copy.detail.serviceSixLabel : `Service ${selectedService.number} / ${copy.detail.fieldDelivery}`}</div>
                   <h2 id="service-modal-title" className="mt-5 max-w-2xl font-display text-[clamp(3rem,6vw,5.8rem)] font-extrabold leading-[.9] tracking-[-.065em]">{selectedServiceCopy.title}</h2>
                   <p className="mt-8 max-w-xl text-lg leading-8 text-[#334155] sm:text-xl">{selectedServiceCopy.text}</p>
 
