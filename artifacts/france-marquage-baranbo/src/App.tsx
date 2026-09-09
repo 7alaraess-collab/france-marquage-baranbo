@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import {
   ArrowDownRight,
   ArrowRight,
@@ -973,6 +973,11 @@ function SectionKicker({ index, children, light = false }: { index: string; chil
 }
 
 const languageOptions: Language[] = ['EN', 'FR', 'AR'];
+const languageNames: Record<Language, string> = {
+  EN: 'English',
+  FR: 'French',
+  AR: 'Arabic',
+};
 
 function getInitialLanguage(): Language {
   if (typeof window === 'undefined') return 'EN';
@@ -989,6 +994,7 @@ function Home() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [selectedProjectType, setSelectedProjectType] = useState('');
   const submitContactEnquiry = useSubmitContactEnquiry();
+  const languageMenuRef = useRef<HTMLDivElement>(null);
   const copy = siteTranslations[language];
   const isArabic = language === 'AR';
   useReveal();
@@ -1033,6 +1039,26 @@ function Home() {
   }, [isArabic, language]);
 
   useEffect(() => {
+    if (!languageOpen) return;
+
+    const closeOnOutsidePress = (event: PointerEvent) => {
+      if (event.target instanceof Node && !languageMenuRef.current?.contains(event.target)) {
+        setLanguageOpen(false);
+      }
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setLanguageOpen(false);
+    };
+
+    document.addEventListener('pointerdown', closeOnOutsidePress);
+    window.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutsidePress);
+      window.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [languageOpen]);
+
+  useEffect(() => {
     if (!selectedService) return;
     const closeOnEscape = (event: KeyboardEvent) => event.key === 'Escape' && setSelectedService(null);
     document.body.style.overflow = 'hidden';
@@ -1070,7 +1096,7 @@ function Home() {
       </div>
 
       <header className="sticky top-0 z-30 border-b border-[#d8d1c2] bg-[#f4f0e6]/95 backdrop-blur-md">
-        <div className="mx-auto flex h-[76px] max-w-[1380px] items-center justify-between px-5 sm:px-8 lg:px-12">
+        <div className="mx-auto flex h-[76px] max-w-[1380px] items-center justify-between gap-3 px-4 sm:px-8 lg:px-12">
           <Logo official />
           <nav className="hidden items-center gap-7 lg:flex" aria-label={copy.mainNavigation}>
             {navItems.map((item) => (
@@ -1080,31 +1106,78 @@ function Home() {
               </a>
             ))}
           </nav>
-          <div className="hidden items-center gap-4 lg:flex">
-            <div className="relative">
-              <button onClick={() => setLanguageOpen((value) => !value)} aria-label={copy.languageLabel} className="flex items-center gap-1.5 px-2 py-3 font-mono-site text-[10px] font-bold tracking-[.1em] text-[#4d5552] transition-colors hover:text-[#171b1d]" data-testid="button-language">
-                <Languages size={15} strokeWidth={1.5} /> {language} <ChevronDown size={13} className={languageOpen ? 'rotate-180 transition-transform' : 'transition-transform'} />
+          <div className="flex shrink-0 items-center gap-2 lg:gap-4">
+            <div className="relative" ref={languageMenuRef}>
+              <button
+                type="button"
+                onClick={() => setLanguageOpen((value) => !value)}
+                aria-label={`${copy.languageLabel}: ${languageNames[language]}`}
+                aria-controls="language-menu"
+                aria-expanded={languageOpen}
+                aria-haspopup="menu"
+                className="inline-flex min-h-11 items-center gap-1.5 border border-[#d8d1c2] px-2.5 font-mono-site text-[10px] font-bold tracking-[.1em] text-[#4d5552] transition-colors hover:border-[#171b1d] hover:text-[#171b1d] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d9673f] lg:border-0 lg:px-2"
+                data-testid="button-language"
+              >
+                <Languages size={15} strokeWidth={1.5} aria-hidden="true" />
+                <span>{language}</span>
+                <ChevronDown size={13} aria-hidden="true" className={languageOpen ? 'rotate-180 transition-transform' : 'transition-transform'} />
               </button>
               {languageOpen && (
-                <div className="absolute right-0 top-full w-32 border border-[#d8d1c2] bg-[#fbf8f0] p-1 shadow-lg" data-testid="menu-languages">
+                <div id="language-menu" role="menu" aria-label={copy.languageLabel} className="absolute right-0 top-[calc(100%+8px)] z-[70] min-w-[9.5rem] border border-[#d8d1c2] bg-[#fbf8f0] p-1 shadow-lg sm:min-w-[10rem]" data-testid="menu-languages">
                   {languageOptions.map((item) => (
-                    <button key={item} onClick={() => changeLanguage(item)} className={`flex w-full items-center justify-between px-3 py-2 text-left font-mono-site text-[10px] font-bold ${language === item ? 'bg-[#f3c742]' : 'hover:bg-[#ebe4d5]'}`} data-testid={`button-language-${item.toLowerCase()}`}>
-                      {item} {language === item && <Check size={13} />}
+                    <button
+                      key={item}
+                      type="button"
+                      role="menuitem"
+                      aria-pressed={language === item}
+                      onClick={() => changeLanguage(item)}
+                      className={`flex min-h-11 w-full items-center justify-between gap-4 px-3 py-2 text-left font-mono-site text-[10px] font-bold focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#d9673f] ${language === item ? 'bg-[#f3c742]' : 'hover:bg-[#ebe4d5]'}`}
+                      data-testid={`button-language-${item.toLowerCase()}`}
+                    >
+                      <span>{item} <span className="font-normal tracking-normal text-[#59605e]">{languageNames[item]}</span></span>
+                      {language === item && <Check size={13} aria-hidden="true" />}
                     </button>
                   ))}
                 </div>
               )}
             </div>
+            <button
+              type="button"
+              className="grid h-11 w-11 place-items-center border border-[#d8d1c2] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d9673f] lg:hidden"
+              onClick={() => {
+                setLanguageOpen(false);
+                setMobileOpen(true);
+              }}
+              aria-label={copy.openMenu}
+              data-testid="button-open-menu"
+            >
+              <Menu size={21} aria-hidden="true" />
+            </button>
           </div>
-          <button className="grid h-11 w-11 place-items-center border border-[#d8d1c2] lg:hidden" onClick={() => setMobileOpen(true)} aria-label={copy.openMenu} data-testid="button-open-menu">
-            <Menu size={21} />
-          </button>
         </div>
       </header>
 
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 bg-[#171b1d] px-6 py-6 text-[#f6f1e6] lg:hidden" data-testid="mobile-drawer">
-          <div className="flex items-center justify-between"><Logo light official /><button onClick={() => setMobileOpen(false)} className="grid h-11 w-11 place-items-center border border-[#59605e]" aria-label={copy.closeMenu} data-testid="button-close-menu"><X size={21} /></button></div>
+        <div className="fixed inset-0 z-50 overflow-y-auto overscroll-contain bg-[#171b1d] px-5 py-6 text-[#f6f1e6] sm:px-8 lg:hidden" role="dialog" aria-modal="true" aria-label={copy.mobileNavigation} data-testid="mobile-drawer">
+          <div className="flex items-center justify-between gap-4"><Logo light official /><button type="button" onClick={() => setMobileOpen(false)} className="grid h-11 w-11 shrink-0 place-items-center border border-[#59605e] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f3c742]" aria-label={copy.closeMenu} data-testid="button-close-menu"><X size={21} aria-hidden="true" /></button></div>
+          <div className="mt-10" aria-label={copy.languageLabel}>
+            <p className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#b9bbb1]">{copy.languageLabel}</p>
+            <div className="mt-3 grid grid-cols-3 gap-2" role="group">
+              {languageOptions.map((item) => (
+                <button
+                  key={item}
+                  type="button"
+                  aria-pressed={language === item}
+                  onClick={() => changeLanguage(item)}
+                  className={`min-h-11 border px-2 py-2 text-left font-mono-site text-[10px] font-bold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f3c742] ${language === item ? 'border-[#f3c742] bg-[#f3c742] text-[#171b1d]' : 'border-[#59605e] text-[#f6f1e6] hover:border-[#f3c742]'}`}
+                  data-testid={`button-mobile-language-${item.toLowerCase()}`}
+                >
+                  <span className="block">{item}</span>
+                  <span className={`mt-0.5 block text-[9px] font-normal ${language === item ? 'text-[#171b1d]/70' : 'text-[#b9bbb1]'}`}>{languageNames[item]}</span>
+                </button>
+              ))}
+            </div>
+          </div>
           <nav className="mt-20 flex flex-col" aria-label={copy.mobileNavigation}>
             {navItems.map((item, index) => (
               <a key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="flex items-center justify-between border-b border-[#3c4444] py-5 font-display text-3xl font-bold tracking-[-.04em]" data-testid={`link-mobile-${index}`}>
