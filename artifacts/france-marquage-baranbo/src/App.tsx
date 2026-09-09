@@ -80,6 +80,26 @@ const services = [
     ],
     specs: 'Oil- and rubber-resistant, high-contrast yellow and white pavement markings formulated for high adhesion in enclosed or low-light parking structures.',
     icon: SquareParking,
+    gallery: [
+      {
+        src: '/images/services/parking-lot-4.jpg',
+        alt: 'Aerial view of a freshly striped outdoor parking lot',
+        title: 'Outdoor Parking Layout',
+        text: 'Clear stall boundaries and directional arrows organized for efficient circulation and maximum capacity.',
+      },
+      {
+        src: '/images/services/parking-lot-5.jpg',
+        alt: 'Indoor parking garage with bright yellow directional markings',
+        title: 'Traffic Flow & Guidance',
+        text: 'High-visibility lane guidance and chevrons that make covered parking facilities easier to navigate.',
+      },
+      {
+        src: '/images/services/parking-lot-6.jpg',
+        alt: 'Yellow parking stall lines and painted bay numbers on asphalt',
+        title: 'Numbering & Stall Markings',
+        text: 'Crisp stall lines and bay numbering for organized, legible parking operations.',
+      },
+    ],
     tone: 'yellow',
   },
   {
