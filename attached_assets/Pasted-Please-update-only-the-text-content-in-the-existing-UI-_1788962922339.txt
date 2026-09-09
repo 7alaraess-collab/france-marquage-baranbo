@@ -1,0 +1,64 @@
+Please update only the text content in the existing UI section shown in the screenshots (the "Dedicated Bike & Colored Lanes" service detail page). Do NOT change any design, layout, colors, fonts, or element placements.
+
+Here are the exact corrected texts for each language version:
+
+1. Top Breadcrumb / Small Label:
+- English: PROTECTED JUNCTION MARKINGS
+- French: MARQUAGES DE CARREFOUR SÉCURISÉS
+- Arabic: تخطيط التقاطعات المحمية
+
+2. Main Heading:
+- English: Dedicated Bike & Colored Lanes
+- French: Pistes cyclables et voies colorées
+- Arabic: مسارات الدراجات والمسارات الملونة
+
+3. Sub-description / Paragraph under heading:
+- English: Durable surface markings and color treatments for dedicated bike lanes, shared paths, and traffic safety zones.
+- French: Marquages de surface durables et traitements colorés pour les pistes cyclables dédiées, voies partagées et zones de sécurité routière.
+- Arabic: تخطيطات سطحية متينة ومعالجات لونية لمسارات الدراجات المخصصة والمسارات المشتركة ومناطق سلامة الحركة المرورية.
+
+4. Overview Block (Right side):
+- Heading:
+  - English: OVERVIEW
+  - French: PRÉSENTATION
+  - Arabic: نظرة عامة
+- Body:
+  - English: Professional application of colored surface markings, bicycle symbols, and directional markings designed to clearly define cycling areas and improve visibility and organization.
+  - French: Application professionnelle de marquages de surface colorés, de symboles cyclistes et de marquages directionnels conçus pour délimiter...
+  - Arabic: تنفيذ احترافي لعلامات الأسطح الملونة ورموز الدراجات والعلامات الاتجاهية المصممة بوضوح لتحديد مناطق ركوب الدراجات وتحسين الرؤية والتنظيم.
+
+5. Key Scope of Work (Checklist):
+- Item 1:
+  - English: Full-width colored surface applications for dedicated bike lanes and safety zones.
+  - French: Applications de surfaces colorées sur toute la largeur pour les pistes cyclables dédiées et les zones de sécurité.
+  - Arabic: تطبيقات الأسطح الملونة لكامل العرض لمسارات الدراجات المخصصة ومناطق الأمان.
+- Item 2:
+  - English: Application of bicycle symbols, directional arrows, and lane markings.
+  - French: Application de symboles de vélo, de flèches directionnelles et de marquages de voie.
+  - Arabic: تنفيذ رموز الدراجات والأسهم الاتجاهية وخطوط المسارات.
+- Item 3:
+  - English: Clear marking of transition areas, intersections, and conflict zones to improve road-user awareness.
+  - French: Marquage clair des zones de transition, des intersections et des zones de conflit pour améliorer la vigilance des usagers.
+  - Arabic: تخطيط واضح لمناطق الانتقال والتقاطعات ومناطق التداخل لتعزيز وعي مستخدمي الطريق.
+
+6. Technical Specifications:
+- Heading:
+  - English: TECHNICAL SPECIFICATIONS
+  - French: CARACTÉRISTIQUES TECHNIQUES
+  - Arabic: المواصفات الفنية
+- Body:
+  - English: Durable traffic-grade surface marking systems selected according to the project requirements and pavement conditions, with a focus on adhesion, visibility, and long-term performance.
+  - French: Systèmes de marquage de surface de qualité routière sélectionnés en fonction des exigences du projet et de l'état de la chaussée...
+  - Arabic: أنظمة تخطيط أسطح بمواصفات مرورية متينة يتم اختيارها وفقاً لمتطلبات المشروع وحالة الرصف، مع التركيز على الالتصاق والوضوح والأداء طويل الأمد.
+
+7. Badge / Footer Label:
+- English: FIELD-READY QUALITY
+- French: QUALITÉ PRÊTE POUR LE TERRAIN
+- Arabic: جودة جاهزة للتنفيذ
+
+8. Action Button:
+- English: REQUEST A QUOTE
+- French: DEMANDER UN DEVIS
+- Arabic: اطلب عرض سعر
+
+Make sure no visual elements, structure, or formatting are altered—only update the text content accurately as specified above.

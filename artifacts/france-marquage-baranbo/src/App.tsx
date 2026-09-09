@@ -297,6 +297,7 @@ type SiteCopy = {
     serviceOneLabel: string;
     serviceTwoLabel: string;
     serviceThreeLabel: string;
+    serviceFourLabel: string;
     overview: string;
     scope: string;
     specifications: string;
@@ -409,6 +410,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       serviceOneLabel: 'SERVICE 01 — FIELD DELIVERY',
       serviceTwoLabel: 'OUTDOOR PARKING LAYOUT',
       serviceThreeLabel: 'EV CHARGING BAYS',
+      serviceFourLabel: 'PROTECTED JUNCTION MARKINGS',
       overview: 'Overview',
       scope: 'Key scope of work',
       specifications: 'Technical specifications',
@@ -523,6 +525,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       serviceOneLabel: 'ÉQUIPE TERRAIN ET EXECUTION',
       serviceTwoLabel: 'AMÉNAGEMENT DE PARKING EXTÉRIEUR',
       serviceThreeLabel: 'EMPLACEMENTS DE RECHARGE POUR VÉHICULES ÉLECTRIQUES',
+      serviceFourLabel: 'MARQUAGES DE CARREFOUR SÉCURISÉS',
       overview: 'Présentation',
       scope: 'Périmètre d’intervention',
       specifications: 'Caractéristiques techniques',
@@ -637,6 +640,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       serviceOneLabel: 'SERVICE 01 — تنفيذ ميداني',
       serviceTwoLabel: 'تخطيط مواقف السيارات الخارجية',
       serviceThreeLabel: 'مواقف شحن المركبات الكهربائية',
+      serviceFourLabel: 'تخطيط التقاطعات المحمية',
       overview: 'نظرة عامة',
       scope: 'نطاق العمل الرئيسي',
       specifications: 'المواصفات الفنية',
@@ -756,13 +760,13 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
     '04': {
       title: 'Pistes cyclables et voies colorées',
       text: 'Marquages de surface durables et traitements colorés pour les pistes cyclables dédiées, voies partagées et zones de sécurité de la circulation.',
-      overview: 'Application professionnelle de marquages de surface colorés, symboles cyclables et indications directionnelles pour définir clairement les espaces cyclables et améliorer leur visibilité.',
+      overview: 'Application professionnelle de marquages de surface colorés, de symboles cyclistes et de marquages directionnels conçus pour délimiter...',
       scope: [
-        'Application de surfaces colorées pleine largeur pour les pistes cyclables dédiées et les zones de sécurité.',
-        'Application de symboles vélo, flèches directionnelles et marquages de voie.',
-        'Marquage clair des zones de transition, intersections et zones de conflit afin de mieux informer tous les usagers.',
+        'Applications de surfaces colorées sur toute la largeur pour les pistes cyclables dédiées et les zones de sécurité.',
+        'Application de symboles de vélo, de flèches directionnelles et de marquages de voie.',
+        'Marquage clair des zones de transition, des intersections et des zones de conflit pour améliorer la vigilance des usagers.',
       ],
-      specs: 'Systèmes de marquage routier durables sélectionnés selon les exigences du projet et l’état du revêtement, avec une attention portée à l’adhérence, à la visibilité et à la tenue dans le temps.',
+      specs: "Systèmes de marquage de surface de qualité routière sélectionnés en fonction des exigences du projet et de l'état de la chaussée...",
       gallery: [
         { src: '/images/services/cycle-lanes-9.jpg', alt: 'Piste cyclable rouge traversant une intersection urbaine équipée de feux', title: 'Marquage des carrefours protégés', text: 'Traversées cyclables très visibles et symboles directionnels qui rendent les déplacements plus lisibles dans les intersections chargées.' },
         { src: '/images/services/cycle-lanes-13.jpg', alt: 'Piste cyclable rouge dédiée avec symbole vélo blanc et marquages directionnels', title: 'Pistes cyclables dédiées', text: 'Revêtement rouge durable, symboles vélo et lignes de rive séparant clairement les cyclistes des véhicules.' },
@@ -848,14 +852,14 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
     },
     '04': {
       title: 'مسارات الدراجات والمسارات الملونة',
-      text: 'تخطيطات سطحية متينة ومعالجات لونية لمسارات الدراجات المخصصة والمسارات المشتركة ومناطق سلامة الحركة.',
-      overview: 'تنفيذ احترافي لتخطيطات سطحية ملونة ورموز الدراجات والعلامات الاتجاهية لتحديد مناطق الدراجات بوضوح وتحسين الرؤية والتنظيم.',
+      text: 'تخطيطات سطحية متينة ومعالجات لونية لمسارات الدراجات المخصصة والمسارات المشتركة ومناطق سلامة الحركة المرورية.',
+      overview: 'تنفيذ احترافي لعلامات الأسطح الملونة ورموز الدراجات والعلامات الاتجاهية المصممة بوضوح لتحديد مناطق ركوب الدراجات وتحسين الرؤية والتنظيم.',
       scope: [
-        'تطبيق أسطح ملونة بعرض كامل لمسارات الدراجات المخصصة ومناطق السلامة.',
-        'تنفيذ رموز الدراجات والأسهم الاتجاهية وعلامات المسارات.',
-        'تخطيط واضح لمناطق الانتقال والتقاطعات ومناطق التعارض لرفع وعي مستخدمي الطريق.',
+        'تطبيقات الأسطح الملونة لكامل العرض لمسارات الدراجات المخصصة ومناطق الأمان.',
+        'تنفيذ رموز الدراجات والأسهم الاتجاهية وخطوط المسارات.',
+        'تخطيط واضح لمناطق الانتقال والتقاطعات ومناطق التداخل لتعزيز وعي مستخدمي الطريق.',
       ],
-      specs: 'أنظمة تخطيط مرورية متينة يتم اختيارها وفق متطلبات المشروع وحالة الرصف، مع التركيز على الالتصاق والرؤية والأداء طويل الأمد.',
+      specs: 'أنظمة تخطيط أسطح بمواصفات مرورية متينة يتم اختيارها وفقاً لمتطلبات المشروع وحالة الرصف، مع التركيز على الالتصاق والوضوح والأداء طويل الأمد.',
       gallery: [
         { src: '/images/services/cycle-lanes-9.jpg', alt: 'مسار دراجات أحمر يعبر تقاطعاً حضرياً مزوداً بإشارات مرور', title: 'تخطيط التقاطعات المحمية', text: 'معابر دراجات عالية الوضوح ورموز اتجاهية تجعل الحركة في التقاطعات المزدحمة أسهل قراءة.' },
         { src: '/images/services/cycle-lanes-13.jpg', alt: 'مسار دراجات أحمر مخصص يحمل رمز دراجة أبيض وعلامات اتجاهية', title: 'مسارات الدراجات المخصصة', text: 'سطح أحمر متين ورموز دراجات وخطوط جانبية تفصل حركة الدراجات بوضوح عن المركبات.' },
@@ -1142,7 +1146,7 @@ function Home() {
                 </div>
 
                 <div className="order-2 lg:order-none lg:pt-2">
-                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">{selectedService.number === '01' ? copy.detail.serviceOneLabel : selectedService.number === '02' ? copy.detail.serviceTwoLabel : selectedService.number === '03' ? copy.detail.serviceThreeLabel : `Service ${selectedService.number} / ${copy.detail.fieldDelivery}`}</div>
+                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">{selectedService.number === '01' ? copy.detail.serviceOneLabel : selectedService.number === '02' ? copy.detail.serviceTwoLabel : selectedService.number === '03' ? copy.detail.serviceThreeLabel : selectedService.number === '04' ? copy.detail.serviceFourLabel : `Service ${selectedService.number} / ${copy.detail.fieldDelivery}`}</div>
                   <h2 id="service-modal-title" className="mt-5 max-w-2xl font-display text-[clamp(3rem,6vw,5.8rem)] font-extrabold leading-[.9] tracking-[-.065em]">{selectedServiceCopy.title}</h2>
                   <p className="mt-8 max-w-xl text-lg leading-8 text-[#334155] sm:text-xl">{selectedServiceCopy.text}</p>
 
