@@ -312,6 +312,17 @@ function Home() {
     window.setTimeout(() => goTo('#contact'), 50);
   };
 
+  const openServiceDetails = (service: (typeof services)[number]) => {
+    setSelectedService(service);
+  };
+
+  const handleServiceCardKeyDown = (event: React.KeyboardEvent<HTMLElement>, service: (typeof services)[number]) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openServiceDetails(service);
+    }
+  };
+
   const selectedServiceIndex = selectedService ? services.findIndex((service) => service.number === selectedService.number) : -1;
   const SelectedServiceIcon = selectedService?.icon;
   const navigateService = (direction: -1 | 1) => {
@@ -546,7 +557,16 @@ function Home() {
                 const isDark = service.tone === 'dark';
                 const isYellow = service.tone === 'yellow';
                 return (
-                  <article key={service.number} className={`service-card reveal reveal-delay-${(index % 3) + 1} flex min-h-[390px] flex-col justify-between p-7 sm:p-9 ${isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`} data-testid={`card-service-${service.number}`}>
+                  <article
+                    key={service.number}
+                    className={`service-card reveal reveal-delay-${(index % 3) + 1} flex min-h-[390px] cursor-pointer flex-col justify-between p-7 active:scale-[.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9673f] ${isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`}
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => openServiceDetails(service)}
+                    onKeyDown={(event) => handleServiceCardKeyDown(event, service)}
+                    aria-label={`View details for ${service.title}`}
+                    data-testid={`card-service-${service.number}`}
+                  >
                     <div className="flex items-start justify-between">
                       <span className={`text-[10px] font-bold ${service.number === '05' ? 'text-[#FFFFFF]' : isDark ? 'text-[#f3c742]' : isYellow ? 'text-[#1E293B]' : 'text-[#d9673f]'}`}>{service.number}</span>
                       <span className={`grid h-14 w-14 place-items-center border ${isDark ? 'border-[#59605e] text-[#f3c742]' : isYellow ? 'border-[#1E293B] text-[#1E293B]' : 'border-[#cfc7b8] text-[#d9673f]'}`}><Icon size={29} strokeWidth={1.2} /></span>
@@ -554,13 +574,6 @@ function Home() {
                     <div>
                       <h3 className="max-w-xs text-3xl font-extrabold leading-[.95] tracking-[-.05em] sm:text-4xl">{service.title}</h3>
                       <p className={`service-preview mt-5 max-w-md text-sm leading-6 ${isDark ? 'text-[#dbe4ee]' : 'text-[#334155]'}`}>{service.text}</p>
-                      <button onClick={() => setSelectedService(service)} className={`group mt-7 inline-flex items-center gap-2 border-0 bg-transparent p-0 pb-1 text-[10px] font-semibold uppercase tracking-[.1em] transition-colors ${isDark ? 'text-[#FFFFFF]' : 'text-[#1E293B]'}`} data-testid={`button-service-details-${service.number}`}>
-                        <span className="relative inline-block pb-1">
-                          VIEW DETAILS
-                          <span className="absolute bottom-0 left-0 h-px w-1/2 bg-[#d9673f] transition-all duration-300 group-hover:w-full" />
-                        </span>
-                        <span aria-hidden="true" className="text-base font-medium leading-none text-[#d9673f] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
-                      </button>
                     </div>
                   </article>
                 );
