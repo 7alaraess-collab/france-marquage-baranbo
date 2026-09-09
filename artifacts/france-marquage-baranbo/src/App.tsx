@@ -552,8 +552,12 @@ function Home() {
                     <div>
                       <h3 className="max-w-xs text-3xl font-extrabold leading-[.95] tracking-[-.05em] sm:text-4xl">{service.title}</h3>
                       <p className={`service-preview mt-5 max-w-md text-sm leading-6 ${isDark ? 'text-[#dbe4ee]' : 'text-[#334155]'}`}>{service.text}</p>
-                      <button onClick={() => setSelectedService(service)} className={`group mt-7 inline-flex items-center gap-3 px-4 py-3 text-[10px] font-bold uppercase tracking-[.1em] transition-colors ${isYellow ? 'bg-[#1E293B] text-[#F8FAFC] hover:bg-[#334155]' : 'bg-[#F59E0B] text-[#1E293B] hover:bg-[#fbbf24]'}`} data-testid={`button-service-details-${service.number}`}>
-                        View Technical Details <ArrowUpRight size={15} className="service-arrow" />
+                      <button onClick={() => setSelectedService(service)} className="group mt-7 inline-flex items-center gap-2 border-0 bg-transparent p-0 pb-1 text-[10px] font-semibold uppercase tracking-[.1em] text-[#1E293B] transition-colors" data-testid={`button-service-details-${service.number}`}>
+                        <span className="relative inline-block pb-1">
+                          VIEW DETAILS
+                          <span className="absolute bottom-0 left-0 h-px w-1/2 bg-[#d9673f] transition-all duration-300 group-hover:w-full" />
+                        </span>
+                        <span aria-hidden="true" className="text-base font-medium leading-none text-[#d9673f] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
                       </button>
                     </div>
                   </article>
