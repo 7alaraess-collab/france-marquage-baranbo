@@ -259,14 +259,11 @@ type SiteCopy = {
   viewDetailsFor: string;
   languageLabel: string;
   banner: string;
-  headerQuote: string;
-  mobileQuote: string;
   hero: {
     kicker: string;
     titleFirst: string;
     titleSecond: string;
     description: string;
-    quote: string;
     explore: string;
     since: string;
     note: string;
@@ -305,7 +302,6 @@ type SiteCopy = {
     scope: string;
     specifications: string;
     fieldReady: string;
-    requestQuote: string;
     browse: string;
     previous: string;
     next: string;
@@ -381,14 +377,11 @@ const siteTranslations: Record<Language, SiteCopy> = {
     viewDetailsFor: 'View details for',
     languageLabel: 'Language',
     banner: 'Linework you can count on — serving the greater Casablanca region and beyond',
-    headerQuote: 'Get a free quote',
-    mobileQuote: 'Request a quote',
     hero: {
       kicker: 'PRECISION ON THE GROUND',
       titleFirst: 'Marking the',
       titleSecond: 'way forward.',
       description: 'Professional road marking and traffic safety solutions, built for clarity, durability, and everyday performance.',
-      quote: 'REQUEST A QUOTE',
       explore: 'EXPLORE SERVICES',
       since: 'C.F.M.B. / CASABLANCA',
       note: 'Site lines, made clear.',
@@ -427,7 +420,6 @@ const siteTranslations: Record<Language, SiteCopy> = {
       scope: 'Key scope of work',
       specifications: 'Technical specifications',
       fieldReady: 'Field-ready quality',
-      requestQuote: 'Request a Quote',
       browse: 'Browse services',
       previous: 'Previous service',
       next: 'Next service',
@@ -505,14 +497,11 @@ const siteTranslations: Record<Language, SiteCopy> = {
     viewDetailsFor: 'Voir les détails de',
     languageLabel: 'Langue',
     banner: 'Un marquage sur lequel compter — au service de la région du Grand Casablanca et au-delà',
-    headerQuote: 'Obtenir un devis gratuit',
-    mobileQuote: 'Demander un devis',
     hero: {
       kicker: 'LA PRÉCISION AU SOL',
       titleFirst: 'Tracer la',
       titleSecond: 'voie de demain',
       description: 'Des solutions professionnelles de marquage routier et de sécurité des déplacements, conçues pour la lisibilité, la durabilité et la performance au quotidien.',
-      quote: 'DEMANDER UN DEVIS',
       explore: 'DÉCOUVRIR NOS SERVICES',
       since: 'C.F.M.B. / CASABLANCA',
       note: 'Des lignes claires sur site.',
@@ -551,7 +540,6 @@ const siteTranslations: Record<Language, SiteCopy> = {
       scope: 'Périmètre d’intervention',
       specifications: 'Caractéristiques techniques',
       fieldReady: 'Qualité prête pour le terrain',
-      requestQuote: 'Demander un devis',
       browse: 'Parcourir les services',
       previous: 'Service précédent',
       next: 'Service suivant',
@@ -629,14 +617,11 @@ const siteTranslations: Record<Language, SiteCopy> = {
     viewDetailsFor: 'عرض تفاصيل',
     languageLabel: 'اللغة',
     banner: 'تخطيط طرقي يمكنك الاعتماد عليه — نخدم منطقة الدار البيضاء الكبرى وما حولها',
-    headerQuote: 'احصل على عرض مجاني',
-    mobileQuote: 'اطلب عرضاً',
     hero: {
       kicker: 'الدقة في الميدان',
       titleFirst: 'رسم',
       titleSecond: 'طريق التقدم.',
       description: 'حلول احترافية لتخطيط الطرق والسلامة المرورية، مصممة لتحقيق الوضوح والمتانة والأداء اليومي.',
-      quote: 'طلب عرض سعر',
       explore: 'استكشف خدماتنا',
       since: 'C.F.M.B. / الدار البيضاء',
       note: 'خطوط واضحة في كل موقع.',
@@ -675,7 +660,6 @@ const siteTranslations: Record<Language, SiteCopy> = {
       scope: 'نطاق العمل الرئيسي',
       specifications: 'المواصفات الفنية',
       fieldReady: 'جودة جاهزة للتنفيذ',
-      requestQuote: 'اطلب عرض سعر',
       browse: 'تصفح الخدمات',
       previous: 'الخدمة السابقة',
       next: 'الخدمة التالية',
@@ -1007,7 +991,7 @@ function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(false);
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [quoteService, setQuoteService] = useState('');
+  const [selectedProjectType, setSelectedProjectType] = useState('');
   const submitContactEnquiry = useSubmitContactEnquiry();
   const copy = siteTranslations[language];
   const isArabic = language === 'AR';
@@ -1041,7 +1025,7 @@ function Home() {
     try {
       await submitContactEnquiry.mutateAsync({ data: enquiry });
       setSubmitted(true);
-      setQuoteService('');
+      setSelectedProjectType('');
     } catch {
       setSubmitError(true);
     }
@@ -1062,12 +1046,6 @@ function Home() {
       window.removeEventListener('keydown', closeOnEscape);
     };
   }, [selectedService]);
-
-  const requestServiceQuote = (service: Service) => {
-    setQuoteService(service.number);
-    setSelectedService(null);
-    window.setTimeout(() => goTo('#contact'), 50);
-  };
 
   const openServiceDetails = (service: Service) => {
     setSelectedService(service);
@@ -1121,9 +1099,6 @@ function Home() {
                 </div>
               )}
             </div>
-            <a href="#contact" className="group inline-flex items-center gap-3 bg-[#171b1d] px-5 py-3 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#f6f1e6] transition-colors hover:bg-[#d9673f]" data-testid="link-header-quote">
-              {copy.headerQuote} <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
           </div>
           <button className="grid h-11 w-11 place-items-center border border-[#d8d1c2] lg:hidden" onClick={() => setMobileOpen(true)} aria-label={copy.openMenu} data-testid="button-open-menu">
             <Menu size={21} />
@@ -1141,7 +1116,6 @@ function Home() {
               </a>
             ))}
           </nav>
-          <a href="#contact" onClick={() => setMobileOpen(false)} className="mt-9 flex items-center justify-between bg-[#f3c742] px-5 py-4 font-mono-site text-[11px] font-bold uppercase tracking-[.1em] text-[#171b1d]" data-testid="link-mobile-quote">{copy.mobileQuote} <ArrowRight size={17} /></a>
         </div>
       )}
 
@@ -1239,9 +1213,6 @@ function Home() {
                     </div>
                    )}
 
-                   <button onClick={() => requestServiceQuote(selectedService)} className="group mt-10 flex w-full items-center justify-between bg-[#F59E0B] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#1E293B] transition-colors hover:bg-[#fbbf24]" data-testid="button-service-quote">
-                     {copy.detail.requestQuote} <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  </button>
                 </div>
               </div>
 
@@ -1271,10 +1242,7 @@ function Home() {
                 {copy.hero.titleFirst}<br /><span className="text-[#f3c742]">{copy.hero.titleSecond}</span>
               </h1>
               <p className="hero-description mt-9 max-w-xl border-l-2 border-[#d9673f] pl-5 font-sans text-[15px] leading-7 tracking-[.01em] text-[#d4d2c9] sm:text-[17px] sm:leading-8">{copy.hero.description}</p>
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-                <a href="#contact" className="group inline-flex items-center justify-between gap-8 bg-[#f3c742] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.13em] text-[#171b1d] transition-colors hover:bg-[#f6d96d]" data-testid="link-hero-quote">{copy.hero.quote} <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
-                <a href="#services" className="group inline-flex items-center justify-between gap-8 border border-[#757b76] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.13em] text-[#f6f1e6] transition-colors hover:border-[#f3c742] hover:text-[#f3c742]" data-testid="link-hero-services">{copy.hero.explore} <ArrowDownRight size={17} className="transition-transform group-hover:translate-y-1" /></a>
-              </div>
+              <a href="#services" className="group mt-10 inline-flex items-center justify-between gap-8 border border-[#757b76] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.13em] text-[#f6f1e6] transition-colors hover:border-[#f3c742] hover:text-[#f3c742]" data-testid="link-hero-services">{copy.hero.explore} <ArrowDownRight size={17} className="transition-transform group-hover:translate-y-1" /></a>
             </div>
             <div className="mt-16 flex items-end justify-between gap-6 border-t border-[#59605e] pt-5 reveal reveal-delay-2">
               <p className="font-mono-site text-[9px] uppercase tracking-[.14em] text-[#9ba09a]">{copy.hero.since}</p>
@@ -1408,17 +1376,17 @@ function Home() {
                    <button onClick={() => { setSubmitted(false); setSubmitError(false); }} className="mt-8 border-b border-[#f3c742] pb-1 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#f3c742]" data-testid="button-send-another">{copy.contact.sendAnother}</button>
                 </div>
               ) : (
-                <form className="bg-[#f4f0e6] p-6 sm:p-9" onSubmit={handleEnquirySubmit} aria-busy={submitContactEnquiry.isPending} data-testid="form-quote">
+                <form className="bg-[#f4f0e6] p-6 sm:p-9" onSubmit={handleEnquirySubmit} aria-busy={submitContactEnquiry.isPending} data-testid="form-project-enquiry">
                   <div className="mb-8 flex items-center justify-between border-b border-[#cfc7b8] pb-5"><span className="font-mono-site text-[10px] font-bold uppercase tracking-[.15em]">{copy.contact.enquiry}</span><Sparkles size={18} className="text-[#d9673f]" /></div>
                   <div className="grid gap-6 sm:grid-cols-2">
                     <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.nameLabel}</span><input required name="name" className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder={copy.contact.namePlaceholder} data-testid="input-name" /></label>
                     <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.organisationLabel}</span><input required name="organisation" className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder={copy.contact.organisationPlaceholder} data-testid="input-organisation" /></label>
                     <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.emailLabel}</span><input required type="email" name="email" className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder={copy.contact.emailPlaceholder} data-testid="input-email" /></label>
-                      <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.projectTypeLabel}</span><select required name="projectType" value={quoteService} onChange={(event) => setQuoteService(event.target.value)} className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none focus:border-[#d9673f]" data-testid="select-project"><option value="" disabled>{copy.contact.selectOne}</option>{services.map((service) => <option key={service.number} value={service.number}>{getServiceCopy(service, language).title}</option>)}<option value="other">{copy.contact.otherSite}</option></select></label>
+                      <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.projectTypeLabel}</span><select required name="projectType" value={selectedProjectType} onChange={(event) => setSelectedProjectType(event.target.value)} className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none focus:border-[#d9673f]" data-testid="select-project"><option value="" disabled>{copy.contact.selectOne}</option>{services.map((service) => <option key={service.number} value={service.number}>{getServiceCopy(service, language).title}</option>)}<option value="other">{copy.contact.otherSite}</option></select></label>
                   </div>
                   <label className="mt-7 block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.messageLabel}</span><textarea required name="siteDetails" rows={3} className="mt-2 w-full resize-none border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder={copy.contact.messagePlaceholder} data-testid="textarea-message" /></label>
                   {submitError && <p role="alert" className="mt-4 text-[10px] leading-4 text-[#b33820]" data-testid="form-error">{copy.contact.errorText}</p>}
-                  <button type="submit" disabled={submitContactEnquiry.isPending} className="group mt-9 flex w-full items-center justify-between bg-[#171b1d] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.14em] text-[#f6f1e6] transition-colors hover:bg-[#d9673f]" data-testid="button-submit-quote">{submitContactEnquiry.isPending ? copy.contact.submitting : copy.contact.submit} <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></button>
+                  <button type="submit" disabled={submitContactEnquiry.isPending} className="group mt-9 flex w-full items-center justify-between bg-[#171b1d] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.14em] text-[#f6f1e6] transition-colors hover:bg-[#d9673f]" data-testid="button-submit-enquiry">{submitContactEnquiry.isPending ? copy.contact.submitting : copy.contact.submit} <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></button>
                   <p className="mt-4 text-[10px] leading-4 text-[#77796e]">{copy.contact.consent}</p>
                 </form>
               )}
