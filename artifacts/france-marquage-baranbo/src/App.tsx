@@ -258,7 +258,6 @@ type SiteCopy = {
   closeMenu: string;
   viewDetailsFor: string;
   languageLabel: string;
-  banner: string;
   hero: {
     kicker: string;
     titleFirst: string;
@@ -376,7 +375,6 @@ const siteTranslations: Record<Language, SiteCopy> = {
     closeMenu: 'Close menu',
     viewDetailsFor: 'View details for',
     languageLabel: 'Language',
-    banner: 'Linework you can count on — serving the greater Casablanca region and beyond',
     hero: {
       kicker: 'PRECISION ON THE GROUND',
       titleFirst: 'Marking the',
@@ -496,7 +494,6 @@ const siteTranslations: Record<Language, SiteCopy> = {
     closeMenu: 'Fermer le menu',
     viewDetailsFor: 'Voir les détails de',
     languageLabel: 'Langue',
-    banner: 'Un marquage sur lequel compter — au service de la région du Grand Casablanca et au-delà',
     hero: {
       kicker: 'LA PRÉCISION AU SOL',
       titleFirst: 'Tracer la',
@@ -616,7 +613,6 @@ const siteTranslations: Record<Language, SiteCopy> = {
     closeMenu: 'إغلاق القائمة',
     viewDetailsFor: 'عرض تفاصيل',
     languageLabel: 'اللغة',
-    banner: 'تخطيط طرقي يمكنك الاعتماد عليه — نخدم منطقة الدار البيضاء الكبرى وما حولها',
     hero: {
       kicker: 'الدقة في الميدان',
       titleFirst: 'رسم',
@@ -1095,10 +1091,6 @@ function Home() {
 
   return (
     <div id="top" dir={isArabic ? 'rtl' : 'ltr'} className={`site-noise bg-[#f4f0e6] text-[#171b1d] ${isArabic ? 'site-rtl' : ''}`}>
-      <div className="bg-[#171b1d] px-5 py-2 text-center font-mono-site text-[9px] uppercase tracking-[.16em] text-[#d4d2c9] sm:px-8">
-        <span className="text-[#f3c742]">●</span> {copy.banner}
-      </div>
-
       <header className="sticky top-0 z-30 border-b border-[#d8d1c2] bg-[#f4f0e6]/95 backdrop-blur-md">
         <div className="mx-auto flex h-[84px] max-w-[1380px] items-center justify-between gap-3 px-4 sm:h-[88px] sm:px-8 lg:px-12">
           <Logo official />
@@ -1305,7 +1297,7 @@ function Home() {
       )}
 
       <main>
-        <section className="relative isolate flex min-h-[720px] items-end overflow-hidden bg-[#171b1d] text-[#f6f1e6] lg:min-h-[calc(100vh-108px)]" aria-labelledby="hero-heading">
+        <section className="relative isolate flex min-h-[720px] items-end overflow-hidden bg-[#171b1d] text-[#f6f1e6] lg:min-h-[calc(100vh-88px)]" aria-labelledby="hero-heading">
           <div className="hero-road absolute inset-0 overflow-hidden opacity-90" />
           <div className="absolute inset-0 opacity-[.12]" style={{ backgroundImage: 'linear-gradient(118deg, transparent 0 43%, #f4f0e6 43% 43.3%, transparent 43.3% 100%), linear-gradient(180deg, transparent 0 70%, #f3c742 70% 70.4%, transparent 70.4% 100%)' }} />
           <div className="relative z-10 mx-auto w-full max-w-[1380px] px-5 pb-14 pt-24 sm:px-8 lg:px-12 lg:pb-20">
