@@ -65,7 +65,7 @@ const services = [
   {
     number: '01',
     title: 'Road Marking & Pedestrian Crossings',
-    text: 'Professional application of lane lines, directional markings, stop lines, arrows, symbols, and pedestrian crossings for roads and intersections.',
+    text: 'Professional application of lane lines, directional markings, stop lines, arrows, symbols, and pedestrian crossings for roads and...',
     overview: 'Comprehensive on-site road marking services for highways, municipal roads, intersections, and pedestrian areas, focused on clear visibility, organized traffic flow, and durable performance.',
     scope: [
       'Application of continuous and broken centerlines, lane lines, directional arrows, stop lines, symbols, and zebra pedestrian crossings.',
@@ -99,7 +99,7 @@ const services = [
   {
     number: '02',
     title: 'Parking Lot Striping & Traffic Layout',
-    text: 'Professional parking space striping and traffic layouts for commercial, industrial, and private facilities, designed for clear vehicle flow, organized parking, and high visibility.',
+    text: 'Professional parking space striping and traffic layouts for commercial, industrial, and private facilities, designed for clear...',
     overview: 'Complete parking lot layout, line painting, and space organization for commercial, residential, and corporate facilities, designed for efficient use of space and smooth traffic flow.',
     scope: [
       'Layout of parking stall boundaries, directional arrows, and entry and exit lanes for clear and organized vehicle movement.',
@@ -393,7 +393,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       reliableItems: ['Precision application', 'Durable materials', 'Day & night visibility', 'Professional project execution'],
     },
     services: {
-      kicker: 'What we do',
+      kicker: 'WHAT WE DO',
       titleFirst: 'Our',
       titleSecond: 'Services',
       description: 'Professional marking, traffic layout, and surface maintenance solutions for roads, parking facilities, commercial properties, industrial sites, and specialized areas.',
@@ -504,7 +504,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       reliableItems: ['Application de précision', 'Matériaux durables', 'Visibilité jour et nuit', 'Exécution professionnelle des projets'],
     },
     services: {
-      kicker: 'Nos réalisations',
+      kicker: 'NOS RÉALISATIONS',
       titleFirst: 'Nos',
       titleSecond: 'services',
       description: 'Des solutions professionnelles de marquage, d’aménagement de la circulation et d’entretien des surfaces pour les routes, parkings, propriétés commerciales, sites industriels et espaces spécialisés.',
@@ -615,10 +615,10 @@ const siteTranslations: Record<Language, SiteCopy> = {
       reliableItems: ['تطبيق دقيق', 'مواد متينة', 'وضوح نهاراً وليلاً', 'تنفيذ احترافي للمشاريع'],
     },
     services: {
-      kicker: 'ماذا نقدم',
+      kicker: 'ماذا نهدف / خدماتنا',
       titleFirst: 'خدماتنا',
       titleSecond: '',
-      description: 'حلول احترافية لتخطيط الطرق وتنظيم الحركة وصيانة الأسطح للطرق ومواقف السيارات والعقارات التجارية والمواقع الصناعية والمساحات المتخصصة.',
+      description: 'حلول احترافية لتخطيط الطرق وتنظيم الحركة وصيانة السطح للطرق ومواقف السيارات والعقارات التجارية والمواقع الصناعية والمساحات المتخصصة.',
     },
     detail: {
       back: 'العودة إلى الخدمات',
@@ -697,7 +697,7 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
   FR: {
     '01': {
       title: 'Marquage routier et passages piétons',
-      text: 'Application professionnelle des lignes de voie, marquages directionnels, lignes d’arrêt, flèches, symboles et passages piétons sur les routes et aux intersections.',
+      text: 'Application professionnelle des lignes de voie, marquages directionnels, lignes d’arrêt, flèches, symboles et passages piéton...',
       overview: 'Des prestations complètes de marquage routier sur site pour les autoroutes, routes communales, intersections et zones piétonnes, axées sur la visibilité, la fluidité et la durabilité.',
       scope: [
         'Application de lignes axiales continues ou discontinues, lignes de voie, flèches directionnelles, lignes d’arrêt, symboles et passages piétons zébrés.',
@@ -713,7 +713,7 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
     },
     '02': {
       title: 'Marquage de parkings et organisation de la circulation',
-      text: 'Marquage professionnel des places de stationnement et organisation de la circulation pour les sites commerciaux, industriels et privés, afin de garantir des flux lisibles, un stationnement ordonné et une visibilité optimale.',
+      text: 'Marquage professionnel des places de stationnement et organisation de la circulation pour les sites commerciaux,...',
       overview: 'Aménagement complet des parkings, peinture des lignes et organisation des places pour les sites commerciaux, résidentiels et tertiaires, avec une utilisation efficace de l’espace et une circulation fluide.',
       scope: [
         'Implantation des limites de places, flèches directionnelles et voies d’entrée et de sortie pour une circulation claire et organisée.',
@@ -806,7 +806,7 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
     },
     '02': {
       title: 'تخطيط مواقف السيارات وتنظيم الحركة',
-      text: 'تخطيط احترافي لمواقف السيارات وتنظيم الحركة في المنشآت التجارية والصناعية والخاصة، بما يضمن وضوح تدفق المركبات وترتيب المواقف وارتفاع مستوى الرؤية.',
+      text: 'تخطيط احترافي لمواقف السيارات وتنظيم الحركة في المنشآت التجارية والصناعية والخاصة، بما يضمن وضوح تدفق المركبات وترتيب المواقف.',
       overview: 'تنفيذ متكامل لتخطيط مواقف السيارات ودهان الخطوط وتنظيم المساحات في المنشآت التجارية والسكنية والإدارية، لتحقيق استخدام فعال للمساحة وحركة سلسة.',
       scope: [
         'تحديد حدود المواقف والأسهم الاتجاهية ومسارات الدخول والخروج لحركة واضحة ومنظمة.',

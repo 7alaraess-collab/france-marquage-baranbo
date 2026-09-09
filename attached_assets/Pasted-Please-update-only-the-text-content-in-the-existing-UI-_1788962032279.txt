@@ -1,0 +1,42 @@
+Please update only the text content in the existing UI section shown in the screenshots (the "Our Services" section). Do NOT change any design, layout, colors, fonts, or element placements.
+
+Here are the exact corrected texts for each language version:
+
+1. Section Tag / Small Label:
+- English: 02 — WHAT WE DO
+- French: 02 — NOS RÉALISATIONS
+- Arabic: 02 — ماذا نهدف / خدماتنا
+
+2. Main Heading:
+- English: Our Services
+- French: Nos services
+- Arabic: خدماتنا
+
+3. Main Sub-description (Paragraph under heading):
+- English: Professional marking, traffic layout, and surface maintenance solutions for roads, parking facilities, commercial properties, industrial sites, and specialized areas.
+- French: Des solutions professionnelles de marquage, d'aménagement de la circulation et d'entretien des surfaces pour les routes, parkings, propriétés commerciales, sites industriels et espaces spécialisés.
+- Arabic: حلول احترافية لتخطيط الطرق وتنظيم الحركة وصيانة السطح للطرق ومواقف السيارات والعقارات التجارية والمواقع الصناعية والمساحات المتخصصة.
+
+4. Card 1 (Left / Road Marking & Pedestrian Crossings):
+- Tag: 01
+- Heading:
+  - English: Road Marking & Pedestrian Crossings
+  - French: Marquage routier et passages piétons
+  - Arabic: تخطيط الطرق ومعابر المشاة
+- Description:
+  - English: Professional application of lane lines, directional markings, stop lines, arrows, symbols, and pedestrian crossings for roads and...
+  - French: Application professionnelle des lignes de voie, marquages directionnels, lignes d'arrêt, flèches, symboles et passages piéton...
+  - Arabic: تنفيذ احترافي لخطوط المسارات والعلامات الاتجاهية وخطوط التوقف والأسهم والرموز ومعابر المشاة على الطرق والتقاطعات.
+
+5. Card 2 (Right / Parking Lot Striping & Traffic Layout):
+- Tag: 02
+- Heading:
+  - English: Parking Lot Striping & Traffic Layout
+  - French: Marquage de parkings et organisation de la circulation
+  - Arabic: تخطيط مواقف السيارات وتنظيم الحركة
+- Description:
+  - English: Professional parking space striping and traffic layouts for commercial, industrial, and private facilities, designed for clear...
+  - French: Marquage professionnel des places de stationnement et organisation de la circulation pour les sites commerciaux,...
+  - Arabic: تخطيط احترافي لمواقف السيارات وتنظيم الحركة في المنشآت التجارية والصناعية والخاصة، بما يضمن وضوح تدفق المركبات وترتيب المواقف.
+
+Make sure no visual elements, structure, or formatting are altered—only update the text content accurately as specified above.
