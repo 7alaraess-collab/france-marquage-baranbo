@@ -255,13 +255,17 @@ function useReveal() {
   }, []);
 }
 
-function Logo({ light = false }: { light?: boolean }) {
+function Logo({ light = false, official = false }: { light?: boolean; official?: boolean }) {
   return (
     <a href="#top" className="flex items-center gap-3" data-testid="link-logo">
-      <span className={`relative grid h-10 w-10 place-items-center border-2 ${light ? 'border-[#f3c742]' : 'border-[#171b1d]'}`}>
-        <span className={`h-4 w-4 ${light ? 'bg-[#f3c742]' : 'bg-[#171b1d]'}`} />
-        <span className={`absolute -right-1 -top-1 h-2 w-2 ${light ? 'bg-[#f3c742]' : 'bg-[#d9673f]'}`} />
-      </span>
+      {official ? (
+        <img src="/images/brand/company-logo.jpg" alt="FRANCE MARQUAGE BARANBO" className="h-10 w-10 shrink-0 object-contain" />
+      ) : (
+        <span className={`relative grid h-10 w-10 place-items-center border-2 ${light ? 'border-[#f3c742]' : 'border-[#171b1d]'}`}>
+          <span className={`h-4 w-4 ${light ? 'bg-[#f3c742]' : 'bg-[#171b1d]'}`} />
+          <span className={`absolute -right-1 -top-1 h-2 w-2 ${light ? 'bg-[#f3c742]' : 'bg-[#d9673f]'}`} />
+        </span>
+      )}
       <span className={`leading-[.9] ${light ? 'text-[#f6f1e6]' : 'text-[#171b1d]'}`}>
         <span className="block font-display text-[17px] font-extrabold tracking-[-.04em]">FRANCE</span>
         <span className={`block font-mono-site text-[8px] uppercase tracking-[.21em] ${light ? 'text-[#b9bbb1]' : 'text-[#59605e]'}`}>MARQUAGE BARANBO</span>
@@ -325,7 +329,7 @@ function Home() {
 
       <header className="sticky top-0 z-30 border-b border-[#d8d1c2] bg-[#f4f0e6]/95 backdrop-blur-md">
         <div className="mx-auto flex h-[76px] max-w-[1380px] items-center justify-between px-5 sm:px-8 lg:px-12">
-          <Logo />
+          <Logo official />
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Main navigation">
             {navItems.map((item) => (
               <a key={item.href} href={item.href} className="group relative py-3 text-[12px] font-bold uppercase tracking-[.09em] text-[#4d5552] transition-colors hover:text-[#171b1d]" data-testid={`link-nav-${item.label.toLowerCase().replaceAll(' ', '-')}`}>
@@ -361,7 +365,7 @@ function Home() {
 
       {mobileOpen && (
         <div className="fixed inset-0 z-50 bg-[#171b1d] px-6 py-6 text-[#f6f1e6] lg:hidden" data-testid="mobile-drawer">
-          <div className="flex items-center justify-between"><Logo light /><button onClick={() => setMobileOpen(false)} className="grid h-11 w-11 place-items-center border border-[#59605e]" aria-label="Close menu" data-testid="button-close-menu"><X size={21} /></button></div>
+          <div className="flex items-center justify-between"><Logo light official /><button onClick={() => setMobileOpen(false)} className="grid h-11 w-11 place-items-center border border-[#59605e]" aria-label="Close menu" data-testid="button-close-menu"><X size={21} /></button></div>
           <nav className="mt-20 flex flex-col" aria-label="Mobile navigation">
             {navItems.map((item, index) => (
               <a key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="flex items-center justify-between border-b border-[#3c4444] py-5 font-display text-3xl font-bold tracking-[-.04em]" data-testid={`link-mobile-${index}`}>
