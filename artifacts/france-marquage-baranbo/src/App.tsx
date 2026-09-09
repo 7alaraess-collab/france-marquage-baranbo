@@ -159,13 +159,13 @@ const services = [
     number: '04',
     title: 'Dedicated Bike & Colored Lanes',
     text: 'Durable surface markings and color treatments for dedicated bike lanes, shared paths, and traffic safety zones.',
-    overview: 'Custom color coating and demarcation for urban cycle tracks, scooter lanes, and high-risk pedestrian interaction areas.',
+    overview: 'Professional application of colored surface markings, bicycle symbols, and directional markings designed to clearly define cycling areas and improve visibility and organization.',
     scope: [
-      'Full-width color application (traffic red and green) embedded with reflective compounds for night driving awareness.',
-      'Stenciling of bicycle symbols and directional travel indicators.',
-      'Highlighting transition zones, speed bumps, and dangerous intersections to alert drivers in advance.',
+      'Full-width colored surface applications for dedicated bike lanes and safety zones.',
+      'Application of bicycle symbols, directional arrows, and lane markings.',
+      'Clear marking of transition areas, intersections, and conflict zones to improve road-user awareness.',
     ],
-    specs: 'High-friction, coarse-textured anti-skid coatings delivering superior grip in wet weather and optimal luminescent reflection under vehicle headlights.',
+    specs: 'Durable traffic-grade surface marking systems selected according to the project requirements and pavement conditions, with a focus on adhesion, visibility, and long-term performance.',
     icon: Bike,
     gallery: [
       {
@@ -409,7 +409,7 @@ function Home() {
                   {selectedService.gallery ? (
                     <>
                       <figure>
-                        <div className="service-detail-image service-detail-image-primary">
+                        <div className={`service-detail-image service-detail-image-primary ${selectedService.number === '04' ? 'service-detail-image-cycle-primary' : ''}`}>
                           <img src={selectedService.gallery[0].src} alt={selectedService.gallery[0].alt} />
                         </div>
                         <figcaption className="mt-4">
