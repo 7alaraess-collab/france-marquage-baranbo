@@ -381,6 +381,13 @@ body { min-width: 320px; overflow-x: hidden; }
 .fleet-line { position: relative; }
 .fleet-line::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; border-left: 1px dashed rgba(23,27,29,.25); }
 .field-frame { box-shadow: 16px 16px 0 #f3c742; }
+.site-rtl { direction: rtl; }
+.site-rtl .hero-description { border-left: 0; border-right: 2px solid #d9673f; padding-left: 0; padding-right: 1.25rem; }
+.site-rtl input, .site-rtl textarea, .site-rtl select { text-align: right; }
+.site-rtl .fleet-line { padding-left: 0; padding-right: 1.25rem; }
+.site-rtl .fleet-line::before { left: auto; right: 0; }
+.site-rtl [data-testid='button-previous-service'], .site-rtl [data-testid='button-next-service'] { text-align: right; }
+.site-rtl .service-card { text-align: right; }
 @media (max-width: 767px) {
   .field-frame { box-shadow: 8px 8px 0 #f3c742; }
   .hero-road::before { width: 44%; left: 64%; }

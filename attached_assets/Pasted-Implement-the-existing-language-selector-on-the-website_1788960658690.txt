@@ -1,0 +1,26 @@
+Implement the existing language selector on the website. It currently has three language options: English, Arabic, and French.
+
+Keep English as the original/default language.
+
+For Arabic and French, translate ALL user-facing website text automatically and professionally. The translations must be natural, fluent, and appropriate for a professional road planning / transportation engineering company website. Do NOT translate word-for-word when that would sound unnatural. Use accurate industry terminology.
+
+IMPORTANT:
+
+- Do not change the existing design, layout, spacing, typography, colors, animations, images, icons, buttons, or components.
+- Do not remove or redesign the existing language selector.
+- Do not change the English content.
+- Translate all visible text, including headings, paragraphs, service names, buttons, navigation items, labels, and footer content.
+- Make sure the Arabic version is properly right-to-left (RTL), while English and French remain left-to-right (LTR).
+- Make sure Arabic text does not break the existing layout or cause horizontal overflow.
+- The French translation should use professional native-level French.
+- The Arabic translation should use professional Modern Standard Arabic suitable for a company website.
+- Keep technical terms consistent throughout the entire website.
+- When the user switches language, the entire website should update to the selected language without refreshing the page if the current architecture allows it.
+- Preserve the user's selected language after a page refresh using the existing app's appropriate state/local-storage mechanism.
+- Make sure every page and every section responds correctly to the language selector, including service detail pages.
+
+Before making changes, inspect the existing project structure and identify how the current language selector is implemented. Reuse the existing selector rather than creating a new one.
+
+Do not use Google Translate or an external translation widget. Store the translations within the application's existing code/data structure so they can be manually edited later.
+
+After implementing the translations, check the entire website for missing translations, untranslated English text, inconsistent terminology, and RTL layout issues.
