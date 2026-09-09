@@ -64,13 +64,13 @@ const services = [
     number: '01',
     title: 'Road Marking & Pedestrian Crossings',
     text: 'Professional application of lane lines, directional markings, stop lines, arrows, symbols, and pedestrian crossings for roads and intersections.',
-    overview: 'Comprehensive on-site road line marking services for highways, municipal roads, and intersections adhering strictly to international traffic safety standards.',
+    overview: 'Comprehensive on-site road marking services for highways, municipal roads, intersections, and pedestrian areas, focused on clear visibility, organized traffic flow, and durable performance.',
     scope: [
-      'Application of continuous, broken centerlines, directional arrows, and zebra pedestrian crossings.',
-      'Integration of high-index Reflective Glass Beads embedded into the paint to maximize night-time headlight retroreflection.',
-      'Intersection safety enhancement and speed hump warning line marking.',
+      'Application of continuous and broken centerlines, lane lines, directional arrows, stop lines, symbols, and zebra pedestrian crossings.',
+      'Clear and visible road markings designed to support nighttime visibility and organized traffic flow.',
+      'Intersection markings, safety enhancements, and speed hump warning lines designed for clear visibility and organized traffic flow.',
     ],
-    specs: 'Premium heavy-duty thermoplastic and cold-applied acrylic road paints engineered for high abrasion resistance, weather durability, and optimal night visibility.',
+    specs: 'Road marking solutions selected according to project requirements, surface conditions, traffic needs, and site specifications.',
     icon: Route,
     gallery: [
       {
@@ -83,7 +83,7 @@ const services = [
         src: '/images/services/reflective-lines.jpg',
         alt: 'Reflective white road lines beside traffic cones',
         title: 'Lines & Pathways',
-        text: 'Integration of high-index reflective glass beads to maximize night-time headlight retroreflection.',
+        text: 'Clear, visible road markings that help make routes and intersections easier to read.',
       },
       {
         src: '/images/services/road-layout.jpg',

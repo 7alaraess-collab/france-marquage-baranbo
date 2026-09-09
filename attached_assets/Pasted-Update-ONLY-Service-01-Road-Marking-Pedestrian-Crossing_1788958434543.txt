@@ -1,0 +1,36 @@
+Update ONLY Service 01: "Road Marking & Pedestrian Crossings" on the service detail page.
+
+Do not change the images, image layout, overall page design, colors, typography, spacing, animations, navigation, header, footer, or any other service.
+
+Keep the service title exactly as:
+
+"Road Marking & Pedestrian Crossings"
+
+Keep the main service description exactly as:
+
+"Professional application of lane lines, directional markings, stop lines, arrows, symbols, and pedestrian crossings for roads and intersections."
+
+Replace the current "OVERVIEW" text with:
+
+"Comprehensive on-site road marking services for highways, municipal roads, intersections, and pedestrian areas, focused on clear visibility, organized traffic flow, and durable performance."
+
+Under "KEY SCOPE OF WORK", replace the current bullet points with these three:
+
+1. "Application of continuous and broken centerlines, lane lines, directional arrows, stop lines, symbols, and zebra pedestrian crossings."
+
+2. "Clear and visible road markings designed to support nighttime visibility and organized traffic flow."
+
+3. "Intersection markings, safety enhancements, and speed hump warning lines designed for clear visibility and organized traffic flow."
+
+IMPORTANT:
+- Remove all references to "international traffic safety standards" or any certification/compliance claims.
+- Remove all specific material claims, including Thermoplastic, cold-applied acrylic, reflective glass beads, or any other road marking material, because the company has not yet confirmed which materials it uses.
+- Remove or replace the current "TECHNICAL SPECIFICATIONS" section. Do not include unverified technical material specifications.
+- If the design requires this section to remain for visual consistency, replace its text with:
+
+"Road marking solutions selected according to project requirements, surface conditions, traffic needs, and site specifications."
+
+- Do not invent certifications, standards, materials, performance percentages, or technical specifications.
+- Keep the existing images exactly as they are.
+- Keep the existing "REQUEST A QUOTE" button and all existing visual elements unchanged.
+- Make no changes outside Service 01.
