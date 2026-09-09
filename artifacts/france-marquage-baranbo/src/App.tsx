@@ -63,7 +63,7 @@ const services = [
   {
     number: '01',
     title: 'Road Marking & Pedestrian Crossings',
-    text: 'Field application of road lane markings and pedestrian crossings engineered for maximum daytime clarity and high night-time visibility.',
+    text: 'Professional application of lane lines, directional markings, stop lines, arrows, symbols, and pedestrian crossings for roads and intersections.',
     overview: 'Comprehensive on-site road line marking services for highways, municipal roads, and intersections adhering strictly to international traffic safety standards.',
     scope: [
       'Application of continuous, broken centerlines, directional arrows, and zebra pedestrian crossings.',
@@ -97,7 +97,7 @@ const services = [
   {
     number: '02',
     title: 'Parking Lot Striping & Traffic Layout',
-    text: 'Custom parking space layout and lane organization for open-air and covered facilities using high-contrast, luminous paints.',
+    text: 'Professional parking space striping and traffic layouts for commercial, industrial, and private facilities, designed for clear vehicle flow, organized parking, and high visibility.',
     overview: 'Turnkey layout, line painting, and space optimization for commercial, residential, and corporate parking facilities to maximize capacity and traffic flow.',
     scope: [
       'Layout of stall boundaries, directional arrows, and entry/exit navigation lanes.',
@@ -536,8 +536,8 @@ function Home() {
           <div className="mx-auto max-w-[1380px]">
             <div className="mx-auto max-w-4xl text-center reveal">
               <div className="flex justify-center"><SectionKicker index="02" children="What we do" /></div>
-              <h2 className="font-display text-5xl font-extrabold leading-[.9] tracking-[-.06em] sm:text-7xl">Road Marking &<br /><span className="text-[#d9673f]">Pedestrian Crossings.</span></h2>
-              <p className="mx-auto mt-7 max-w-3xl text-base leading-7 text-[#334155]">Comprehensive on-site road line marking services for highways, municipal roads, and intersections adhering strictly to international traffic safety standards.</p>
+              <h2 className="font-display text-5xl font-extrabold leading-[.9] tracking-[-.06em] sm:text-7xl">Road Marking &<br /><span className="text-[#d9673f]">Traffic Safety.</span></h2>
+              <p className="mx-auto mt-7 max-w-3xl text-base leading-7 text-[#334155]">Professional road marking and traffic layout services for highways, municipal roads, intersections, and pedestrian areas, designed for clear visibility, safe traffic flow, and long-lasting performance.</p>
             </div>
             <div className="mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {services.map((service, index) => {
