@@ -1,0 +1,64 @@
+Please update only the text content in the existing UI section shown in the screenshots (the "Road Marking & Pedestrian Crossings" service detail page). Do NOT change any design, layout, colors, fonts, or element placements.
+
+Here are the exact corrected texts for each language version:
+
+1. Top Breadcrumb / Small Label:
+- English: SERVICE 01 — FIELD DELIVERY
+- French: ÉQUIPE TERRAIN ET EXECUTION
+- Arabic: SERVICE 01 — تنفيذ ميداني
+
+2. Main Heading:
+- English: Road Marking & Pedestrian Crossings
+- French: Marquage routier et passages piétons
+- Arabic: تخطيط الطرق ومعابر المشاة
+
+3. Sub-description / Paragraph under heading:
+- English: Professional application of lane lines, directional markings, stop lines, arrows, symbols, and pedestrian crossings for roads and...
+- French: Application professionnelle des lignes de voie, marquages directionnels, lignes d'arrêt, flèches, symboles et passages piéton...
+- Arabic: تنفيذ احترافي لخطوط المسارات والعلامات الاتجاهية وخطوط التوقف والأسهم والرموز ومعابر المشاة على الطرق والتقاطعات.
+
+4. Overview Block (Right side):
+- Heading:
+  - English: OVERVIEW
+  - French: PRÉSENTATION
+  - Arabic: نظرة عامة
+- Body:
+  - English: Comprehensive on-site road marking services for highways, municipal roads, intersections, and parking areas, focused on clear visibility, organized traffic flow, and durable performance.
+  - French: Des prestations complètes de marquage routier pour les autoroutes, routes communales, intersections et zones piétonnes, axées sur la visibilité, la fluidité et la durabilité.
+  - Arabic: خدمات متكاملة لتخطيط الطرق في مواقع العمل، للطرق السريعة والطرق البلدية والتقاطعات ومناطق المشاة، مع التركيز على وضوح الرؤية وتنظيم الحركة والمتانة.
+
+5. Key Scope of Work (Checklist):
+- Item 1:
+  - English: Application of continuous and broken lane lines, directional arrows, stop lines, and zebra pedestrian crossings.
+  - French: Application de lignes axiales continues ou discontinues, lignes de voie, flèches directionnelles, lignes d'arrêt, symboles et passages piétons.
+  - Arabic: تنفيذ الخطوط المحورية المتصلة والمتقطعة وخطوط المسارات والأسهم الاتجاهية وخطوط التوقف والرموز ومعابر المشاة المخططة.
+- Item 2:
+  - English: Clear and visible road markings designed for nighttime visibility and organized traffic flow.
+  - French: Marquages routiers clairs et visibles conçus pour améliorer la visibilité nocturne et organiser la circulation.
+  - Arabic: تخطيطات طرق واضحة ومرئية تساعد على تحسين الرؤية الليلية وتنظيم تدفق الحركة.
+- Item 3:
+  - English: Intersection markings, safety enhancement, and speed hump warning lines designed for optimal visibility and organized traffic flow.
+  - French: Marquage des intersections, renforcement de la sécurité et lignes d'avertissement pour ralentisseurs avec une visibilité optimale.
+  - Arabic: تخطيط التقاطعات وتعزيز السلامة وخطوط التحذير من مطبات السرعة بوضوح مناسب للموقع.
+
+6. Technical Specifications:
+- Heading:
+  - English: TECHNICAL SPECIFICATIONS
+  - French: CARACTÉRISTIQUES TECHNIQUES
+  - Arabic: المواصفات الفنية
+- Body:
+  - English: Road marking solutions selected according to project requirements, surface conditions, traffic needs, and site specifications.
+  - French: Des solutions de marquage routier sélectionnées selon les exigences du projet, l'état de la surface, les besoins de circulation et les spécifications du site.
+  - Arabic: حلول تخطيط طرق يتم اختيارها وفق متطلبات المشروع وحالة السطح واحتياجات الحركة ومواصفات الموقع.
+
+7. Badge / Footer Label:
+- English: FIELD-READY QUALITY
+  - French: QUALITÉ PRÊTE POUR LE TERRAIN
+  - Arabic: جودة جاهزة للتنفيذ
+
+8. Action Button:
+- English: REQUEST A QUOTE
+- French: DEMANDER UN DEVIS
+- Arabic: اطلب عرض سعر
+
+Make sure no visual elements, structure, or formatting are altered—only update the text content accurately as specified above.

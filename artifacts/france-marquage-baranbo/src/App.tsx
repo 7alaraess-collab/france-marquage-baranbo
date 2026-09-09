@@ -66,11 +66,11 @@ const services = [
     number: '01',
     title: 'Road Marking & Pedestrian Crossings',
     text: 'Professional application of lane lines, directional markings, stop lines, arrows, symbols, and pedestrian crossings for roads and...',
-    overview: 'Comprehensive on-site road marking services for highways, municipal roads, intersections, and pedestrian areas, focused on clear visibility, organized traffic flow, and durable performance.',
+    overview: 'Comprehensive on-site road marking services for highways, municipal roads, intersections, and parking areas, focused on clear visibility, organized traffic flow, and durable performance.',
     scope: [
-      'Application of continuous and broken centerlines, lane lines, directional arrows, stop lines, symbols, and zebra pedestrian crossings.',
-      'Clear and visible road markings designed to support nighttime visibility and organized traffic flow.',
-      'Intersection markings, safety enhancements, and speed hump warning lines designed for clear visibility and organized traffic flow.',
+      'Application of continuous and broken lane lines, directional arrows, stop lines, and zebra pedestrian crossings.',
+      'Clear and visible road markings designed for nighttime visibility and organized traffic flow.',
+      'Intersection markings, safety enhancement, and speed hump warning lines designed for optimal visibility and organized traffic flow.',
     ],
     specs: 'Road marking solutions selected according to project requirements, surface conditions, traffic needs, and site specifications.',
     icon: Route,
@@ -294,6 +294,7 @@ type SiteCopy = {
     label: string;
     close: string;
     fieldDelivery: string;
+    serviceOneLabel: string;
     overview: string;
     scope: string;
     specifications: string;
@@ -403,6 +404,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       label: 'Service detail',
       close: 'Close service details',
       fieldDelivery: 'Field delivery',
+      serviceOneLabel: 'SERVICE 01 — FIELD DELIVERY',
       overview: 'Overview',
       scope: 'Key scope of work',
       specifications: 'Technical specifications',
@@ -514,6 +516,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       label: 'Détail du service',
       close: 'Fermer le détail du service',
       fieldDelivery: 'Intervention sur site',
+      serviceOneLabel: 'ÉQUIPE TERRAIN ET EXECUTION',
       overview: 'Présentation',
       scope: 'Périmètre d’intervention',
       specifications: 'Caractéristiques techniques',
@@ -625,7 +628,8 @@ const siteTranslations: Record<Language, SiteCopy> = {
       label: 'تفاصيل الخدمة',
       close: 'إغلاق تفاصيل الخدمة',
       fieldDelivery: 'تنفيذ ميداني',
-      overview: 'نبذة',
+      serviceOneLabel: 'SERVICE 01 — تنفيذ ميداني',
+      overview: 'نظرة عامة',
       scope: 'نطاق العمل الرئيسي',
       specifications: 'المواصفات الفنية',
       fieldReady: 'جودة جاهزة للتنفيذ',
@@ -698,13 +702,13 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
     '01': {
       title: 'Marquage routier et passages piétons',
       text: 'Application professionnelle des lignes de voie, marquages directionnels, lignes d’arrêt, flèches, symboles et passages piéton...',
-      overview: 'Des prestations complètes de marquage routier sur site pour les autoroutes, routes communales, intersections et zones piétonnes, axées sur la visibilité, la fluidité et la durabilité.',
+      overview: 'Des prestations complètes de marquage routier pour les autoroutes, routes communales, intersections et zones piétonnes, axées sur la visibilité, la fluidité et la durabilité.',
       scope: [
-        'Application de lignes axiales continues ou discontinues, lignes de voie, flèches directionnelles, lignes d’arrêt, symboles et passages piétons zébrés.',
+        "Application de lignes axiales continues ou discontinues, lignes de voie, flèches directionnelles, lignes d'arrêt, symboles et passages piétons.",
         'Marquages routiers clairs et visibles conçus pour améliorer la visibilité nocturne et organiser la circulation.',
-        'Marquage des intersections, renforcement de la sécurité et lignes d’avertissement pour ralentisseurs, avec une visibilité optimale.',
+        "Marquage des intersections, renforcement de la sécurité et lignes d'avertissement pour ralentisseurs avec une visibilité optimale.",
       ],
-      specs: 'Des solutions de marquage routier sélectionnées selon les exigences du projet, l’état de la surface, les besoins de circulation et les spécifications du site.',
+      specs: "Des solutions de marquage routier sélectionnées selon les exigences du projet, l'état de la surface, les besoins de circulation et les spécifications du site.",
       gallery: [
         { src: '/images/services/field-crews.jpg', alt: 'Équipe de marquage routier appliquant une ligne jaune vive', title: 'Équipes terrain et exécution', text: 'Application de lignes axiales continues ou discontinues, de flèches directionnelles et de passages piétons zébrés.' },
         { src: '/images/services/reflective-lines.jpg', alt: 'Lignes routières blanches rétroréfléchissantes près de cônes de signalisation', title: 'Lignes et trajectoires', text: 'Des marquages routiers clairs et visibles qui rendent les itinéraires et les intersections plus lisibles.' },
@@ -1130,7 +1134,7 @@ function Home() {
                 </div>
 
                 <div className="order-2 lg:order-none lg:pt-2">
-                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">Service {selectedService.number} <span className="mx-2 text-[#b7afa1]">/</span> {copy.detail.fieldDelivery}</div>
+                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">{selectedService.number === '01' ? copy.detail.serviceOneLabel : `Service ${selectedService.number} / ${copy.detail.fieldDelivery}`}</div>
                   <h2 id="service-modal-title" className="mt-5 max-w-2xl font-display text-[clamp(3rem,6vw,5.8rem)] font-extrabold leading-[.9] tracking-[-.065em]">{selectedServiceCopy.title}</h2>
                   <p className="mt-8 max-w-xl text-lg leading-8 text-[#334155] sm:text-xl">{selectedServiceCopy.text}</p>
 
