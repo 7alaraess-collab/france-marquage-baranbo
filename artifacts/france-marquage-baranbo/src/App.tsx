@@ -500,7 +500,7 @@ function Home() {
               <h1 id="hero-heading" className="max-w-5xl font-display text-[clamp(3.65rem,9.2vw,9.8rem)] font-extrabold leading-[.86] tracking-[-.075em]">
                 Marking the<br /><span className="text-[#f3c742]">way forward.</span>
               </h1>
-              <p className="mt-9 max-w-xl border-l-2 border-[#d9673f] pl-5 text-base leading-7 text-[#d4d2c9] sm:text-lg">Professional road marking and traffic safety for places that need to work — from the first morning delivery to the last school pickup.</p>
+              <p className="mt-9 max-w-xl border-l-2 border-[#d9673f] pl-5 font-sans text-[15px] leading-7 tracking-[.01em] text-[#d4d2c9] sm:text-[17px] sm:leading-8">Professional road marking and traffic safety solutions, built for clarity, durability, and everyday performance.</p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <a href="#contact" className="group inline-flex items-center justify-between gap-8 bg-[#f3c742] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.13em] text-[#171b1d] transition-colors hover:bg-[#f6d96d]" data-testid="link-hero-quote">Request a quote <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
                 <a href="#services" className="group inline-flex items-center justify-between gap-8 border border-[#757b76] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.13em] text-[#f6f1e6] transition-colors hover:border-[#f3c742] hover:text-[#f3c742]" data-testid="link-hero-services">Explore services <ArrowDownRight size={17} className="transition-transform group-hover:translate-y-1" /></a>
