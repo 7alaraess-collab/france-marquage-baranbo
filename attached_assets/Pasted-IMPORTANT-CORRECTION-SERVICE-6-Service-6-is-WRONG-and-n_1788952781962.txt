@@ -1,0 +1,80 @@
+IMPORTANT CORRECTION — SERVICE 6
+
+Service 6 is WRONG and needs to be completely corrected.
+
+The current Service 6 titled:
+"Road Safety Audits & Maintenance"
+
+is NOT the service I want.
+
+REPLACE SERVICE 6 with:
+
+"Mechanical Street Sweeping & Road Cleaning"
+
+This service is specifically about professional mechanical street sweeping and road cleaning using specialized road-sweeping machinery.
+
+The images I am uploading immediately after this message are ONLY for Service 6 and represent this service.
+
+Use these images as the visual references for Service 6.
+
+DO NOT modify Services 1–5.
+ONLY correct Service 6.
+
+SERVICE 6 CONTENT:
+
+Title:
+Mechanical Street Sweeping & Road Cleaning
+
+Create a professional, detailed service description explaining that the company provides mechanical street and road cleaning using specialized sweeping equipment and machinery.
+
+The service should communicate:
+- Mechanical sweeping of roads and streets
+- Removal of dust, sand, dirt, debris, and accumulated roadside material
+- Cleaning of paved surfaces before and after road works
+- Routine road and street maintenance cleaning
+- Cleaning of areas around road markings and infrastructure
+- Improving road cleanliness, visibility, and overall roadway condition
+- Efficient cleaning using professional mechanical sweeping equipment
+- Suitable for municipal roads, highways, parking areas, industrial areas, and other paved surfaces
+
+Add a dedicated "Key Scope of Work" section with clear, professional points.
+
+Add a "Technical Details" section containing relevant technical information about mechanical street sweeping, such as:
+- Mechanical rotary brush sweeping systems
+- Collection and removal of swept debris
+- Dust-control / water-assisted sweeping where applicable
+- Adjustable sweeping brushes
+- Professional road-cleaning machinery
+- Efficient coverage of paved road surfaces
+- Routine and project-based cleaning operations
+
+IMPORTANT:
+Do not invent unrealistic technical specifications such as exact machine capacities, dimensions, speeds, or performance numbers unless they already exist in the website content.
+
+The wording should sound like a real professional road infrastructure company, not generic AI-generated text.
+
+VISUAL DESIGN:
+
+Use EXACTLY the same service-detail layout already created for Services 1–5.
+
+Keep:
+- Same typography
+- Same spacing
+- Same colors
+- Same image gallery
+- Same buttons
+- Same Previous / Next navigation
+- Same responsive behavior
+
+For the images I am uploading:
+- Use them ONLY for Service 6
+- Make the first image the main featured image
+- Put the remaining images into the gallery
+- Preserve their original proportions
+- Do NOT unnecessarily crop them
+- Do NOT distort them
+
+Most importantly:
+REMOVE the old "Road Safety Audits & Maintenance" service content completely and replace it with the Mechanical Street Sweeping & Road Cleaning service described above.
+
+Do not modify Services 1–5.

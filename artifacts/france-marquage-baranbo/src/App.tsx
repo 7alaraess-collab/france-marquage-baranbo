@@ -188,16 +188,25 @@ const services = [
   },
   {
     number: '06',
-    title: 'Road Safety Audits & Maintenance',
-    text: 'Periodic inspection, safety auditing, and recoating services to ensure continuous compliance with traffic regulations.',
-    overview: 'Ongoing inspection and maintenance services that keep road markings visible, compliant, and ready for daily traffic.',
+    title: 'Mechanical Street Sweeping & Road Cleaning',
+    text: 'Professional mechanical street and road cleaning using specialized sweeping equipment to remove debris and keep paved surfaces clear.',
+    overview: 'Mechanical sweeping services for municipal roads, highways, parking areas, industrial sites, and other paved surfaces before, during, and after road works.',
     scope: [
-      'Inspection of worn, faded, or damaged markings across roads, crossings, parking areas, and safety zones.',
-      'Review of lane arrows, pedestrian crossings, directional markings, and night-time visibility conditions.',
-      'Recoating and corrective marking work planned around traffic flow to keep sites clear and operational.',
+      'Rotary-brush sweeping to remove dust, sand, dirt, debris, and accumulated roadside material.',
+      'Cleaning paved surfaces before and after road marking, resurfacing, and maintenance works.',
+      'Routine cleaning around road markings, curbs, drainage edges, and traffic infrastructure.',
+      'Project-based or scheduled operations to improve roadway cleanliness, visibility, and overall condition.',
     ],
-    specs: 'Maintenance-grade thermoplastic and cold-applied acrylic systems selected for durable adhesion, consistent visibility, and repeat recoating cycles.',
+    specs: 'Professional road-sweeping machinery with adjustable rotary brushes, debris collection, and dust-control or water-assisted sweeping where site conditions require it. Suitable for efficient coverage of paved road surfaces without relying on fixed machine-capacity claims.',
     icon: Truck,
+    gallery: [
+      {
+        src: '/images/services/street-sweeping-12.jpg',
+        alt: 'Mechanical rotary street sweeper cleaning a paved road surface',
+        title: 'Mechanical Road Cleaning',
+        text: 'Rotary-brush sweeping equipment removing accumulated material from paved surfaces before road works and routine maintenance.',
+      },
+    ],
     tone: 'paper',
   },
 ];
