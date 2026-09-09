@@ -1,0 +1,48 @@
+Update ONLY the current "About Us" section.
+
+Do NOT modify the Navbar, Hero section, Services section, Equipment & Fleet section, Certifications section, Contact section, buttons, global colors, or any other part of the website.
+
+The purpose of this section is to introduce the company and highlight what makes its work reliable and distinctive, NOT to repeat the six services already presented in the Services section.
+
+Replace the current About Us content with the following:
+
+MAIN HEADLINE:
+"Clear markings.
+Safer roads."
+
+INTRODUCTION:
+"France Marquage Baranbo delivers professional road marking and traffic safety solutions with a focus on precision, durability, and clear visual guidance."
+
+FEATURE 01:
+Title:
+"PRECISION ON EVERY PROJECT"
+
+Text:
+"Every project is carefully prepared and executed to deliver clean, accurate, and consistent results."
+
+FEATURE 02:
+Title:
+"VISIBLE DAY & NIGHT"
+
+Text:
+"Reflective marking solutions improve visibility after dark, helping drivers and pedestrians navigate with greater clarity."
+
+Add a small supporting list underneath:
+
+"Precision application"
+"Durable materials"
+"Day & night visibility"
+"Professional project execution"
+
+Design requirements:
+- Keep the existing About Us section's overall layout and visual structure if possible.
+- Make the new content feel premium, modern, professional, and appropriate for a road-marking and traffic-safety company.
+- Maintain the existing black, off-white, and orange/yellow visual identity.
+- Keep strong typography hierarchy between the headline, introduction, feature titles, and supporting text.
+- Use generous whitespace and avoid making the section feel crowded.
+- Do NOT create a large list of services here because all six services are already shown in the Services section.
+- Do NOT invent company history, years of experience, certifications, clients, projects, statistics, or claims that were not provided.
+- Make the section responsive and clean on mobile.
+
+IMPORTANT:
+Only replace/restructure the content of the About Us section. Preserve the rest of the website exactly as it is.

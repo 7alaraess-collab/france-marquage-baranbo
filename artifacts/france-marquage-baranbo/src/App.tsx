@@ -517,18 +517,17 @@ function Home() {
           <div className="mx-auto grid max-w-[1380px] gap-14 lg:grid-cols-[.82fr_1.18fr] lg:gap-28">
             <div className="reveal">
               <SectionKicker index="01" children="About us" />
-              <h2 className="max-w-md font-display text-5xl font-extrabold leading-[.92] tracking-[-.06em] sm:text-6xl">The detail is the difference.</h2>
-              <p className="mt-8 max-w-sm text-sm leading-6 text-[#59605e]">A good site feels obvious. People know where to drive, where to walk, where to stop. We make that clarity happen on the ground.</p>
+               <h2 className="max-w-md font-display text-5xl font-extrabold leading-[.92] tracking-[-.06em] sm:text-6xl">Clear markings.<br />Safer roads.</h2>
             </div>
             <div className="reveal reveal-delay-1">
-              <p className="max-w-2xl font-display text-2xl font-bold leading-[1.1] tracking-[-.035em] text-[#27302f] sm:text-4xl">Compagnie France Marquage Baranbo turns complex circulation into a readable, dependable experience.</p>
+               <p className="max-w-2xl font-display text-2xl font-bold leading-[1.1] tracking-[-.035em] text-[#27302f] sm:text-4xl">France Marquage Baranbo delivers professional road marking and traffic safety solutions with a focus on precision, durability, and clear visual guidance.</p>
               <div className="mt-12 grid gap-8 border-t border-[#cfc7b8] pt-8 sm:grid-cols-2">
-                <div><span className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Built for the brief</span><p className="mt-3 text-sm leading-6 text-[#59605e]">We work from the plan, the site conditions and the people who will use it — never from a one-size-fits-all template.</p></div>
-                <div><span className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Made to last</span><p className="mt-3 text-sm leading-6 text-[#59605e]">Materials, preparation and application are selected for real traffic, real weather and real maintenance cycles.</p></div>
+                 <div><span className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Precision on every project</span><p className="mt-3 text-sm leading-6 text-[#59605e]">Every project is carefully prepared and executed to deliver clean, accurate, and consistent results.</p></div>
+                 <div><span className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Visible day &amp; night</span><p className="mt-3 text-sm leading-6 text-[#59605e]">Reflective marking solutions improve visibility after dark, helping drivers and pedestrians navigate with greater clarity.</p></div>
               </div>
-              <div className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-5 border-t border-[#cfc7b8] pt-7">
-                {['Municipalities', 'Commercial sites', 'Schools & campuses', 'Private developers'].map((item) => <div key={item} className="flex items-center gap-2 text-xs font-bold text-[#27302f]"><Check size={15} className="text-[#d9673f]" /> {item}</div>)}
-              </div>
+               <ul className="mt-12 grid gap-x-10 gap-y-4 border-t border-[#cfc7b8] pt-7 sm:grid-cols-2" aria-label="What makes our work reliable">
+                 {['Precision application', 'Durable materials', 'Day & night visibility', 'Professional project execution'].map((item) => <li key={item} className="flex items-center gap-2 text-xs font-bold text-[#27302f]"><Check size={15} className="text-[#d9673f]" /> {item}</li>)}
+               </ul>
             </div>
           </div>
         </section>
