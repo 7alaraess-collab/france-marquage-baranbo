@@ -1,0 +1,45 @@
+Please update only the text content in the existing UI section shown in the screenshots (the "Accessible & EV Charging Spaces" service detail page). Do NOT change any design, layout, colors, fonts, or element placements.
+
+Here are the exact corrected texts for each language version:
+
+1. Top Breadcrumb / Small Label:
+- English: EV CHARGING BAYS
+- French: EMPLACEMENTS DE RECHARGE POUR VÉHICULES ÉLECTRIQUES
+- Arabic: مواقف شحن المركبات الكهربائية
+
+2. Main Heading:
+- English: Accessible & EV Charging Spaces
+- French: Places accessibles et bornes de recharge
+- Arabic: مواقف ذوي الإعاقة ومحطات شحن المركبات الكهربائية
+
+3. Sub-description / Paragraph under heading:
+- English: Clear and professional markings for accessible parking spaces and EV charging stations, designed for easy identification, organized parking, and enhanced nighttime visibility.
+- French: Marquage professionnel et lisible des places accessibles et des bornes de recharge pour véhicules électriques, conçu pour une identification facile...
+- Arabic: تخطيط واضح واحترافي لمواقف ذوي الإعاقة ومحطات شحن المركبات الكهربائية، لتسهيل التعرف عليها وتنظيم استخدامها وتحسين الرؤية الليلية.
+
+4. Overview Block (Right side):
+- Heading:
+  - English: OVERVIEW
+  - French: PRÉSENTATION
+  - Arabic: نظرة عامة
+- Body:
+  - English: Professional marking and layout solutions for accessible parking spaces and EV charging areas, providing clear identification, organized use of designated spaces, and enhanced nighttime visibility.
+  - French: Solutions professionnelles de marquage et d'aménagement pour les places accessibles et les zones de recharge, garantissant une identification claire...
+  - Arabic: حلول تخطيط وتنفيذ احترافية لمواقف ذوي الإعاقة ومناطق شحن المركبات الكهربائية، مع توفير تحديد واضح وتنظيم استخدام الأماكن المخصصة وتعزيز الرؤية الليلية.
+
+5. Key Scope of Work (Checklist):
+- Item 1:
+  - English: Clear marking and identification of accessible parking spaces with designated accessibility symbols.
+  - French: Marquage clair et identification des places de stationnement accessibles avec des symboles d'accessibilité désignés.
+  - Arabic: تخطيط وتحديد واضح لمواقف ذوي الإعاقة باستخدام رموز إمكانية الوصول المعتمدة.
+- Item 2:
+  - English: Clear and highly visible markings for EV charging spaces, designed for easy identification during both daytime and nighttime conditions.
+  - French: Marquages clairs et très visibles pour les espaces de recharge VE, conçus pour une identification facile de jour comme de nuit.
+  - Arabic: تخطيطات واضحة وعالية الوضوح لمواقف شحن المركبات الكهربائية، مصممة لسهولة التعرف عليها في ظروف النهار والليل.
+
+6. Action Button:
+- English: REQUEST A QUOTE
+- French: DEMANDER UN DEVIS
+- Arabic: اطلب عرض سعر
+
+Make sure no visual elements, structure, or formatting are altered—only update the text content accurately as specified above.

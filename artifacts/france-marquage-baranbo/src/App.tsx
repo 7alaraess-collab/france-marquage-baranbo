@@ -296,6 +296,7 @@ type SiteCopy = {
     fieldDelivery: string;
     serviceOneLabel: string;
     serviceTwoLabel: string;
+    serviceThreeLabel: string;
     overview: string;
     scope: string;
     specifications: string;
@@ -407,6 +408,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       fieldDelivery: 'Field delivery',
       serviceOneLabel: 'SERVICE 01 — FIELD DELIVERY',
       serviceTwoLabel: 'OUTDOOR PARKING LAYOUT',
+      serviceThreeLabel: 'EV CHARGING BAYS',
       overview: 'Overview',
       scope: 'Key scope of work',
       specifications: 'Technical specifications',
@@ -520,6 +522,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       fieldDelivery: 'Intervention sur site',
       serviceOneLabel: 'ÉQUIPE TERRAIN ET EXECUTION',
       serviceTwoLabel: 'AMÉNAGEMENT DE PARKING EXTÉRIEUR',
+      serviceThreeLabel: 'EMPLACEMENTS DE RECHARGE POUR VÉHICULES ÉLECTRIQUES',
       overview: 'Présentation',
       scope: 'Périmètre d’intervention',
       specifications: 'Caractéristiques techniques',
@@ -633,6 +636,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       fieldDelivery: 'تنفيذ ميداني',
       serviceOneLabel: 'SERVICE 01 — تنفيذ ميداني',
       serviceTwoLabel: 'تخطيط مواقف السيارات الخارجية',
+      serviceThreeLabel: 'مواقف شحن المركبات الكهربائية',
       overview: 'نظرة عامة',
       scope: 'نطاق العمل الرئيسي',
       specifications: 'المواصفات الفنية',
@@ -737,11 +741,11 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
     },
     '03': {
       title: 'Places accessibles et bornes de recharge',
-      text: 'Marquage professionnel et lisible des places accessibles et des bornes de recharge pour véhicules électriques, conçu pour une identification immédiate, un stationnement organisé et une visibilité renforcée la nuit.',
-      overview: 'Solutions professionnelles de marquage et d’aménagement pour les places accessibles et les zones de recharge électrique, avec une identification claire et un usage organisé des emplacements dédiés.',
+      text: 'Marquage professionnel et lisible des places accessibles et des bornes de recharge pour véhicules électriques, conçu pour une identification facile...',
+      overview: 'Solutions professionnelles de marquage et d’aménagement pour les places accessibles et les zones de recharge, garantissant une identification claire...',
       scope: [
-        'Marquage et identification clairs des places accessibles avec les symboles réglementaires dédiés.',
-        'Marquage très visible des places de recharge électrique, conçu pour une identification facile de jour comme de nuit.',
+        "Marquage clair et identification des places de stationnement accessibles avec des symboles d'accessibilité désignés.",
+        'Marquages clairs et très visibles pour les espaces de recharge VE, conçus pour une identification facile de jour comme de nuit.',
       ],
       specs: '',
       gallery: [
@@ -830,11 +834,11 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
     },
     '03': {
       title: 'مواقف ذوي الإعاقة ومحطات شحن المركبات الكهربائية',
-      text: 'تخطيط واضح واحترافي لمواقف ذوي الإعاقة ومحطات شحن المركبات الكهربائية، لتسهيل التعرف عليها وتنظيم استخدامها وتعزيز الرؤية الليلية.',
-      overview: 'حلول احترافية للتخطيط والتنظيم في مواقف ذوي الإعاقة ومناطق شحن المركبات الكهربائية، مع تعريف واضح واستخدام منظم للمساحات المخصصة.',
+      text: 'تخطيط واضح واحترافي لمواقف ذوي الإعاقة ومحطات شحن المركبات الكهربائية، لتسهيل التعرف عليها وتنظيم استخدامها وتحسين الرؤية الليلية.',
+      overview: 'حلول تخطيط وتنفيذ احترافية لمواقف ذوي الإعاقة ومناطق شحن المركبات الكهربائية، مع توفير تحديد واضح وتنظيم استخدام الأماكن المخصصة وتعزيز الرؤية الليلية.',
       scope: [
-        'تخطيط وتعريف واضح لمواقف ذوي الإعاقة باستخدام رموز الوصول المخصصة.',
-        'تخطيطات واضحة وعالية الرؤية لمواقف شحن المركبات الكهربائية، سهلة التعرف نهاراً وليلاً.',
+        'تخطيط وتحديد واضح لمواقف ذوي الإعاقة باستخدام رموز إمكانية الوصول المعتمدة.',
+        'تخطيطات واضحة وعالية الوضوح لمواقف شحن المركبات الكهربائية، مصممة لسهولة التعرف عليها في ظروف النهار والليل.',
       ],
       specs: '',
       gallery: [
@@ -1138,7 +1142,7 @@ function Home() {
                 </div>
 
                 <div className="order-2 lg:order-none lg:pt-2">
-                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">{selectedService.number === '01' ? copy.detail.serviceOneLabel : selectedService.number === '02' ? copy.detail.serviceTwoLabel : `Service ${selectedService.number} / ${copy.detail.fieldDelivery}`}</div>
+                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">{selectedService.number === '01' ? copy.detail.serviceOneLabel : selectedService.number === '02' ? copy.detail.serviceTwoLabel : selectedService.number === '03' ? copy.detail.serviceThreeLabel : `Service ${selectedService.number} / ${copy.detail.fieldDelivery}`}</div>
                   <h2 id="service-modal-title" className="mt-5 max-w-2xl font-display text-[clamp(3rem,6vw,5.8rem)] font-extrabold leading-[.9] tracking-[-.065em]">{selectedServiceCopy.title}</h2>
                   <p className="mt-8 max-w-xl text-lg leading-8 text-[#334155] sm:text-xl">{selectedServiceCopy.text}</p>
 
