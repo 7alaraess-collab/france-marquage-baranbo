@@ -1,0 +1,43 @@
+Please update Service 06: “Mechanical Street Sweeping & Road Cleaning”.
+
+1. Fix the main image framing:
+- The main image is slightly cropped.
+- Display the full original image as much as possible.
+- Do not stretch, distort, or replace the image.
+- Adjust the image container/aspect ratio if needed so the full image is clearly visible.
+- Keep the existing premium visual style and layout consistent with the other service pages.
+
+2. Update the service content to be professional, clear, and accurate.
+
+Use this content:
+
+SERVICE 06
+FIELD DELIVERY
+
+Title:
+Mechanical Street Sweeping & Road Cleaning
+
+Description:
+Professional mechanical street and road sweeping services to remove dust, dirt, debris, and accumulated material from paved surfaces, helping keep roads and paved areas clean and well maintained.
+
+OVERVIEW:
+Mechanical sweeping services for municipal roads, highways, parking areas, industrial sites, and other paved surfaces, supporting clean and well-maintained areas before, during, and after road works.
+
+KEY SCOPE OF WORK:
+✓ Mechanical sweeping to remove dust, sand, dirt, debris, and accumulated roadside material.
+✓ Cleaning paved surfaces before and after road marking, resurfacing, and maintenance works.
+✓ Routine cleaning around road markings, curbs, drainage edges, and traffic infrastructure.
+✓ Project-based or scheduled sweeping operations to maintain roadway cleanliness and overall surface condition.
+
+TECHNICAL SPECIFICATIONS:
+Professional mechanical sweeping equipment selected according to the project requirements and site conditions, providing efficient cleaning of paved road and surface areas.
+
+FIELD-READY QUALITY
+
+Important:
+- Do NOT mention water-assisted sweeping unless it is confirmed that our equipment uses water.
+- Do NOT claim specific machine capacities, technical specifications, or equipment features that have not been confirmed.
+- Do NOT invent certifications or material specifications.
+- Keep the existing images, typography, colors, spacing, buttons, and overall visual identity unchanged.
+- Only update the Service 06 content and fix the main image framing.
+- Make sure the full image is visible without distortion.

@@ -214,22 +214,22 @@ const services = [
   {
     number: '06',
     title: 'Mechanical Street Sweeping & Road Cleaning',
-    text: 'Professional mechanical street and road sweeping using specialized equipment to remove dirt, debris, and surface buildup, helping keep paved areas clean and well maintained.',
-    overview: 'Mechanical sweeping services for municipal roads, highways, parking areas, industrial sites, and other paved surfaces before, during, and after road works.',
+    text: 'Professional mechanical street and road sweeping services to remove dust, dirt, debris, and accumulated material from paved surfaces, helping keep roads and paved areas clean and well maintained.',
+    overview: 'Mechanical sweeping services for municipal roads, highways, parking areas, industrial sites, and other paved surfaces, supporting clean and well-maintained areas before, during, and after road works.',
     scope: [
-      'Rotary-brush sweeping to remove dust, sand, dirt, debris, and accumulated roadside material.',
+      'Mechanical sweeping to remove dust, sand, dirt, debris, and accumulated roadside material.',
       'Cleaning paved surfaces before and after road marking, resurfacing, and maintenance works.',
       'Routine cleaning around road markings, curbs, drainage edges, and traffic infrastructure.',
-      'Project-based or scheduled operations to improve roadway cleanliness, visibility, and overall condition.',
+      'Project-based or scheduled sweeping operations to maintain roadway cleanliness and overall surface condition.',
     ],
-    specs: 'Professional road-sweeping machinery with adjustable rotary brushes, debris collection, and dust-control or water-assisted sweeping where site conditions require it. Suitable for efficient coverage of paved road surfaces without relying on fixed machine-capacity claims.',
+    specs: 'Professional mechanical sweeping equipment selected according to the project requirements and site conditions, providing efficient cleaning of paved road and surface areas.',
     icon: CleaningBrushIcon,
     gallery: [
       {
         src: '/images/services/street-sweeping-12.jpg',
-        alt: 'Mechanical rotary street sweeper cleaning a paved road surface',
+        alt: 'Mechanical street sweeper cleaning a paved road surface',
         title: 'Mechanical Road Cleaning',
-        text: 'Rotary-brush sweeping equipment removing accumulated material from paved surfaces before road works and routine maintenance.',
+        text: 'Mechanical sweeping equipment removing accumulated material from paved surfaces before road works and routine maintenance.',
       },
     ],
     tone: 'paper',
@@ -409,7 +409,7 @@ function Home() {
                   {selectedService.gallery ? (
                     <>
                       <figure>
-                        <div className={`service-detail-image service-detail-image-primary ${selectedService.number === '04' ? 'service-detail-image-cycle-primary' : selectedService.number === '05' ? 'service-detail-image-sports-primary' : ''}`}>
+                        <div className={`service-detail-image service-detail-image-primary ${selectedService.number === '04' ? 'service-detail-image-cycle-primary' : selectedService.number === '05' ? 'service-detail-image-sports-primary' : selectedService.number === '06' ? 'service-detail-image-sweeper-primary' : ''}`}>
                           <img src={selectedService.gallery[0].src} alt={selectedService.gallery[0].alt} />
                         </div>
                         <figcaption className="mt-4">
