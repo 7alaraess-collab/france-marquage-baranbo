@@ -1,0 +1,87 @@
+I want you to redesign ONLY the service detail view that appears after clicking one of the 6 service cards/buttons.
+
+Keep the existing 6 main service cards exactly as they are from the outside. Do NOT redesign or remove the six services.
+
+The current service detail popup/modal looks cramped, uncomfortable, and visually unbalanced. The images are cropped, the text is too small, and the content feels squeezed into a small window.
+
+Replace the current popup/modal experience with a much cleaner, premium, modern service detail section/page.
+
+DESIGN REQUIREMENTS:
+
+1. DO NOT use a small centered modal.
+   When a user clicks a service, open a full-width service detail view within the website, or navigate to a dedicated service detail section while keeping the same website style.
+
+2. Use a large, spacious layout with generous padding and whitespace.
+
+3. On desktop:
+   - Use a two-column layout.
+   - One side should contain the service image.
+   - The other side should contain the service title, short description, and detailed information.
+   - The image should be large and visually dominant.
+   - Do NOT crop the important parts of the image.
+   - Preserve the original image aspect ratio as much as possible.
+   - Use object-fit: contain or an appropriate aspect-ratio container instead of aggressively cropping the image.
+
+4. Make the typography significantly larger and easier to read.
+   - Service title: large and bold.
+   - Section headings: clear and medium/large.
+   - Body text: comfortable reading size, approximately 17–19px on desktop.
+   - Increase line-height.
+   - Avoid putting large amounts of text into tiny cards.
+
+5. The text and image should feel like ONE unified service presentation, not three separate cards.
+
+6. Create a strong visual hierarchy:
+   Service category
+   ↓
+   Large service title
+   ↓
+   Short professional description
+   ↓
+   Key services / features
+   ↓
+   Technical specifications or additional information
+
+7. Use the company's existing visual identity:
+   - Keep the existing dark navy / blue and white color palette.
+   - Keep the professional engineering/infrastructure feeling.
+   - Use subtle borders, shadows, and rounded corners only where appropriate.
+   - Avoid excessive gradients, excessive animations, or decorative elements.
+
+8. Add a clear "Back to Services" or "Close" button at the top of the detail view.
+   It should be easy to find but not visually dominant.
+
+9. Add navigation between services if appropriate:
+   "Previous Service" and "Next Service"
+   This should allow the user to browse the 6 services without repeatedly returning to the main section.
+
+10. RESPONSIVE DESIGN:
+   On mobile and tablet, stack the layout vertically:
+   image first → title → description → details.
+   Make sure the entire image remains visible and readable.
+   Do not allow text or images to overflow the screen.
+
+11. IMPORTANT:
+   Do not change the actual service content unless necessary.
+   Do not invent new services.
+   Do not remove the existing information.
+   The goal is primarily to improve the visual presentation and usability.
+
+12. The final result should feel like a professional corporate website for a road infrastructure / civil engineering company, not like a generic popup.
+
+VISUAL GOAL:
+
+Think of the service detail page as a premium case-study/service presentation:
+large image + large typography + clean spacing + strong hierarchy + professional engineering aesthetic.
+
+Please inspect the existing implementation first, then modify the existing components/styles rather than rebuilding the entire website from scratch.
+
+Most importantly:
+- No cramped popup
+- No tiny text
+- No badly cropped images
+- No unnecessary nested cards
+- No excessive scrolling inside a small window
+- Give the content room to breathe
+- Make the images and text feel visually connected
+- Preserve the existing 6 service cards on the main page

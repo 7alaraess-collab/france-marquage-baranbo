@@ -212,6 +212,14 @@ function Home() {
     window.setTimeout(() => goTo('#contact'), 50);
   };
 
+  const selectedServiceIndex = selectedService ? services.findIndex((service) => service.number === selectedService.number) : -1;
+  const SelectedServiceIcon = selectedService?.icon;
+  const navigateService = (direction: -1 | 1) => {
+    if (selectedServiceIndex < 0) return;
+    const nextIndex = (selectedServiceIndex + direction + services.length) % services.length;
+    setSelectedService(services[nextIndex]);
+  };
+
   return (
     <div id="top" className="site-noise bg-[#f4f0e6] text-[#171b1d]">
       <div className="bg-[#171b1d] px-5 py-2 text-center font-mono-site text-[9px] uppercase tracking-[.16em] text-[#d4d2c9] sm:px-8">
@@ -270,67 +278,112 @@ function Home() {
 
       {selectedService && (
         <div
-          className="fixed inset-0 z-[60] flex items-center justify-center overflow-y-auto bg-[#171b1d]/80 p-4 backdrop-blur-sm sm:p-8"
+          className="fixed inset-0 z-[60] overflow-y-auto bg-[#f4f0e6] text-[#171b1d]"
           role="presentation"
           onMouseDown={(event) => event.target === event.currentTarget && setSelectedService(null)}
           data-testid="service-modal-backdrop"
         >
           <div
-            className="relative my-auto w-full max-w-3xl overflow-hidden bg-[#f4f0e6] text-[#171b1d] shadow-2xl"
+            className="min-h-full"
             role="dialog"
             aria-modal="true"
             aria-labelledby="service-modal-title"
             data-testid="service-modal"
           >
-            <div className="flex items-start justify-between gap-6 bg-[#171b1d] p-6 text-[#f6f1e6] sm:p-9">
-              <div>
-                <span className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#f3c742]">Service {selectedService.number}</span>
-                <h2 id="service-modal-title" className="mt-4 max-w-2xl font-display text-4xl font-extrabold leading-[.92] tracking-[-.06em] sm:text-6xl">{selectedService.title}</h2>
+            <div className="border-b border-[#394345] bg-[#171b1d] text-[#f6f1e6]">
+              <div className="mx-auto flex max-w-[1380px] items-center justify-between gap-6 px-5 py-5 sm:px-8 lg:px-12">
+                <button onClick={() => setSelectedService(null)} className="group inline-flex items-center gap-3 font-mono-site text-[10px] font-bold uppercase tracking-[.14em] text-[#d4d2c9] transition-colors hover:text-[#f3c742]" data-testid="button-back-to-services">
+                  <ArrowRight size={16} className="rotate-180 transition-transform group-hover:-translate-x-1" /> Back to Services
+                </button>
+                <div className="flex items-center gap-4">
+                  <span className="hidden font-mono-site text-[10px] uppercase tracking-[.14em] text-[#9ba09a] sm:inline">Service detail</span>
+                  <button onClick={() => setSelectedService(null)} className="grid h-10 w-10 place-items-center border border-[#59605e] text-[#f6f1e6] transition-colors hover:border-[#f3c742] hover:text-[#f3c742]" aria-label="Close service details" data-testid="button-close-service-modal">
+                    <X size={20} />
+                  </button>
+                </div>
               </div>
-              <button onClick={() => setSelectedService(null)} className="grid h-11 w-11 shrink-0 place-items-center border border-[#59605e] text-[#f6f1e6] transition-colors hover:border-[#f3c742] hover:text-[#f3c742]" aria-label="Close service details" data-testid="button-close-service-modal">
-                <X size={20} />
-              </button>
             </div>
-            <div className="max-h-[min(620px,calc(100vh-210px))] overflow-y-auto p-6 sm:p-9">
-              <p className="max-w-2xl text-base leading-7 text-[#27302f]">{selectedService.overview}</p>
-              {selectedService.gallery && (
-                <div className="service-gallery mt-8 grid gap-3 sm:grid-cols-3">
-                  {selectedService.gallery.map((item) => (
-                    <figure key={item.title} className="overflow-hidden border border-[#cfc7b8] bg-[#1E293B]">
-                      <div className="service-gallery-image">
-                        <img src={item.src} alt={item.alt} />
+            <div className="mx-auto max-w-[1380px] px-5 py-10 sm:px-8 sm:py-14 lg:px-12 lg:py-20">
+              <div className="grid gap-12 lg:grid-cols-[minmax(0,1.12fr)_minmax(360px,.88fr)] lg:items-start lg:gap-20">
+                <div className="service-detail-media order-1 lg:order-none">
+                  {selectedService.gallery ? (
+                    <>
+                      <figure>
+                        <div className="service-detail-image service-detail-image-primary">
+                          <img src={selectedService.gallery[0].src} alt={selectedService.gallery[0].alt} />
+                        </div>
+                        <figcaption className="mt-4">
+                          <span className="font-mono-site text-[10px] font-bold uppercase tracking-[.14em] text-[#d9673f]">{selectedService.gallery[0].title}</span>
+                          <p className="mt-2 max-w-2xl text-sm leading-6 text-[#59605e]">{selectedService.gallery[0].text}</p>
+                        </figcaption>
+                      </figure>
+                      <div className="mt-8 grid gap-6 sm:grid-cols-2">
+                        {selectedService.gallery.slice(1).map((item) => (
+                          <figure key={item.title}>
+                            <div className="service-detail-image service-detail-image-support">
+                              <img src={item.src} alt={item.alt} loading="lazy" />
+                            </div>
+                            <figcaption className="mt-4">
+                              <span className="font-mono-site text-[10px] font-bold uppercase tracking-[.14em] text-[#d9673f]">{item.title}</span>
+                              <p className="mt-2 text-sm leading-6 text-[#59605e]">{item.text}</p>
+                            </figcaption>
+                          </figure>
+                        ))}
                       </div>
-                      <figcaption className="p-4">
-                        <h3 className="text-sm font-extrabold leading-tight text-[#F8FAFC]">{item.title}</h3>
-                        <p className="mt-2 text-xs leading-5 text-[#cbd5e1]">{item.text}</p>
-                      </figcaption>
-                    </figure>
-                  ))}
+                    </>
+                  ) : (
+                    <div className="service-detail-placeholder flex aspect-[16/10] min-h-[280px] items-center justify-center border border-[#cfc7b8] bg-[#e9e3d7] p-10 text-center sm:min-h-[380px]">
+                      {SelectedServiceIcon && <SelectedServiceIcon size={84} strokeWidth={1} className="text-[#d9673f]" />}
+                    </div>
+                  )}
                 </div>
-              )}
-              <div className="mt-9 grid gap-9 border-t border-[#cfc7b8] pt-8 sm:grid-cols-[1.15fr_.85fr]">
-                <div>
-                  <h3 className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Key scope of work</h3>
-                  <ul className="mt-5 space-y-4">
-                    {selectedService.scope.map((item) => (
-                      <li key={item} className="flex gap-3 text-sm leading-6 text-[#59605e]">
-                        <Check size={16} className="mt-1 shrink-0 text-[#d9673f]" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="border-l-0 border-[#cfc7b8] sm:border-l sm:pl-7">
-                  <h3 className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Technical specifications</h3>
-                  <p className="mt-5 text-sm leading-6 text-[#59605e]">{selectedService.specs}</p>
-                  <div className="mt-7 flex items-center gap-2 border-t border-[#cfc7b8] pt-5 font-mono-site text-[9px] font-bold uppercase tracking-[.1em] text-[#27302f]">
-                    <CircleDot size={14} className="text-[#d9673f]" /> Field-ready quality
+
+                <div className="order-2 lg:order-none lg:pt-2">
+                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">Service {selectedService.number} <span className="mx-2 text-[#b7afa1]">/</span> Field delivery</div>
+                  <h2 id="service-modal-title" className="mt-5 max-w-2xl font-display text-[clamp(3rem,6vw,5.8rem)] font-extrabold leading-[.9] tracking-[-.065em]">{selectedService.title}</h2>
+                  <p className="mt-8 max-w-xl text-lg leading-8 text-[#334155] sm:text-xl">{selectedService.text}</p>
+
+                  <div className="mt-12 border-t border-[#cfc7b8] pt-8">
+                    <h3 className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Overview</h3>
+                    <p className="mt-4 max-w-xl text-[17px] leading-8 text-[#334155]">{selectedService.overview}</p>
                   </div>
+
+                  <div className="mt-10 border-t border-[#cfc7b8] pt-8">
+                    <h3 className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Key scope of work</h3>
+                    <ul className="mt-5 space-y-5">
+                      {selectedService.scope.map((item) => (
+                        <li key={item} className="flex gap-3 text-[17px] leading-7 text-[#334155]">
+                          <Check size={18} className="mt-1 shrink-0 text-[#d9673f]" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-10 border-t border-[#cfc7b8] pt-8">
+                    <h3 className="font-mono-site text-[10px] font-bold uppercase tracking-[.16em] text-[#d9673f]">Technical specifications</h3>
+                    <p className="mt-4 max-w-xl text-[17px] leading-8 text-[#334155]">{selectedService.specs}</p>
+                    <div className="mt-6 flex items-center gap-2 border-t border-[#cfc7b8] pt-5 font-mono-site text-[9px] font-bold uppercase tracking-[.1em] text-[#27302f]">
+                      <CircleDot size={14} className="text-[#d9673f]" /> Field-ready quality
+                    </div>
+                  </div>
+
+                  <button onClick={() => requestServiceQuote(selectedService.title)} className="group mt-10 flex w-full items-center justify-between bg-[#F59E0B] px-5 py-5 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#1E293B] transition-colors hover:bg-[#fbbf24]" data-testid="button-service-quote">
+                    Request a Quote for this Service <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </button>
                 </div>
               </div>
-              <button onClick={() => requestServiceQuote(selectedService.title)} className="group mt-9 flex w-full items-center justify-between bg-[#F59E0B] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#1E293B] transition-colors hover:bg-[#fbbf24]" data-testid="button-service-quote">
-                Request a Quote for this Service <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-              </button>
+
+              <nav className="mt-16 flex flex-col gap-4 border-t border-[#cfc7b8] pt-7 sm:flex-row sm:items-center sm:justify-between" aria-label="Browse services">
+                <button onClick={() => navigateService(-1)} className="group text-left" data-testid="button-previous-service">
+                  <span className="flex items-center gap-2 font-mono-site text-[9px] font-bold uppercase tracking-[.14em] text-[#d9673f]"><ArrowRight size={14} className="rotate-180 transition-transform group-hover:-translate-x-1" /> Previous service</span>
+                  <span className="mt-2 block max-w-xs font-display text-xl font-bold tracking-[-.03em] text-[#171b1d]">{services[(selectedServiceIndex - 1 + services.length) % services.length].title}</span>
+                </button>
+                <button onClick={() => navigateService(1)} className="group text-left sm:text-right" data-testid="button-next-service">
+                  <span className="flex items-center justify-start gap-2 font-mono-site text-[9px] font-bold uppercase tracking-[.14em] text-[#d9673f] sm:justify-end">Next service <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" /></span>
+                  <span className="mt-2 block max-w-xs font-display text-xl font-bold tracking-[-.03em] text-[#171b1d] sm:ml-auto">{services[(selectedServiceIndex + 1) % services.length].title}</span>
+                </button>
+              </nav>
             </div>
           </div>
         </div>
