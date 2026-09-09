@@ -369,16 +369,14 @@ body { min-width: 320px; overflow-x: hidden; }
 .service-card:hover .service-arrow { transform: translate(4px,-4px); }
 .service-arrow { transition: transform .35s ease; }
 .service-preview { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
-.service-technical-mark { display: flex; width: min(100%, 250px); align-items: flex-start; gap: 12px; }
-.service-technical-mark svg { width: 100%; height: auto; overflow: visible; }
+.service-technical-mark { display: flex; width: min(100%, 208px); align-items: flex-start; gap: 9px; }
+.service-technical-mark svg { min-width: 0; width: 100%; height: auto; overflow: visible; }
 .service-technical-mark-dark { --technical-ink: #f8fafc; --technical-line: #94a3b8; --technical-accent: #f3c742; }
 .service-technical-mark-yellow { --technical-ink: #1e293b; --technical-line: #475569; --technical-accent: #1e293b; }
 .service-technical-mark-paper { --technical-ink: #334155; --technical-line: #64748b; --technical-accent: #d9673f; }
-.service-technical-number { flex: 0 0 auto; color: var(--technical-accent); font-family: var(--app-font-mono); font-size: 2rem; font-weight: 700; letter-spacing: -.12em; line-height: .88; }
+.service-technical-number { flex: 0 0 auto; color: var(--technical-accent); font-family: var(--app-font-mono); font-size: 1.65rem; font-weight: 700; letter-spacing: -.12em; line-height: .88; }
 .technical-guide { stroke: var(--technical-line); stroke-dasharray: 2 5; opacity: .45; }
 .technical-accent { color: var(--technical-accent); }
-.service-technical-mark-large { width: min(100%, 360px); transform: scale(1.1); transform-origin: center; }
-.service-technical-mark-large .service-technical-number { font-size: 2.75rem; }
 .service-gallery-image { aspect-ratio: 4 / 3; overflow: hidden; display: grid; place-items: center; background: #e9e3d7; }
 .service-gallery-image img { width: 100%; height: 100%; object-fit: contain; transition: transform .45s ease; }
 .service-gallery figure:hover .service-gallery-image img { transform: scale(1.02); }

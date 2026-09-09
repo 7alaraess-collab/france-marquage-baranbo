@@ -1,0 +1,71 @@
+I want to refine the service illustrations again.
+
+IMPORTANT: DO NOT make the illustrations larger.
+
+Actually, make them slightly SMALLER and more refined.
+
+The current illustrations feel too basic and generic. I want them to be:
+
+- Small
+- Precise
+- Clean
+- Simple
+- Clearly recognizable
+- Professionally designed
+- Slightly technical
+- Visually balanced within the card
+
+I do NOT want large illustrations.
+I do NOT want complicated blueprints.
+I do NOT want generic icons.
+I do NOT want overly detailed drawings.
+
+Think of them as small custom technical sketches rather than icons.
+
+Each illustration should communicate the service immediately using only a few carefully chosen details.
+
+For example:
+
+SERVICE 01:
+A small, clean roadway section with lane markings, directional arrows, and a pedestrian crossing.
+
+SERVICE 02:
+A small parking layout showing an accessible parking space and EV charging point.
+
+SERVICE 03:
+A simple roadway section with a clearly recognizable bicycle lane and bicycle symbol.
+
+SERVICE 04:
+A clean sports/playground surface with recognizable court markings.
+
+SERVICE 05:
+Create a simple but accurate technical sketch that clearly represents the actual Service 5.
+
+SERVICE 06 — Mechanical Street Sweeping & Road Cleaning:
+Create a small, clean technical sketch of a recognizable mechanical road sweeper.
+It should clearly show the main body of the machine, wheels, and especially the rotating sweeping brush underneath/at the side.
+Keep enough details to make it immediately recognizable as a road-sweeping machine, but do not make it complex.
+
+STYLE:
+
+Use a consistent custom line-art style across all six services.
+
+- Thin-to-medium clean lines
+- Precise geometry
+- Minimal details
+- Dark navy/charcoal linework
+- Very subtle orange accent details
+- White/transparent background
+- Consistent scale
+- Consistent stroke weight
+- Professional civil-engineering aesthetic
+
+The illustrations should look like they were designed specifically for this website as one coherent illustration set.
+
+The priority is CLARITY, not complexity.
+
+The user should be able to look at each small illustration for one second and immediately understand what it represents.
+
+Please keep the current card layout, dimensions, typography, spacing, and colors unchanged.
+
+ONLY refine the illustrations.
