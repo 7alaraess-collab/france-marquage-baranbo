@@ -99,14 +99,14 @@ const services = [
   {
     number: '02',
     title: 'Parking Lot Striping & Traffic Layout',
-    text: 'Professional parking space striping and traffic layouts for commercial, industrial, and private facilities, designed for clear...',
+    text: 'Professional parking space striping and traffic layouts for commercial, industrial, and residential facilities, designed for clear...',
     overview: 'Complete parking lot layout, line painting, and space organization for commercial, residential, and corporate facilities, designed for efficient use of space and smooth traffic flow.',
     scope: [
       'Layout of parking stall boundaries, directional arrows, and entry and exit lanes for clear and organized vehicle movement.',
       'Marking of concrete pillars, curbs, clearance zones, and other safety areas to improve visibility and support safer parking operations.',
       'Numbering, lettering, and reserved-space markings for private, designated, and special-use parking spaces.',
     ],
-    specs: '',
+    specs: 'Parking layout and striping solutions selected based on surface conditions, traffic volume, safety requirements, and local standards.',
     icon: SquareParking,
     gallery: [
       {
@@ -295,6 +295,7 @@ type SiteCopy = {
     close: string;
     fieldDelivery: string;
     serviceOneLabel: string;
+    serviceTwoLabel: string;
     overview: string;
     scope: string;
     specifications: string;
@@ -405,6 +406,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       close: 'Close service details',
       fieldDelivery: 'Field delivery',
       serviceOneLabel: 'SERVICE 01 — FIELD DELIVERY',
+      serviceTwoLabel: 'OUTDOOR PARKING LAYOUT',
       overview: 'Overview',
       scope: 'Key scope of work',
       specifications: 'Technical specifications',
@@ -517,6 +519,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       close: 'Fermer le détail du service',
       fieldDelivery: 'Intervention sur site',
       serviceOneLabel: 'ÉQUIPE TERRAIN ET EXECUTION',
+      serviceTwoLabel: 'AMÉNAGEMENT DE PARKING EXTÉRIEUR',
       overview: 'Présentation',
       scope: 'Périmètre d’intervention',
       specifications: 'Caractéristiques techniques',
@@ -629,6 +632,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       close: 'إغلاق تفاصيل الخدمة',
       fieldDelivery: 'تنفيذ ميداني',
       serviceOneLabel: 'SERVICE 01 — تنفيذ ميداني',
+      serviceTwoLabel: 'تخطيط مواقف السيارات الخارجية',
       overview: 'نظرة عامة',
       scope: 'نطاق العمل الرئيسي',
       specifications: 'المواصفات الفنية',
@@ -716,15 +720,15 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
       ],
     },
     '02': {
-      title: 'Marquage de parkings et organisation de la circulation',
+      title: 'Marquage de parkings et plan de circulation',
       text: 'Marquage professionnel des places de stationnement et organisation de la circulation pour les sites commerciaux,...',
-      overview: 'Aménagement complet des parkings, peinture des lignes et organisation des places pour les sites commerciaux, résidentiels et tertiaires, avec une utilisation efficace de l’espace et une circulation fluide.',
+      overview: 'Aménagement complet de parkings, traçage de lignes et organisation des espaces pour les sites commerciaux, résidentiels et...',
       scope: [
-        'Implantation des limites de places, flèches directionnelles et voies d’entrée et de sortie pour une circulation claire et organisée.',
-        'Marquage des piliers, bordures, zones de gabarit et autres espaces de sécurité afin d’améliorer la visibilité et de faciliter les manœuvres.',
-        'Numérotation, lettrage et marquage des places réservées, désignées ou affectées à des usages spécifiques.',
+        "Traçage des limites de places de stationnement, flèches directionnelles et voies d'entrée et de sortie pour une circulation claire et organisée.",
+        "Marquage des piliers en béton, des trottoirs, des zones de dégagement et d'autres zones de sécurité pour améliorer la visibilité...",
+        'Numérotation, lettrage et marquage des places réservées pour les espaces de stationnement privés, désignés et à usage spécial.',
       ],
-      specs: '',
+      specs: "Solutions d'aménagement et de marquage de parking sélectionnées en fonction de l'état de la surface, du volume de trafic...",
       gallery: [
         { src: '/images/services/parking-lot-4.jpg', alt: 'Vue aérienne d’un parking extérieur fraîchement marqué', title: 'Aménagement de parking extérieur', text: 'Limites de places et flèches directionnelles organisées pour une circulation efficace et une capacité optimisée.' },
         { src: '/images/services/parking-lot-5.jpg', alt: 'Parking couvert avec marquages directionnels jaunes bien visibles', title: 'Flux et guidage', text: 'Guidage des voies et chevrons très visibles pour faciliter la navigation dans les parkings couverts.' },
@@ -809,15 +813,15 @@ const serviceTranslations: Record<Exclude<Language, 'EN'>, Record<Service['numbe
       ],
     },
     '02': {
-      title: 'تخطيط مواقف السيارات وتنظيم الحركة',
-      text: 'تخطيط احترافي لمواقف السيارات وتنظيم الحركة في المنشآت التجارية والصناعية والخاصة، بما يضمن وضوح تدفق المركبات وترتيب المواقف.',
-      overview: 'تنفيذ متكامل لتخطيط مواقف السيارات ودهان الخطوط وتنظيم المساحات في المنشآت التجارية والسكنية والإدارية، لتحقيق استخدام فعال للمساحة وحركة سلسة.',
+      title: 'تخطيط مواقف السيارات وتخطيط الحركة المرورية',
+      text: 'تخطيط احترافي لمواقف السيارات ومسارات الحركة للمنشآت التجارية والصناعية والسكنية، مصمم لضمان الوضوح...',
+      overview: 'تخطيط متكامل لمواقف السيارات، وتخطيط الخطوط، وتنظيم المساحات للمنشآت التجارية والسكنية والشركات، بما يضمن الاستخدام الفعال للمساحة وسلاسة تدفق الحركة.',
       scope: [
-        'تحديد حدود المواقف والأسهم الاتجاهية ومسارات الدخول والخروج لحركة واضحة ومنظمة.',
-        'تخطيط الأعمدة والأرصفة ومناطق الخلوص وغيرها من مناطق السلامة لتحسين الرؤية ودعم عمليات الوقوف الآمنة.',
-        'ترقيم وكتابة وتحديد المواقف المحجوزة والمخصصة والاستخدامات الخاصة.',
+        'تخطيط حدود مواقف السيارات والأسهم الاتجاهية ومسارات الدخول والخروج لضمان حركة مركبات واضحة ومنظمة.',
+        'تخطيط الأعمدة الخرسانية والأرصفة ومناطق الخلوص ومناطق الأمان الأخرى لتحسين الرؤية ودعم عمليات ركن آمنة.',
+        'ترقيم وكتابة وعلامات الأماكن المخصصة للمواقف الخاصة والمعتمدة ومواقف الاستخدام الخاص.',
       ],
-      specs: '',
+      specs: 'حلول تخطيط وتنظيم المواقف التي يتم اختيارها بناءً على حالة السطح، وحجم الحركة المرورية، ومتطلبات السلامة، والمعايير المحلية.',
       gallery: [
         { src: '/images/services/parking-lot-4.jpg', alt: 'منظر جوي لموقف سيارات خارجي مخطط حديثاً', title: 'تنظيم المواقف الخارجية', text: 'حدود واضحة للمواقف وأسهم اتجاهية منظمة لتحقيق دوران فعال واستيعاب أفضل.' },
         { src: '/images/services/parking-lot-5.jpg', alt: 'موقف سيارات مغطى بعلامات اتجاهية صفراء واضحة', title: 'تدفق الحركة والإرشاد', text: 'مسارات وعلامات توجيه عالية الوضوح تسهّل التنقل في مواقف السيارات المغطاة.' },
@@ -1134,7 +1138,7 @@ function Home() {
                 </div>
 
                 <div className="order-2 lg:order-none lg:pt-2">
-                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">{selectedService.number === '01' ? copy.detail.serviceOneLabel : `Service ${selectedService.number} / ${copy.detail.fieldDelivery}`}</div>
+                  <div className="font-mono-site text-[10px] font-bold uppercase tracking-[.18em] text-[#d9673f]">{selectedService.number === '01' ? copy.detail.serviceOneLabel : selectedService.number === '02' ? copy.detail.serviceTwoLabel : `Service ${selectedService.number} / ${copy.detail.fieldDelivery}`}</div>
                   <h2 id="service-modal-title" className="mt-5 max-w-2xl font-display text-[clamp(3rem,6vw,5.8rem)] font-extrabold leading-[.9] tracking-[-.065em]">{selectedServiceCopy.title}</h2>
                   <p className="mt-8 max-w-xl text-lg leading-8 text-[#334155] sm:text-xl">{selectedServiceCopy.text}</p>
 

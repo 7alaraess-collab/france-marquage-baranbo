@@ -1,0 +1,64 @@
+Please update only the text content in the existing UI section shown in the screenshots (the "Parking Lot Striping & Traffic Layout" service detail page). Do NOT change any design, layout, colors, fonts, or element placements.
+
+Here are the exact corrected texts for each language version:
+
+1. Top Breadcrumb / Small Label:
+- English: OUTDOOR PARKING LAYOUT
+- French: AMÉNAGEMENT DE PARKING EXTÉRIEUR
+- Arabic: تخطيط مواقف السيارات الخارجية
+
+2. Main Heading:
+- English: Parking Lot Striping & Traffic Layout
+- French: Marquage de parkings et plan de circulation
+- Arabic: تخطيط مواقف السيارات وتخطيط الحركة المرورية
+
+3. Sub-description / Paragraph under heading:
+- English: Professional parking space striping and traffic layouts for commercial, industrial, and residential facilities, designed for clear...
+- French: Marquage professionnel de places de stationnement et plans de circulation pour installations commerciales, industrielles et...
+- Arabic: تخطيط احترافي لمواقف السيارات ومسارات الحركة للمنشآت التجارية والصناعية والسكنية، مصمم لضمان الوضوح...
+
+4. Overview Block (Right side):
+- Heading:
+  - English: OVERVIEW
+  - French: PRÉSENTATION
+  - Arabic: نظرة عامة
+- Body:
+  - English: Complete parking lot layout, line painting, and space organization for commercial, residential, and corporate facilities, designed for efficient use of space and smooth traffic flow.
+  - French: Aménagement complet de parkings, traçage de lignes et organisation des espaces pour les sites commerciaux, résidentiels et...
+  - Arabic: تخطيط متكامل لمواقف السيارات، وتخطيط الخطوط، وتنظيم المساحات للمنشآت التجارية والسكنية والشركات، بما يضمن الاستخدام الفعال للمساحة وسلاسة تدفق الحركة.
+
+5. Key Scope of Work (Checklist):
+- Item 1:
+  - English: Layout of parking stall boundaries, directional arrows, and entry and exit lanes for clear and organized vehicle movement.
+  - French: Traçage des limites de places de stationnement, flèches directionnelles et voies d'entrée et de sortie pour une circulation claire et organisée.
+  - Arabic: تخطيط حدود مواقف السيارات والأسهم الاتجاهية ومسارات الدخول والخروج لضمان حركة مركبات واضحة ومنظمة.
+- Item 2:
+  - English: Marking of concrete pillars, curbs, clearance zones, and other safety areas to improve visibility and support safer parking operations.
+  - French: Marquage des piliers en béton, des trottoirs, des zones de dégagement et d'autres zones de sécurité pour améliorer la visibilité...
+  - Arabic: تخطيط الأعمدة الخرسانية والأرصفة ومناطق الخلوص ومناطق الأمان الأخرى لتحسين الرؤية ودعم عمليات ركن آمنة.
+- Item 3:
+  - English: Numbering, lettering, and reserved-space markings for private, designated, and special-use parking spaces.
+  - French: Numérotation, lettrage et marquage des places réservées pour les espaces de stationnement privés, désignés et à usage spécial.
+  - Arabic: ترقيم وكتابة وعلامات الأماكن المخصصة للمواقف الخاصة والمعتمدة ومواقف الاستخدام الخاص.
+
+6. Technical Specifications:
+- Heading:
+  - English: TECHNICAL SPECIFICATIONS
+  - French: CARACTÉRISTIQUES TECHNIQUES
+  - Arabic: المواصفات الفنية
+- Body:
+  - English: Parking layout and striping solutions selected based on surface conditions, traffic volume, safety requirements, and local standards.
+  - French: Solutions d'aménagement et de marquage de parking sélectionnées en fonction de l'état de la surface, du volume de trafic...
+  - Arabic: حلول تخطيط وتنظيم المواقف التي يتم اختيارها بناءً على حالة السطح، وحجم الحركة المرورية، ومتطلبات السلامة، والمعايير المحلية.
+
+7. Badge / Footer Label:
+- English: FIELD-READY QUALITY
+- French: QUALITÉ PRÊTE POUR LE TERRAIN
+- Arabic: جودة جاهزة للتنفيذ
+
+8. Action Button:
+- English: REQUEST A QUOTE
+- French: DEMANDER UN DEVIS
+- Arabic: اطلب عرض سعر
+
+Make sure no visual elements, structure, or formatting are altered—only update the text content accurately as specified above.
