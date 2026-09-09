@@ -186,14 +186,14 @@ const services = [
   {
     number: '05',
     title: 'Schools, Sports Facilities & Specialized Venues',
-    text: 'Durable and highly visible markings for school playgrounds, sports courts, industrial facilities, and specialized sites.',
-    overview: 'Tailored line marking for recreational, educational, and industrial environments requiring extreme precision and specialized paint standards.',
+    text: 'Durable and highly visible markings for school playgrounds, sports courts, recreational areas, and specialized facilities.',
+    overview: 'Professional line marking and surface marking services for sports courts, schoolyards, recreational areas, and other specialized facilities, with a focus on clear layouts, accurate lines, and long-lasting results.',
     scope: [
-      'Educational and colorful floor games for schoolyards and public parks (hopscotch, fun geometric paths).',
-      'Precision geometric line painting for athletic courts (basketball, tennis, running tracks).',
-      'Industrial safety zones, forklift lanes, factory walkways, and specialized reflective ground markings.',
+      'Educational and colorful floor markings for schoolyards, playgrounds, and activity areas.',
+      'Precision line marking for athletic courts, including basketball and tennis courts.',
+      'Safety zones, walkways, and customized ground markings for specialized facilities.',
     ],
-    specs: 'Non-toxic, eco-friendly, wear-resistant coatings engineered for heavy foot and equipment traffic while maintaining color brightness.',
+    specs: 'Durable surface marking solutions selected according to the application, surface condition, and project requirements, with a focus on adhesion, visibility, and wear resistance.',
     icon: LayoutGrid,
     gallery: [
       {
@@ -409,7 +409,7 @@ function Home() {
                   {selectedService.gallery ? (
                     <>
                       <figure>
-                        <div className={`service-detail-image service-detail-image-primary ${selectedService.number === '04' ? 'service-detail-image-cycle-primary' : ''}`}>
+                        <div className={`service-detail-image service-detail-image-primary ${selectedService.number === '04' ? 'service-detail-image-cycle-primary' : selectedService.number === '05' ? 'service-detail-image-sports-primary' : ''}`}>
                           <img src={selectedService.gallery[0].src} alt={selectedService.gallery[0].alt} />
                         </div>
                         <figcaption className="mt-4">
