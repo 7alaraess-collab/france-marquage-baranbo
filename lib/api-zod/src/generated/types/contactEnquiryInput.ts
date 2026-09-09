@@ -5,18 +5,7 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
-
-export type ContactEnquiryInputLanguage = typeof ContactEnquiryInputLanguage[keyof typeof ContactEnquiryInputLanguage];
-
-
-export const ContactEnquiryInputLanguage = {
-  EN: 'EN',
-  FR: 'FR',
-  AR: 'AR',
-} as const;
+import type { ContactEnquiryInputLanguage } from './contactEnquiryInputLanguage';
 
 export interface ContactEnquiryInput {
   /**
@@ -43,13 +32,3 @@ export interface ContactEnquiryInput {
   siteDetails: string;
   language: ContactEnquiryInputLanguage;
 }
-
-export interface ContactEnquiryResponse {
-  status: string;
-  message: string;
-}
-
-export interface ErrorResponse {
-  error: string;
-}
-

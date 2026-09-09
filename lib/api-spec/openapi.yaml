@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: contact
+    description: Contact enquiry operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,37 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /contact-enquiries:
+    post:
+      operationId: submitContactEnquiry
+      tags: [contact]
+      summary: Submit a project enquiry
+      description: Sends a visitor's project enquiry to the company's contact email.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactEnquiryInput"
+      responses:
+        "200":
+          description: Enquiry sent
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactEnquiryResponse"
+        "400":
+          description: Invalid enquiry
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "502":
+          description: Email delivery failed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +66,54 @@ components:
           type: string
       required:
         - status
+    ContactEnquiryInput:
+      type: object
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 200
+        organisation:
+          type: string
+          minLength: 1
+          maxLength: 200
+        email:
+          type: string
+          format: email
+          maxLength: 320
+        projectType:
+          type: string
+          minLength: 1
+          maxLength: 200
+        siteDetails:
+          type: string
+          minLength: 1
+          maxLength: 5000
+        language:
+          type: string
+          enum: [EN, FR, AR]
+      required:
+        - name
+        - organisation
+        - email
+        - projectType
+        - siteDetails
+        - language
+    ContactEnquiryResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        message:
+          type: string
+      required:
+        - status
+        - message
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
 

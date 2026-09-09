@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type FormEvent } from 'react';
 import {
   ArrowDownRight,
   ArrowRight,
@@ -22,6 +22,7 @@ import {
   LayoutGrid,
   X,
 } from 'lucide-react';
+import { useSubmitContactEnquiry } from '@workspace/api-client-react';
 
 type Language = 'EN' | 'FR' | 'AR';
 
@@ -359,6 +360,8 @@ type SiteCopy = {
     messageLabel: string;
     messagePlaceholder: string;
     submit: string;
+    submitting: string;
+    errorText: string;
     consent: string;
   };
   footer: {
@@ -483,6 +486,8 @@ const siteTranslations: Record<Language, SiteCopy> = {
       messageLabel: 'Tell us about the site',
       messagePlaceholder: 'Location, timing, what needs marking...',
       submit: 'Send project enquiry',
+      submitting: 'Sending enquiry...',
+      errorText: 'We could not send your enquiry right now. Please try again.',
       consent: 'By sending this form, you agree that we may use your details to respond to this enquiry.',
     },
     footer: {
@@ -605,6 +610,8 @@ const siteTranslations: Record<Language, SiteCopy> = {
       messageLabel: 'Parlez-nous du site',
       messagePlaceholder: 'Lieu, calendrier, éléments à marquer...',
       submit: 'Envoyer la demande',
+      submitting: 'Envoi en cours...',
+      errorText: 'Votre demande n’a pas pu être envoyée. Veuillez réessayer.',
       consent: 'En envoyant ce formulaire, vous acceptez que nous utilisions vos coordonnées pour répondre à votre demande.',
     },
     footer: {
@@ -727,6 +734,8 @@ const siteTranslations: Record<Language, SiteCopy> = {
       messageLabel: 'أخبرنا عن الموقع',
       messagePlaceholder: 'الموقع، التوقيت، ما يحتاج إلى تخطيط...',
       submit: 'إرسال استفسار المشروع',
+      submitting: 'جارٍ إرسال الاستفسار...',
+      errorText: 'تعذر إرسال استفسارك الآن. يرجى المحاولة مرة أخرى.',
       consent: 'بإرسال هذا النموذج، توافق على استخدام بياناتك للرد على استفسارك.',
     },
     footer: {
@@ -996,8 +1005,10 @@ function Home() {
   const [languageOpen, setLanguageOpen] = useState(false);
   const [language, setLanguage] = useState<Language>(getInitialLanguage);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [quoteService, setQuoteService] = useState('');
+  const submitContactEnquiry = useSubmitContactEnquiry();
   const copy = siteTranslations[language];
   const isArabic = language === 'AR';
   useReveal();
@@ -1011,6 +1022,29 @@ function Home() {
     setLanguage(nextLanguage);
     setLanguageOpen(false);
     window.localStorage.setItem('france-marquage-language', nextLanguage);
+  };
+
+  const handleEnquirySubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setSubmitError(false);
+
+    const formData = new FormData(event.currentTarget);
+    const enquiry = {
+      name: String(formData.get('name') ?? '').trim(),
+      organisation: String(formData.get('organisation') ?? '').trim(),
+      email: String(formData.get('email') ?? '').trim(),
+      projectType: String(formData.get('projectType') ?? '').trim(),
+      siteDetails: String(formData.get('siteDetails') ?? '').trim(),
+      language,
+    };
+
+    try {
+      await submitContactEnquiry.mutateAsync({ data: enquiry });
+      setSubmitted(true);
+      setQuoteService('');
+    } catch {
+      setSubmitError(true);
+    }
   };
 
   useEffect(() => {
@@ -1371,19 +1405,20 @@ function Home() {
                   <span className="grid h-16 w-16 place-items-center rounded-full bg-[#f3c742] text-[#171b1d]"><Check size={30} /></span>
                   <h3 className="mt-7 font-display text-4xl font-bold tracking-[-.05em]">{copy.contact.successTitle}</h3>
                   <p className="mt-4 max-w-sm text-sm leading-6 text-[#b9bbb1]">{copy.contact.successText}</p>
-                  <button onClick={() => setSubmitted(false)} className="mt-8 border-b border-[#f3c742] pb-1 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#f3c742]" data-testid="button-send-another">{copy.contact.sendAnother}</button>
+                   <button onClick={() => { setSubmitted(false); setSubmitError(false); }} className="mt-8 border-b border-[#f3c742] pb-1 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#f3c742]" data-testid="button-send-another">{copy.contact.sendAnother}</button>
                 </div>
               ) : (
-                <form className="bg-[#f4f0e6] p-6 sm:p-9" onSubmit={(event) => { event.preventDefault(); setSubmitted(true); }} data-testid="form-quote">
+                <form className="bg-[#f4f0e6] p-6 sm:p-9" onSubmit={handleEnquirySubmit} aria-busy={submitContactEnquiry.isPending} data-testid="form-quote">
                   <div className="mb-8 flex items-center justify-between border-b border-[#cfc7b8] pb-5"><span className="font-mono-site text-[10px] font-bold uppercase tracking-[.15em]">{copy.contact.enquiry}</span><Sparkles size={18} className="text-[#d9673f]" /></div>
                   <div className="grid gap-6 sm:grid-cols-2">
                     <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.nameLabel}</span><input required name="name" className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder={copy.contact.namePlaceholder} data-testid="input-name" /></label>
                     <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.organisationLabel}</span><input required name="organisation" className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder={copy.contact.organisationPlaceholder} data-testid="input-organisation" /></label>
                     <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.emailLabel}</span><input required type="email" name="email" className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder={copy.contact.emailPlaceholder} data-testid="input-email" /></label>
-                     <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.projectTypeLabel}</span><select name="project" value={quoteService} onChange={(event) => setQuoteService(event.target.value)} className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none focus:border-[#d9673f]" data-testid="select-project"><option value="" disabled>{copy.contact.selectOne}</option>{services.map((service) => <option key={service.number} value={service.number}>{getServiceCopy(service, language).title}</option>)}<option value="other">{copy.contact.otherSite}</option></select></label>
+                      <label className="block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.projectTypeLabel}</span><select required name="projectType" value={quoteService} onChange={(event) => setQuoteService(event.target.value)} className="mt-2 w-full border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none focus:border-[#d9673f]" data-testid="select-project"><option value="" disabled>{copy.contact.selectOne}</option>{services.map((service) => <option key={service.number} value={service.number}>{getServiceCopy(service, language).title}</option>)}<option value="other">{copy.contact.otherSite}</option></select></label>
                   </div>
-                  <label className="mt-7 block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.messageLabel}</span><textarea required name="message" rows={3} className="mt-2 w-full resize-none border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder={copy.contact.messagePlaceholder} data-testid="textarea-message" /></label>
-                  <button type="submit" className="group mt-9 flex w-full items-center justify-between bg-[#171b1d] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.14em] text-[#f6f1e6] transition-colors hover:bg-[#d9673f]" data-testid="button-submit-quote">{copy.contact.submit} <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></button>
+                  <label className="mt-7 block"><span className="font-mono-site text-[9px] font-bold uppercase tracking-[.13em] text-[#59605e]">{copy.contact.messageLabel}</span><textarea required name="siteDetails" rows={3} className="mt-2 w-full resize-none border-0 border-b border-[#bcb4a5] bg-transparent px-0 py-3 text-sm outline-none transition-colors placeholder:text-[#9ba09a] focus:border-[#d9673f]" placeholder={copy.contact.messagePlaceholder} data-testid="textarea-message" /></label>
+                  {submitError && <p role="alert" className="mt-4 text-[10px] leading-4 text-[#b33820]" data-testid="form-error">{copy.contact.errorText}</p>}
+                  <button type="submit" disabled={submitContactEnquiry.isPending} className="group mt-9 flex w-full items-center justify-between bg-[#171b1d] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.14em] text-[#f6f1e6] transition-colors hover:bg-[#d9673f]" data-testid="button-submit-quote">{submitContactEnquiry.isPending ? copy.contact.submitting : copy.contact.submit} <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></button>
                   <p className="mt-4 text-[10px] leading-4 text-[#77796e]">{copy.contact.consent}</p>
                 </form>
               )}
