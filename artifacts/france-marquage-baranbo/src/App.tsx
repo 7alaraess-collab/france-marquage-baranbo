@@ -114,6 +114,20 @@ const services = [
     ],
     specs: 'UV-resistant epoxy/acrylic formulations designed to prevent color fading, combined with anti-slip micro-textures.',
     icon: BatteryCharging,
+    gallery: [
+      {
+        src: '/images/services/specialized-ev-7.jpg',
+        alt: 'Green electric vehicle charging bay with a white car symbol',
+        title: 'EV Charging Bays',
+        text: 'High-visibility green surfacing and clear vehicle symbols for instantly recognizable electric vehicle spaces.',
+      },
+      {
+        src: '/images/services/specialized-ev-8.jpg',
+        alt: 'Blue accessible parking bay with white wheelchair markings',
+        title: 'Accessible Parking Bays',
+        text: 'Durable blue surface coating and crisp accessibility markings for compliant, easy-to-identify designated spaces.',
+      },
+    ],
     tone: 'paper',
   },
   {
