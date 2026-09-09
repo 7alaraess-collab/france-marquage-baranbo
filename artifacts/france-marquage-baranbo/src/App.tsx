@@ -336,8 +336,13 @@ type SiteCopy = {
     titleFirst: string;
     titleSecond: string;
     description: string;
+    company: string;
+    owner: string;
     location: string;
     region: string;
+    tel: string;
+    mobile: string;
+    emailAddress: string;
     successTitle: string;
     successText: string;
     sendAnother: string;
@@ -454,9 +459,14 @@ const siteTranslations: Record<Language, SiteCopy> = {
       kicker: 'Start a conversation',
       titleFirst: "Let's make",
       titleSecond: 'the route clear.',
-      description: 'Tell us what is changing on your site. We will come back with the right questions, a practical scope and a clear next step.',
-      location: 'Casablanca · Morocco',
-      region: 'Projects across the region',
+      description: 'For road and car park marking using the best types of French paints with high-quality Swiss specifications.',
+      company: 'BARANBO MARQUAGE',
+      owner: 'Eng. Idriss Mohammad Baranbo',
+      location: 'Hama - Barnieh Street, opposite Hisham Sinan Hospital',
+      region: 'Hama - Barnieh Street, opposite Hisham Sinan Hospital',
+      tel: 'Tel: 00 41 78 249 74 81 — 00 41 78 323 81 29',
+      mobile: 'Mobile: 0939687190 — 0944311232',
+      emailAddress: 'momo.bar06160@gmail.com',
       successTitle: 'Message received.',
       successText: 'Thank you. Our team will review the details and get back to you within one working day.',
       sendAnother: 'Send another request',
@@ -476,8 +486,8 @@ const siteTranslations: Record<Language, SiteCopy> = {
       consent: 'By sending this form, you agree that we may use your details to respond to this enquiry.',
     },
     footer: {
-      description: 'Professional marking and traffic safety for sites that need to work beautifully.',
-      copyright: '© 2024 Compagnie France Marquage Baranbo',
+      description: 'BARANBO MARQUAGE · Eng. Idriss Mohammad Baranbo',
+      copyright: '© 2024 BARANBO MARQUAGE',
       builtFor: 'Built for the working day',
     },
   },
@@ -571,9 +581,14 @@ const siteTranslations: Record<Language, SiteCopy> = {
       kicker: 'Parlons de votre projet',
       titleFirst: 'Rendons',
       titleSecond: 'le parcours lisible.',
-      description: 'Décrivez-nous les changements prévus sur votre site. Nous reviendrons vers vous avec les bonnes questions, un périmètre concret et une prochaine étape claire.',
-      location: 'Casablanca · Maroc',
-      region: 'Projets dans toute la région',
+      description: 'Pour le marquage des routes et des parkings en utilisant les meilleurs types de peintures françaises avec des spécifications suisses de haute qualité.',
+      company: 'BARANBO MARQUAGE (Société Baranbo)',
+      owner: 'Ing. Idriss Mohammad Baranbo',
+      location: "Hama - Rue Barnieh, en face de l'hôpital Hisham Sinan",
+      region: "Hama - Rue Barnieh, en face de l'hôpital Hisham Sinan",
+      tel: 'Tel: 00 41 78 249 74 81 — 00 41 78 323 81 29',
+      mobile: 'Mobile: 0939687190 — 0944311232',
+      emailAddress: 'momo.bar06160@gmail.com',
       successTitle: 'Message reçu.',
       successText: 'Merci. Notre équipe étudiera les détails et reviendra vers vous sous un jour ouvré.',
       sendAnother: 'Envoyer une autre demande',
@@ -593,8 +608,8 @@ const siteTranslations: Record<Language, SiteCopy> = {
       consent: 'En envoyant ce formulaire, vous acceptez que nous utilisions vos coordonnées pour répondre à votre demande.',
     },
     footer: {
-      description: 'Marquage professionnel et sécurité des déplacements pour les sites qui doivent fonctionner avec élégance.',
-      copyright: '© 2024 Compagnie France Marquage Baranbo',
+      description: 'BARANBO MARQUAGE (Société Baranbo) · Ing. Idriss Mohammad Baranbo',
+      copyright: '© 2024 BARANBO MARQUAGE (Société Baranbo)',
       builtFor: 'Conçu pour le quotidien des chantiers',
     },
   },
@@ -688,9 +703,14 @@ const siteTranslations: Record<Language, SiteCopy> = {
       kicker: 'لنبدأ حواراً',
       titleFirst: 'لنجعل',
       titleSecond: 'الطريق واضحاً.',
-      description: 'أخبرنا بما سيتغير في موقعك. سنعود إليك بالأسئلة المناسبة ونطاق عمل عملي وخطوة تالية واضحة.',
-      location: 'الدار البيضاء · المغرب',
-      region: 'مشاريع في أنحاء المنطقة',
+      description: 'لتخطيط الطرق ومصففات السيارات بيجود انواد الدهانات الفرنسية بمواصفات فرنسية سويسري عالية الجودة.',
+      company: 'شركة برنبو / برنبو ماركاج',
+      owner: 'المهندس الفرنسي ادريس محمد برنبو',
+      location: 'الميسات شارع برنية مقابل مشفى هشام سنان',
+      region: 'الميسات شارع برنية مقابل مشفى هشام سنان',
+      tel: 'Tel: 00 41 78 249 74 81 — 00 41 78 323 81 29',
+      mobile: 'Mobile: 0939687190 — 0944311232',
+      emailAddress: 'momo.bar06160@gmail.com',
       successTitle: 'تم استلام الرسالة.',
       successText: 'شكراً لك. سيراجع فريقنا التفاصيل وسيعود إليك خلال يوم عمل واحد.',
       sendAnother: 'إرسال طلب آخر',
@@ -710,8 +730,8 @@ const siteTranslations: Record<Language, SiteCopy> = {
       consent: 'بإرسال هذا النموذج، توافق على استخدام بياناتك للرد على استفسارك.',
     },
     footer: {
-      description: 'تخطيط احترافي وسلامة للحركة في مواقع تستحق أداءً متقناً.',
-      copyright: '© 2024 Compagnie France Marquage Baranbo',
+      description: 'شركة برنبو / برنبو ماركاج · المهندس الفرنسي ادريس محمد برنبو',
+      copyright: '© 2024 شركة برنبو / برنبو ماركاج',
       builtFor: 'مصمم ليوم العمل',
     },
   },
@@ -1340,9 +1360,9 @@ function Home() {
               <h2 className="max-w-xl font-display text-5xl font-extrabold leading-[.88] tracking-[-.07em] sm:text-7xl">{copy.contact.titleFirst}<br />{copy.contact.titleSecond}</h2>
               <p className="mt-8 max-w-sm text-sm leading-6 text-[#4c4c37]">{copy.contact.description}</p>
               <div className="mt-12 space-y-5 border-t border-[#c8a62f] pt-6">
-                <a href="tel:+212522000000" className="flex items-center gap-4 text-sm font-bold transition-transform hover:translate-x-1" data-testid="link-contact-phone"><Phone size={18} strokeWidth={1.5} /> +212 522 00 00 00</a>
-                <a href="mailto:hello@francemarquage.ma" className="flex items-center gap-4 text-sm font-bold transition-transform hover:translate-x-1" data-testid="link-contact-email"><Mail size={18} strokeWidth={1.5} /> hello@francemarquage.ma</a>
-                <p className="flex items-start gap-4 text-sm leading-6"><MapPin size={18} strokeWidth={1.5} className="mt-1 shrink-0" /> {copy.contact.location}<br />{copy.contact.region}</p>
+                <a href="tel:+41782497481" className="flex items-start gap-4 text-sm font-bold leading-6 transition-transform hover:translate-x-1" data-testid="link-contact-phone"><Phone size={18} strokeWidth={1.5} className="mt-1 shrink-0" /><span>{copy.contact.tel}<br />{copy.contact.mobile}</span></a>
+                <a href="mailto:momo.bar06160@gmail.com" className="flex items-center gap-4 text-sm font-bold transition-transform hover:translate-x-1" data-testid="link-contact-email"><Mail size={18} strokeWidth={1.5} /> {copy.contact.emailAddress}</a>
+                <p className="flex items-start gap-4 text-sm leading-6"><MapPin size={18} strokeWidth={1.5} className="mt-1 shrink-0" /><span>{copy.contact.company}<br />{copy.contact.owner}<br />{copy.contact.location}</span></p>
               </div>
             </div>
             <div className="reveal reveal-delay-1">
