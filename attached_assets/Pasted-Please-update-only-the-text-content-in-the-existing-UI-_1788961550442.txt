@@ -1,0 +1,48 @@
+Please update only the text content in the existing UI section shown in the screenshots (the "About Us" section). Do NOT change any design, layout, colors, fonts, or element placements.
+
+Here are the exact corrected texts for each language version:
+
+1. Section Tag / Small Label:
+- English: 01 — ABOUT US
+- French: 01 — À PROPOS
+- Arabic: 01 — من نحن
+
+2. Main Heading:
+- English: Clear markings. Safer roads.
+- French: Un marquage clair. Des routes plus sûres.
+- Arabic: تخطيط أوضح. طرق أماناً. (أو: علامات أوضح. طرق أماناً.)
+
+3. Main Paragraph (Right side):
+- English: France Marquage Baranbo delivers professional road marking and traffic safety solutions with a focus on precision, durability, and clear visual guidance.
+- French: France Marquage Baranbo propose des solutions professionnelles de marquage routier et de sécurité des déplacements, avec une attention particulière portée à la précision, à la durabilité et à la lisibilité.
+- Arabic: تقدم France Marquage Baranbo حلولاً احترافية لتخطيط الطرق وسلامة الحركة، مع التركيز على الدقة والمتانة والإرشاد البصري الواضح.
+
+4. Sub-block 1 (Precision on every project):
+- Header:
+  - English: PRECISION ON EVERY PROJECT
+  - French: LA PRÉCISION SUR CHAQUE PROJET
+  - Arabic: دقة في كل مشروع
+- Body:
+  - English: Every project is carefully prepared and executed to deliver clean, accurate, and consistent results.
+  - French: Chaque projet est préparé et exécuté avec soin afin de garantir un résultat net, précis et homogène.
+  - Arabic: يُعد كل مشروع وينفذ بعناية لتقديم نتائج دقيقة ومتناسقة.
+- Checkmarks:
+  - English: Precision application / Day & night visibility
+  - French: Application de précision / Visibilité jour et nuit
+  - Arabic: تطبيق دقيق / وضوح نهاراً وليلاً
+
+5. Sub-block 2 (Visible day & night):
+- Header:
+  - English: VISIBLE DAY & NIGHT
+  - French: VISIBLE DE JOUR COMME DE NUIT
+  - Arabic: وضوح نهاراً وليلاً
+- Body:
+  - English: Reflective marking solutions ensure visibility after dark, helping drivers and pedestrians navigate with confidence.
+  - French: Nos solutions de marquage rétroréfléchissant améliorent la visibilité après la tombée de la nuit et facilitent les déplacements des conducteurs et des piétons.
+  - Arabic: تحسن حلول التخطيط العاكسة الرؤية بعد حلول الظلام، وتساعد السائقين والمشاة على التنقل بوضوح أكبر.
+- Checkmarks:
+  - English: Durable materials / Professional project execution
+  - French: Matériaux durables / Exécution professionnelle des projets
+  - Arabic: مواد متينة / تنفيذ احترافي للمشاريع
+
+Make sure no visual elements, structure, or formatting are altered—only update the text content accurately as specified above.
