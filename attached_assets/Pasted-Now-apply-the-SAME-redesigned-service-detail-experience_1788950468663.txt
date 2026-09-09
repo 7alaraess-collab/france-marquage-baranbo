@@ -1,0 +1,172 @@
+Now apply the SAME redesigned service-detail experience to the remaining 5 services.
+
+IMPORTANT:
+I will provide 2–3 images for each service. Use the images I provide for the CORRECT corresponding service. Do not mix images between services.
+
+Do NOT redesign the main 6 service cards/buttons. Keep their current design.
+
+For every service detail view, use the same visual system and layout that we established for the first service.
+
+DESIGN STRUCTURE:
+
+When a user clicks any of the 6 services, open a full-width service detail experience inside the website instead of the current small popup/modal.
+
+The layout should feel like a premium professional road infrastructure / civil engineering website.
+
+DESKTOP LAYOUT:
+
+Create a spacious two-column hero section:
+
+LEFT:
+- Large service image/gallery.
+- Display the main image prominently.
+- If the service has 2–3 images, create a clean image gallery.
+- One large main image with smaller thumbnail images underneath or beside it.
+- Clicking a thumbnail should change the main image.
+- Allow the user to view each image clearly.
+- Do NOT aggressively crop images.
+- Preserve image proportions.
+- Use object-fit: contain where necessary.
+- Images should have enough space around them.
+- Do not squeeze multiple large images into tiny cards.
+
+RIGHT:
+- Small service category/label.
+- Large service title.
+- Professional short description.
+- Key features / scope of work.
+- Important technical information where available.
+- Use clear headings and comfortable spacing.
+
+The image and text should feel like ONE unified service presentation.
+
+TYPOGRAPHY:
+- Service title: approximately 40–52px on desktop.
+- Section headings: approximately 24–30px.
+- Body text: approximately 17–19px.
+- Comfortable line-height.
+- Strong visual hierarchy.
+- Do not use tiny text.
+- Do not put too much text into narrow columns.
+
+BELOW THE HERO:
+
+Create a clean information section for:
+- Key Scope of Work
+- Technical Specifications
+- Materials / Methods
+- Applications
+- Other relevant information already provided for that service
+
+Only display sections that actually have content.
+
+Use a clean grid or two-column information layout rather than long walls of text.
+
+IMAGE GALLERY:
+
+Each service may have 2 or 3 images.
+
+Build the gallery so that:
+- The first image is the main featured image.
+- Other images appear as thumbnails.
+- Clicking a thumbnail changes the main image.
+- Add subtle hover effects.
+- Optional lightbox/fullscreen viewing is welcome if it fits the existing design.
+- Never crop important parts of the images.
+- Do not distort image proportions.
+- Make sure all images are sharp and large enough to be useful.
+
+NAVIGATION:
+
+At the top of the service detail:
+- Add a clear "Back to Services" button.
+- Keep it subtle but easy to find.
+
+At the bottom:
+- Add "Previous Service" and "Next Service" navigation.
+- This should allow users to move through all 6 services smoothly.
+
+RESPONSIVE DESIGN:
+
+Desktop:
+Image + content side-by-side.
+
+Tablet:
+Reduce the columns proportionally while keeping the image large.
+
+Mobile:
+Stack everything vertically:
+
+Service label
+↓
+Service title
+↓
+Main image
+↓
+Image thumbnails
+↓
+Description
+↓
+Key information
+↓
+Technical specifications
+↓
+Previous / Next service
+
+The mobile version must NOT feel like a squeezed desktop layout.
+
+VISUAL STYLE:
+
+Keep the existing company visual identity:
+- Dark navy / blue
+- White
+- Professional engineering aesthetic
+- Clean modern typography
+- Subtle borders
+- Subtle shadows
+- Moderate corner radius
+
+Avoid:
+- Small centered popups
+- Tiny text
+- Excessive cards
+- Excessive gradients
+- Excessive animations
+- Clutter
+- Large empty gaps
+- Cropped images
+- Horizontal scrolling
+- Nested cards inside cards
+
+VERY IMPORTANT:
+
+All 6 services must use the SAME design system.
+
+Do not create a different layout for each service.
+
+Only the following should change from service to service:
+- Service title
+- Description
+- Text/content
+- Images
+- Technical information
+- Scope of work
+
+The layout, spacing, typography, gallery behavior, navigation, and overall visual language should remain consistent.
+
+I will now provide the images for each of the remaining 5 services.
+
+Organize the images according to the service they belong to and make sure each image is used only in its correct service.
+
+Before finishing, test every service:
+1. Open service
+2. Back to services
+3. Switch gallery images
+4. Check image proportions
+5. Previous/Next navigation
+6. Desktop layout
+7. Mobile layout
+8. Make sure no content is cropped or overflowing
+
+Do not rebuild the website from scratch. Modify the existing implementation and preserve the existing functionality and the six main service cards.I will send the service images in the next messages.
+Do not start replacing or assigning images until I finish uploading all the images and tell you that I am done.
