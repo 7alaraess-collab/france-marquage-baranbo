@@ -259,7 +259,7 @@ function Logo({ light = false, official = false }: { light?: boolean; official?:
   return (
     <a href="#top" className="flex items-center gap-3" data-testid="link-logo">
       {official ? (
-        <img src="/images/brand/company-logo.jpg" alt="FRANCE MARQUAGE BARANBO" className="h-10 w-10 shrink-0 object-contain" />
+        <img src="/images/brand/company-logo-transparent.png" alt="FRANCE MARQUAGE BARANBO" className="h-12 w-12 shrink-0 object-contain" />
       ) : (
         <span className={`relative grid h-10 w-10 place-items-center border-2 ${light ? 'border-[#f3c742]' : 'border-[#171b1d]'}`}>
           <span className={`h-4 w-4 ${light ? 'bg-[#f3c742]' : 'bg-[#171b1d]'}`} />

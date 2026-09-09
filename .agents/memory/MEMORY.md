@@ -1,0 +1,1 @@
+- [Logo background cleanup](logo-background-cleanup.md) — flood-fill only the connected outer background so internal white logo details remain intact.
