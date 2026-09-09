@@ -4,6 +4,8 @@ import {
   ArrowRight,
   ArrowUpRight,
   Award,
+  BatteryCharging,
+  Bike,
   Check,
   ChevronDown,
   CircleDot,
@@ -15,8 +17,11 @@ import {
   Menu,
   Minus,
   Phone,
+  Route,
+  SquareParking,
   Sparkles,
   Truck,
+  LayoutGrid,
   X,
 } from 'lucide-react';
 
@@ -40,6 +45,7 @@ const services = [
       'Intersection safety enhancement and speed hump warning line marking.',
     ],
     specs: 'Premium heavy-duty thermoplastic and cold-applied acrylic road paints engineered for high abrasion resistance, weather durability, and optimal night visibility.',
+    icon: Route,
     gallery: [
       {
         src: '/images/services/field-crews.jpg',
@@ -73,6 +79,7 @@ const services = [
       'Numbering, lettering, and reservation marking for private/VIP spaces.',
     ],
     specs: 'Oil- and rubber-resistant, high-contrast yellow and white pavement markings formulated for high adhesion in enclosed or low-light parking structures.',
+    icon: SquareParking,
     gallery: [
       {
         src: '/images/services/parking-lot-4.jpg',
@@ -106,6 +113,7 @@ const services = [
       'Anti-slip aggregate application within painted bays to prevent pedestrian and driver slipping.',
     ],
     specs: 'UV-resistant epoxy/acrylic formulations designed to prevent color fading, combined with anti-slip micro-textures.',
+    icon: BatteryCharging,
     gallery: [
       {
         src: '/images/services/specialized-ev-7.jpg',
@@ -133,6 +141,7 @@ const services = [
       'Highlighting transition zones, speed bumps, and dangerous intersections to alert drivers in advance.',
     ],
     specs: 'High-friction, coarse-textured anti-skid coatings delivering superior grip in wet weather and optimal luminescent reflection under vehicle headlights.',
+    icon: Bike,
     gallery: [
       {
         src: '/images/services/cycle-lanes-9.jpg',
@@ -160,6 +169,7 @@ const services = [
       'Industrial safety zones, forklift lanes, factory walkways, and airfield/helipad reflective ground markings.',
     ],
     specs: 'Non-toxic, eco-friendly, wear-resistant coatings engineered for heavy foot and equipment traffic while maintaining color brightness.',
+    icon: LayoutGrid,
     gallery: [
       {
         src: '/images/services/sports-court-10.jpg',
@@ -188,6 +198,7 @@ const services = [
       'Project-based or scheduled operations to improve roadway cleanliness, visibility, and overall condition.',
     ],
     specs: 'Professional road-sweeping machinery with adjustable rotary brushes, debris collection, and dust-control or water-assisted sweeping where site conditions require it. Suitable for efficient coverage of paved road surfaces without relying on fixed machine-capacity claims.',
+    icon: Truck,
     gallery: [
       {
         src: '/images/services/street-sweeping-12.jpg',
@@ -241,91 +252,6 @@ function SectionKicker({ index, children, light = false }: { index: string; chil
   );
 }
 
-function TechnicalServiceIllustration({ serviceNumber, tone, large = false }: { serviceNumber: string; tone: string; large?: boolean }) {
-  const toneClass = tone === 'dark' ? 'service-technical-mark-dark' : tone === 'yellow' ? 'service-technical-mark-yellow' : 'service-technical-mark-paper';
-
-  return (
-    <div className={`service-technical-mark ${toneClass} ${large ? 'service-technical-mark-large' : ''}`} aria-hidden="true">
-      <span className="service-technical-number">{serviceNumber}</span>
-      <svg viewBox="0 0 210 126" fill="none" role="presentation">
-        <path d="M7 106.5H203" className="technical-guide" />
-        {serviceNumber === '01' && (
-          <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M31 96 70 35h73l36 61" strokeWidth="1.7" />
-            <path d="M46 95 79 46M76 95l23-49M111 95l-2-49M146 95l-16-49M177 95l-31-49" strokeWidth="1.35" />
-            <g className="technical-accent" strokeWidth="2.6">
-              <path d="M76 39h13M105 39h13M134 39h12" />
-              <path d="M79 72h12M109 72h12M139 72h12" />
-            </g>
-          </g>
-        )}
-        {serviceNumber === '02' && (
-          <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M22 22h166v82H22z" strokeWidth="1.7" />
-            <path d="M64 22v82M105 22v82M146 22v82" strokeWidth="1.2" />
-            <path d="M30 35h24v19H30zM30 70h24v19H30zM112 35h24v19h-24zM112 70h24v19h-24z" strokeWidth="1.15" />
-            <path d="m78 63 9 9 17-21" strokeWidth="1.5" />
-            <g className="technical-accent" strokeWidth="2.6">
-              <path d="M154 38h24M154 73h24" />
-              <path d="m168 32 7 6-7 6M168 67l7 6-7 6" />
-            </g>
-          </g>
-        )}
-        {serviceNumber === '03' && (
-          <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M23 94V29h102v65zM125 49h54v45h-54z" strokeWidth="1.7" />
-            <path d="M137 49V34h26v15M150 34v-9M145 25h10" strokeWidth="1.35" />
-            <circle cx="74" cy="62" r="20" strokeWidth="1.25" />
-            <path d="M66 62h16M74 54v16" strokeWidth="1.35" />
-            <g className="technical-accent" strokeWidth="2.5">
-              <path d="M38 42h22M38 82h22" />
-              <path d="M139 72h25" />
-            </g>
-          </g>
-        )}
-        {serviceNumber === '04' && (
-          <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M17 39h176M17 97h176" strokeWidth="1.7" />
-            <path d="M34 39v58M176 39v58M17 68h176" strokeWidth="1.1" />
-            <circle cx="77" cy="70" r="10" strokeWidth="1.35" />
-            <circle cx="128" cy="70" r="10" strokeWidth="1.35" />
-            <path d="m77 70 15-20 18 20H77l9-20M92 50l12-1M103 49l8 11" strokeWidth="1.35" />
-            <g className="technical-accent" strokeWidth="2.5">
-              <path d="M40 50h22M148 50h22" />
-              <path d="M40 86h22M148 86h22" />
-            </g>
-          </g>
-        )}
-        {serviceNumber === '05' && (
-          <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M18 20h174v85H18zM105 20v85M18 62.5h174" strokeWidth="1.7" />
-            <circle cx="105" cy="62.5" r="18" strokeWidth="1.25" />
-            <path d="M36 44h24v37H36zM150 44h24v37h-24z" strokeWidth="1.2" />
-            <path d="M30 62.5h12M168 62.5h12" strokeWidth="1.35" />
-            <g className="technical-accent" strokeWidth="2.6">
-              <path d="M46 28v13M164 28v13" />
-              <path d="M46 84v13M164 84v13" />
-            </g>
-          </g>
-        )}
-        {serviceNumber === '06' && (
-          <g stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M18 96h174M31 82h148" strokeWidth="1.7" />
-            <path d="M42 96 72 82M70 96 91 82M102 96l12-14M133 96l6-14" strokeWidth="1.1" />
-            <path d="M72 48h67l18 19H54zM83 48V35h43v13M61 67v15h91V67" strokeWidth="1.5" />
-            <path d="M91 82c3 13 11 19 22 19s19-6 22-19" strokeWidth="1.3" />
-            <path d="M86 86v13M97 84v16M108 83v17M119 84v16M130 86v13" strokeWidth="1.1" />
-            <g className="technical-accent" strokeWidth="2.5">
-              <path d="M43 39h23M147 39h20" />
-              <path d="m58 34 7 5-7 5M160 34l7 5-7 5" />
-            </g>
-          </g>
-        )}
-      </svg>
-    </div>
-  );
-}
-
 function Home() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
@@ -358,6 +284,7 @@ function Home() {
   };
 
   const selectedServiceIndex = selectedService ? services.findIndex((service) => service.number === selectedService.number) : -1;
+  const SelectedServiceIcon = selectedService?.icon;
   const navigateService = (direction: -1 | 1) => {
     if (selectedServiceIndex < 0) return;
     const nextIndex = (selectedServiceIndex + direction + services.length) % services.length;
@@ -477,7 +404,7 @@ function Home() {
                     </>
                   ) : (
                     <div className="service-detail-placeholder flex aspect-[16/10] min-h-[280px] items-center justify-center border border-[#cfc7b8] bg-[#e9e3d7] p-10 text-center sm:min-h-[380px]">
-                      <TechnicalServiceIllustration serviceNumber={selectedService.number} tone={selectedService.tone} large />
+                      {SelectedServiceIcon && <SelectedServiceIcon size={84} strokeWidth={1} className="text-[#d9673f]" />}
                     </div>
                   )}
                 </div>
@@ -585,12 +512,14 @@ function Home() {
             </div>
             <div className="mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {services.map((service, index) => {
+                const Icon = service.icon;
                 const isDark = service.tone === 'dark';
                 const isYellow = service.tone === 'yellow';
                 return (
                   <article key={service.number} className={`service-card reveal reveal-delay-${(index % 3) + 1} flex min-h-[390px] flex-col justify-between p-7 sm:p-9 ${isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`} data-testid={`card-service-${service.number}`}>
                     <div className="flex items-start justify-between">
-                      <TechnicalServiceIllustration serviceNumber={service.number} tone={service.tone} />
+                      <span className={`text-[10px] font-bold ${isDark ? 'text-[#f3c742]' : isYellow ? 'text-[#1E293B]' : 'text-[#d9673f]'}`}>{service.number}</span>
+                      <span className={`grid h-14 w-14 place-items-center border ${isDark ? 'border-[#59605e] text-[#f3c742]' : isYellow ? 'border-[#1E293B] text-[#1E293B]' : 'border-[#cfc7b8] text-[#d9673f]'}`}><Icon size={29} strokeWidth={1.2} /></span>
                     </div>
                     <div>
                       <h3 className="max-w-xs text-3xl font-extrabold leading-[.95] tracking-[-.05em] sm:text-4xl">{service.title}</h3>
