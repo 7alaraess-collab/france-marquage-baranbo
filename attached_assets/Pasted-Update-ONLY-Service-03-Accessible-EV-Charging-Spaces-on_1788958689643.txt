@@ -1,0 +1,46 @@
+Update ONLY Service 03: "Accessible & EV Charging Spaces" on the service detail page.
+
+Do not change the images, image layout, overall page design, colors, typography, spacing, animations, navigation, header, footer, or any other service.
+
+1. SERVICE TITLE
+
+Replace the current title:
+
+"Accessible & EV Charging Parking"
+
+With:
+
+"Accessible & EV Charging Spaces"
+
+2. MAIN SERVICE DESCRIPTION
+
+Replace the current description with:
+
+"Clear and professional markings for accessible parking spaces and EV charging stations, designed for easy identification, organized parking, and enhanced nighttime visibility."
+
+3. OVERVIEW
+
+Replace the current "OVERVIEW" text with:
+
+"Professional marking and layout solutions for accessible parking spaces and EV charging areas, providing clear identification, organized use of designated spaces, and enhanced nighttime visibility."
+
+4. KEY SCOPE OF WORK
+
+Replace the existing bullet points with these:
+
+- "Clear marking and identification of accessible parking spaces with designated accessibility symbols."
+
+- "Clear and highly visible markings for EV charging spaces, designed for easy identification during both daytime and nighttime conditions."
+
+IMPORTANT:
+- Keep the existing images exactly as they are. Do not replace, edit, crop, or reposition them.
+- Remove the current third Key Scope of Work bullet about anti-slip aggregate.
+- Remove the entire current "TECHNICAL SPECIFICATIONS" section. Do not add specific material names or technical formulations.
+- Do not mention epoxy, acrylic, UV resistance, anti-slip micro-textures, or other unverified material specifications.
+- Do not mention Tesla specifically. Refer to EV charging spaces/stations generally.
+- Do not use the word "handicapped"; use "accessible" or "accessible parking".
+- It is confirmed that the company's marking materials provide enhanced nighttime visibility, so this benefit may be stated.
+- Do not claim certifications, legal compliance, international standards, or specific regulatory approvals.
+- Keep the existing "REQUEST A QUOTE" button and all other visual elements unchanged.
+- Keep the service number as 03.
+- Make no changes outside Service 03.

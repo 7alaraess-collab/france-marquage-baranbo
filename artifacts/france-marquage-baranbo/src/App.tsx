@@ -130,15 +130,14 @@ const services = [
   },
   {
     number: '03',
-    title: 'Accessible & EV Charging Parking',
-    text: 'Color-coded and retroreflective markings for accessible parking spaces and EV charging stations, designed for clear identification and visibility.',
-    overview: 'High-visibility surface coatings and internationally recognized symbols for designated parking zones, ensuring clear compliance and night accessibility.',
+    title: 'Accessible & EV Charging Spaces',
+    text: 'Clear and professional markings for accessible parking spaces and EV charging stations, designed for easy identification, organized parking, and enhanced nighttime visibility.',
+    overview: 'Professional marking and layout solutions for accessible parking spaces and EV charging areas, providing clear identification, organized use of designated spaces, and enhanced nighttime visibility.',
     scope: [
-      'Full-surface blue background coating for accessible (handicapped) bays featuring reflective international symbols.',
-      'Vibrant green background markings for EV Charging / Tesla stalls for instant night identification.',
-      'Anti-slip aggregate application within painted bays to prevent pedestrian and driver slipping.',
+      'Clear marking and identification of accessible parking spaces with designated accessibility symbols.',
+      'Clear and highly visible markings for EV charging spaces, designed for easy identification during both daytime and nighttime conditions.',
     ],
-    specs: 'UV-resistant epoxy/acrylic formulations designed to prevent color fading, combined with anti-slip micro-textures.',
+    specs: '',
     icon: BatteryCharging,
     gallery: [
       {
@@ -151,7 +150,7 @@ const services = [
         src: '/images/services/specialized-ev-8.jpg',
         alt: 'Blue accessible parking bay with white wheelchair markings',
         title: 'Accessible Parking Bays',
-        text: 'Durable blue surface coating and crisp accessibility markings for compliant, easy-to-identify designated spaces.',
+        text: 'Durable blue surface coating and crisp accessibility markings for clear, easy-to-identify designated spaces.',
       },
     ],
     tone: 'paper',
