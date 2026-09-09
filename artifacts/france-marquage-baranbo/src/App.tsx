@@ -265,6 +265,7 @@ type SiteCopy = {
     titleSecond: string;
     description: string;
     explore: string;
+    enquiry: string;
     note: string;
     noteAccent: string;
   };
@@ -382,6 +383,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       titleSecond: 'way forward.',
       description: 'Professional road marking and traffic safety solutions, built for clarity, durability, and everyday performance.',
       explore: 'EXPLORE SERVICES',
+      enquiry: 'REQUEST ENQUIRY',
       note: 'Site lines, made clear.',
       noteAccent: 'Every metre matters.',
     },
@@ -501,6 +503,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       titleSecond: 'voie de demain',
       description: 'Des solutions professionnelles de marquage routier et de sécurité des déplacements, conçues pour la lisibilité, la durabilité et la performance au quotidien.',
       explore: 'DÉCOUVRIR NOS SERVICES',
+      enquiry: 'FAIRE UNE DEMANDE',
       note: 'Des lignes claires sur site.',
       noteAccent: 'Chaque mètre compte.',
     },
@@ -620,6 +623,7 @@ const siteTranslations: Record<Language, SiteCopy> = {
       titleSecond: 'طريق التقدم.',
       description: 'حلول احترافية لتخطيط الطرق والسلامة المرورية، مصممة لتحقيق الوضوح والمتانة والأداء اليومي.',
       explore: 'استكشف خدماتنا',
+      enquiry: 'اطلب استفساراً',
       note: 'خطوط واضحة في كل موقع.',
       noteAccent: 'كل متر مهم.',
     },
@@ -1001,7 +1005,7 @@ function Home() {
 
   const goTo = (href: string) => {
     setMobileOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const changeLanguage = (nextLanguage: Language) => {
@@ -1311,7 +1315,10 @@ function Home() {
                 {copy.hero.titleFirst}<br /><span className="text-[#f3c742]">{copy.hero.titleSecond}</span>
               </h1>
               <p className="hero-description mt-9 max-w-xl border-l-2 border-[#d9673f] pl-5 font-sans text-[15px] leading-7 tracking-[.01em] text-[#d4d2c9] sm:text-[17px] sm:leading-8">{copy.hero.description}</p>
-              <a href="#services" className="group mt-10 inline-flex items-center justify-between gap-8 border border-[#757b76] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.13em] text-[#f6f1e6] transition-colors hover:border-[#f3c742] hover:text-[#f3c742]" data-testid="link-hero-services">{copy.hero.explore} <ArrowDownRight size={17} className="transition-transform group-hover:translate-y-1" /></a>
+              <div className="mt-10 flex flex-wrap items-center gap-3">
+                <a href="#services" className="group inline-flex w-fit items-center justify-between gap-8 border border-[#757b76] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.13em] text-[#f6f1e6] transition-colors hover:border-[#f3c742] hover:text-[#f3c742] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f3c742]" data-testid="link-hero-services">{copy.hero.explore} <ArrowDownRight size={17} aria-hidden="true" className="transition-transform group-hover:translate-y-1" /></a>
+                <a href="#contact" onClick={(event) => { event.preventDefault(); goTo('#contact'); }} className="group inline-flex w-fit items-center justify-between gap-8 border border-[#f3c742] bg-[#f3c742] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.13em] text-[#171b1d] transition-colors hover:border-[#f6f1e6] hover:bg-transparent hover:text-[#f6f1e6] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f3c742]" data-testid="link-hero-enquiry">{copy.hero.enquiry} <ArrowUpRight size={17} aria-hidden="true" className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
+              </div>
             </div>
             <div className="mt-16 flex items-end justify-between gap-6 border-t border-[#59605e] pt-5 reveal reveal-delay-2">
               <p className="hidden max-w-[210px] text-right font-mono-site text-[9px] uppercase leading-4 tracking-[.1em] text-[#9ba09a] sm:block">{copy.hero.note}<br /><span className="text-[#f3c742]">{copy.hero.noteAccent}</span></p>
@@ -1369,6 +1376,15 @@ function Home() {
                     <div>
                       <h3 className="max-w-xs text-3xl font-extrabold leading-[.95] tracking-[-.05em] sm:text-4xl">{serviceCopy.title}</h3>
                       <p className={`service-preview mt-5 max-w-md text-sm leading-6 ${isDark ? 'text-[#dbe4ee]' : 'text-[#334155]'}`}>{serviceCopy.text}</p>
+                      <a
+                        href="#contact"
+                        onClick={(event) => { event.preventDefault(); event.stopPropagation(); goTo('#contact'); }}
+                        onKeyDown={(event) => event.stopPropagation()}
+                        className={`group mt-7 inline-flex w-fit items-center gap-3 border-b pb-2 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 ${isDark ? 'border-[#f3c742] text-[#f3c742] hover:border-[#f6f1e6] hover:text-[#f6f1e6] focus-visible:outline-[#f3c742]' : isYellow ? 'border-[#1E293B] text-[#1E293B] hover:border-[#f8fafc] hover:text-[#f8fafc] focus-visible:outline-[#1E293B]' : 'border-[#d9673f] text-[#d9673f] hover:border-[#1E293B] hover:text-[#1E293B] focus-visible:outline-[#d9673f]'}`}
+                        data-testid={`link-service-enquiry-${service.number}`}
+                      >
+                        {copy.hero.enquiry} <ArrowUpRight size={15} aria-hidden="true" className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      </a>
                     </div>
                   </article>
                 );
