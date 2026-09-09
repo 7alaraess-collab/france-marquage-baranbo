@@ -465,8 +465,8 @@ function Home() {
                     </div>
                   </div>
 
-                  <button onClick={() => requestServiceQuote(selectedService.title)} className="group mt-10 flex w-full items-center justify-between bg-[#F59E0B] px-5 py-5 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#1E293B] transition-colors hover:bg-[#fbbf24]" data-testid="button-service-quote">
-                    Request a Quote for this Service <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <button onClick={() => requestServiceQuote(selectedService.title)} className="group mt-10 flex w-full items-center justify-between bg-[#F59E0B] px-5 py-4 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#1E293B] transition-colors hover:bg-[#fbbf24]" data-testid="button-service-quote">
+                    Request a Quote <ArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                   </button>
                 </div>
               </div>
