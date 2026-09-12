@@ -366,11 +366,11 @@ body { min-width: 320px; overflow-x: hidden; }
 }
 .hero-logo {
   pointer-events: none;
-  top: 42%;
-  left: 53%;
-  width: min(66vw, 760px);
+  top: 40%;
+  left: 55%;
+  width: min(70vw, 820px);
   aspect-ratio: 977 / 1000;
-  transform: translate(-8%, -50%);
+  transform: translate(-17%, -50%);
   rotate: 0deg;
   opacity: .38;
   mix-blend-mode: screen;
@@ -405,8 +405,8 @@ body { min-width: 320px; overflow-x: hidden; }
   .hero-road::before { width: 44%; left: 64%; }
   .hero-logo {
     top: 20%;
-    left: 58%;
-    width: 54vw;
+    left: 52%;
+    width: 62vw;
     transform: translate(-15%, -50%);
     rotate: 0deg;
     opacity: .3;
@@ -415,9 +415,9 @@ body { min-width: 320px; overflow-x: hidden; }
 @media (min-width: 768px) and (max-width: 1279px) {
   .hero-logo {
     top: 40%;
-    left: 52%;
-    width: min(52vw, 440px);
-    transform: translate(-8%, -50%);
+    left: 48%;
+    width: min(58vw, 490px);
+    transform: translate(-12%, -50%);
     rotate: 0deg;
   }
 }
