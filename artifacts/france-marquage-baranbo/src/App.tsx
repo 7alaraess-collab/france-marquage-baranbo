@@ -1326,6 +1326,15 @@ function Home() {
             <div className="reveal">
               <SectionKicker index="01" children={copy.about.kicker} />
                <h2 className="max-w-md font-display text-5xl font-extrabold leading-[.92] tracking-[-.06em] sm:text-6xl">{copy.about.titleFirst}<br />{copy.about.titleSecond}</h2>
+              <figure className="mt-10 overflow-hidden border border-[#cfc7b8] bg-[#e9e3d7] p-2">
+                <img
+                  src="/images/about-company.jpg"
+                  alt="France Marquage Baranbo company site with road-marking equipment"
+                  className="block h-auto w-full object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
             </div>
             <div className="reveal reveal-delay-1">
                <p className="max-w-2xl font-display text-2xl font-bold leading-[1.1] tracking-[-.035em] text-[#27302f] sm:text-4xl">{copy.about.intro}</p>
