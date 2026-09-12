@@ -26,6 +26,61 @@ import { useSubmitContactEnquiry } from '@workspace/api-client-react';
 
 type Language = 'EN' | 'FR' | 'AR';
 
+type SeoCopy = {
+  title: string;
+  description: string;
+  keywords: string[];
+  locale: string;
+};
+
+const seoCopy: Record<Language, SeoCopy> = {
+  EN: {
+    title: 'Road Marking & Traffic Safety Services | Baranbo',
+    description: 'Professional road marking, parking lot striping, traffic safety, EV spaces and mechanical sweeping in Damascus by France Marquage Baranbo.',
+    keywords: [
+      'road marking Damascus',
+      'road marking services Syria',
+      'parking lot striping',
+      'traffic safety solutions',
+      'pedestrian crossing marking',
+      'EV charging space marking',
+      'bike lane marking',
+      'mechanical road sweeping',
+    ],
+    locale: 'en_US',
+  },
+  FR: {
+    title: 'Marquage routier et sécurité | Baranbo Marquage',
+    description: 'France Marquage Baranbo réalise le marquage routier, l’aménagement des parkings, la sécurité routière et le balayage à Damas.',
+    keywords: [
+      'marquage routier Damas',
+      'entreprise de marquage routier Syrie',
+      'marquage de parking',
+      'sécurité routière',
+      'marquage passage piéton',
+      'marquage borne de recharge électrique',
+      'marquage piste cyclable',
+      'balayage mécanique voirie',
+    ],
+    locale: 'fr_FR',
+  },
+  AR: {
+    title: 'تخطيط الطرق والسلامة المرورية في دمشق | برنبو ماركاج',
+    description: 'شركة برنبو ماركاج تقدم تخطيط الطرق ومواقف السيارات والسلامة المرورية ومواقف شحن السيارات والكنس الميكانيكي في دمشق.',
+    keywords: [
+      'تخطيط الطرق في دمشق',
+      'شركة تخطيط طرق في سوريا',
+      'تخطيط مواقف السيارات',
+      'حلول السلامة المرورية',
+      'تخطيط معابر المشاة',
+      'تخطيط مواقف شحن السيارات الكهربائية',
+      'تخطيط مسارات الدراجات',
+      'الكنس الميكانيكي للطرق',
+    ],
+    locale: 'ar_SY',
+  },
+};
+
 const navItems = [
   { key: 'about', label: 'About us', href: '#about' },
   { key: 'services', label: 'Services', href: '#services' },
@@ -377,9 +432,9 @@ const siteTranslations: Record<Language, SiteCopy> = {
     languageLabel: 'Language',
     hero: {
       kicker: 'PRECISION ON THE GROUND',
-      titleFirst: 'Marking the',
-      titleSecond: 'way forward.',
-      description: 'Professional road marking and traffic safety solutions, built for clarity, durability, and everyday performance.',
+      titleFirst: 'Professional road',
+      titleSecond: 'marking services.',
+      description: 'Professional road marking and traffic safety solutions in Damascus, built for clarity, durability, and everyday performance.',
       explore: 'EXPLORE SERVICES',
       enquiry: 'REQUEST ENQUIRY',
       note: 'Site lines, made clear.',
@@ -496,9 +551,9 @@ const siteTranslations: Record<Language, SiteCopy> = {
     languageLabel: 'Langue',
     hero: {
       kicker: 'LA PRÉCISION AU SOL',
-      titleFirst: 'Tracer la',
-      titleSecond: 'voie de demain',
-      description: 'Des solutions professionnelles de marquage routier et de sécurité des déplacements, conçues pour la lisibilité, la durabilité et la performance au quotidien.',
+      titleFirst: 'Marquage routier',
+      titleSecond: 'pour des routes plus sûres.',
+      description: 'Des solutions professionnelles de marquage routier et de sécurité des déplacements à Damas, conçues pour la lisibilité et la durabilité.',
       explore: 'DÉCOUVRIR NOS SERVICES',
       enquiry: 'FAIRE UNE DEMANDE',
       note: 'Des lignes claires sur site.',
@@ -615,9 +670,9 @@ const siteTranslations: Record<Language, SiteCopy> = {
     languageLabel: 'اللغة',
     hero: {
       kicker: 'الدقة في الميدان',
-      titleFirst: 'رسم',
-      titleSecond: 'طريق التقدم.',
-      description: 'حلول احترافية لتخطيط الطرق والسلامة المرورية، مصممة لتحقيق الوضوح والمتانة والأداء اليومي.',
+      titleFirst: 'تخطيط الطرق',
+      titleSecond: 'لطرق أكثر أماناً.',
+      description: 'حلول احترافية لتخطيط الطرق والسلامة المرورية في دمشق، مصممة لتحقيق الوضوح والمتانة والأداء اليومي.',
       explore: 'استكشف خدماتنا',
       enquiry: 'اطلب استفساراً',
       note: 'خطوط واضحة في كل موقع.',
@@ -985,6 +1040,11 @@ const languageNames: Record<Language, string> = {
   AR: 'Arabic',
 };
 
+function setMetaContent(selector: string, content: string) {
+  const element = document.querySelector<HTMLMetaElement>(selector);
+  if (element) element.content = content;
+}
+
 function getInitialLanguage(): Language {
   if (typeof window === 'undefined') return 'EN';
   const stored = window.localStorage.getItem('france-marquage-language');
@@ -1043,6 +1103,27 @@ function Home() {
     document.documentElement.lang = language === 'AR' ? 'ar' : language === 'FR' ? 'fr' : 'en';
     document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
   }, [isArabic, language]);
+
+  useEffect(() => {
+    const languageSeo = seoCopy[language];
+    const activeService = selectedService ? getServiceCopy(selectedService, language) : null;
+    const title = activeService ? `${activeService.title} | ${languageSeo.title.split(' | ')[1]}` : languageSeo.title;
+    const description = activeService?.overview || languageSeo.description;
+    const keywords = activeService
+      ? [...languageSeo.keywords, activeService.title, ...activeService.scope.slice(0, 2)].join(', ')
+      : languageSeo.keywords.join(', ');
+
+    document.title = title;
+    setMetaContent('meta[name="description"]', description);
+    setMetaContent('meta[name="keywords"]', keywords);
+    setMetaContent('meta[property="og:title"]', title);
+    setMetaContent('meta[property="og:description"]', description);
+    setMetaContent('meta[property="og:locale"]', languageSeo.locale);
+    setMetaContent('meta[property="og:url"]', window.location.href.split('#')[0]);
+    setMetaContent('meta[name="twitter:title"]', title);
+    setMetaContent('meta[name="twitter:description"]', description);
+    document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', window.location.href.split(/[?#]/)[0]);
+  }, [language, selectedService]);
 
   useEffect(() => {
     if (!languageOpen) return;

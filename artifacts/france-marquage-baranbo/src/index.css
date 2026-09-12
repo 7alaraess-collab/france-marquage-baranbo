@@ -376,6 +376,11 @@ body { min-width: 320px; overflow-x: hidden; }
   mix-blend-mode: screen;
   filter: saturate(.9) brightness(1.08) drop-shadow(0 0 30px rgba(243,199,66,.18));
 }
+.site-rtl .hero-logo {
+  left: auto;
+  right: 55%;
+  transform: translate(17%, -50%);
+}
 .service-card { font-family: var(--app-font-service); transition: transform .35s ease, background-color .35s ease, color .35s ease; }
 .service-card:hover { transform: translateY(-7px); }
 .service-card:hover .service-arrow { transform: translate(4px,-4px); }
@@ -411,6 +416,11 @@ body { min-width: 320px; overflow-x: hidden; }
     rotate: 0deg;
     opacity: .3;
   }
+  .site-rtl .hero-logo {
+    left: auto;
+    right: 52%;
+    transform: translate(15%, -50%);
+  }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .hero-logo {
@@ -419,6 +429,11 @@ body { min-width: 320px; overflow-x: hidden; }
     width: min(58vw, 490px);
     transform: translate(-12%, -50%);
     rotate: 0deg;
+  }
+  .site-rtl .hero-logo {
+    left: auto;
+    right: 48%;
+    transform: translate(12%, -50%);
   }
 }
 @media (prefers-reduced-motion: reduce) {
