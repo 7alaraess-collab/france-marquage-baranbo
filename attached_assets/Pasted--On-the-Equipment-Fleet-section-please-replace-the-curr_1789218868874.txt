@@ -1,0 +1,14 @@
+"On the 'Equipment & Fleet' section, please replace the current three list items (currently: 'آلة تخطيط بدون هواء', 'آلة تطبيق اللدائن الحرارية', 'وحدة تجهيز الأسطح') with the following three items, keeping the exact same layout, numbering style (01/02/03), and typography:
+Item 01:
+AR: آلة رش خطوط بدون هواء — تطبيق دقيق وسريع للخطوط والرموز على الطرقات ومواقف السيارات باستخدام تقنية الرش بدون هواء.
+EN: Airless Line Marking Machine — Precise and fast application of road lines and symbols using advanced airless spray technology.
+FR: Machine de traçage à peinture sans air — Application précise et rapide des lignes et symboles routiers grâce à une technologie de pulvérisation sans air.
+Item 02:
+AR: مكنسة الطرق الميكانيكية — تنظيف فعال للشوارع ومناطق العمل من الغبار والحصى لضمان سطح نظيف وآمن قبل التخطيط.
+EN: Mechanical Road Sweeper — Efficient cleaning of streets and work zones, removing dust and debris to ensure a clean, safe surface before marking.
+FR: Balayeuse mécanique de voirie — Nettoyage efficace des rues et zones de travail, éliminant poussière et débris pour une surface propre avant le marquage.
+Item 03:
+AR: الدهان الفرنسي المضيء بالليل — مادة تخزّن ضوء النهار وتضيء تلقائياً في الظلام، لزيادة السلامة على الطرقات والمعابر دون الحاجة لكهرباء.
+EN: French Photoluminescent Paint — A material that stores daylight and glows automatically at night, enhancing road and crossing safety without electricity.
+FR: Peinture photoluminescente française — Un matériau qui emmagasine la lumière du jour et brille automatiquement la nuit, renforçant la sécurité sans électricité.
+Please make sure all three language versions (Arabic, English, French) are updated correctly through the site's existing language switcher, and that RTL formatting for Arabic stays correct. Also update the large featured image card above the list to use the attached image of the line marking machine, keeping its current layout, overlay, and 'جاهزون منذ اليوم الأول' style heading unless you'd like me to translate/replace that heading too."

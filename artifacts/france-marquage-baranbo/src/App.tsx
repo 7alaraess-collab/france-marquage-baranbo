@@ -432,9 +432,9 @@ const siteTranslations: Record<Language, SiteCopy> = {
       readyFirst: 'Ready on',
       readySecond: 'day one.',
       items: [
-        { title: 'Airless line striper', text: 'For consistent widths and clean, fast application on active sites.' },
-        { title: 'Thermoplastic applicator', text: 'High-durability markings for roads, crossings and heavy traffic areas.' },
-        { title: 'Surface preparation unit', text: 'Mechanical removal and dust-controlled cleaning for a sound bond.' },
+        { title: 'Airless Line Marking Machine', text: 'Precise and fast application of road lines and symbols using advanced airless spray technology.' },
+        { title: 'Mechanical Road Sweeper', text: 'Efficient cleaning of streets and work zones, removing dust and debris to ensure a clean, safe surface before marking.' },
+        { title: 'French Photoluminescent Paint', text: 'A material that stores daylight and glows automatically at night, enhancing road and crossing safety without electricity.' },
       ],
     },
     certifications: {
@@ -551,9 +551,9 @@ const siteTranslations: Record<Language, SiteCopy> = {
       readyFirst: 'Prêts dès',
       readySecond: 'le premier jour.',
       items: [
-        { title: 'Machine de traçage airless', text: 'Pour des largeurs régulières et une application nette et rapide sur les chantiers en activité.' },
-        { title: 'Applicateur thermoplastique', text: 'Des marquages haute durabilité pour les routes, passages piétons et zones à trafic intense.' },
-        { title: 'Unité de préparation des surfaces', text: 'Dépose mécanique et nettoyage maîtrisé des poussières pour une adhérence durable.' },
+        { title: 'Machine de traçage à peinture sans air', text: 'Application précise et rapide des lignes et symboles routiers grâce à une technologie de pulvérisation sans air.' },
+        { title: 'Balayeuse mécanique de voirie', text: 'Nettoyage efficace des rues et zones de travail, éliminant poussière et débris pour une surface propre avant le marquage.' },
+        { title: 'Peinture photoluminescente française', text: 'Un matériau qui emmagasine la lumière du jour et brille automatiquement la nuit, renforçant la sécurité sans électricité.' },
       ],
     },
     certifications: {
@@ -670,9 +670,9 @@ const siteTranslations: Record<Language, SiteCopy> = {
       readyFirst: 'جاهزون منذ',
       readySecond: 'اليوم الأول.',
       items: [
-        { title: 'آلة تخطيط بدون هواء', text: 'للحصول على عروض متناسقة وتطبيق نظيف وسريع في المواقع النشطة.' },
-        { title: 'آلة تطبيق اللدائن الحرارية', text: 'تخطيطات عالية المتانة للطرق وممرات المشاة ومناطق الحركة الكثيفة.' },
-        { title: 'وحدة تجهيز الأسطح', text: 'إزالة ميكانيكية وتنظيف مضبوط للغبار لضمان التصاق متين.' },
+        { title: 'آلة رش خطوط بدون هواء', text: 'تطبيق دقيق وسريع للخطوط والرموز على الطرقات ومواقف السيارات باستخدام تقنية الرش بدون هواء.' },
+        { title: 'مكنسة الطرق الميكانيكية', text: 'تنظيف فعال للشوارع ومناطق العمل من الغبار والحصى لضمان سطح نظيف وآمن قبل التخطيط.' },
+        { title: 'الدهان الفرنسي المضيء بالليل', text: 'مادة تخزّن ضوء النهار وتضيء تلقائياً في الظلام، لزيادة السلامة على الطرقات والمعابر دون الحاجة لكهرباء.' },
       ],
     },
     certifications: {
@@ -928,9 +928,9 @@ function getServiceCopy(service: Service, language: Language): ServiceCopy {
 }
 
 const fleet = [
-  ['01', 'Airless line striper', 'For consistent widths and clean, fast application on active sites.'],
-  ['02', 'Thermoplastic applicator', 'High-durability markings for roads, crossings and heavy traffic areas.'],
-  ['03', 'Surface preparation unit', 'Mechanical removal and dust-controlled cleaning for a sound bond.'],
+  ['01', 'Airless Line Marking Machine', 'Precise and fast application of road lines and symbols using advanced airless spray technology.'],
+  ['02', 'Mechanical Road Sweeper', 'Efficient cleaning of streets and work zones, removing dust and debris to ensure a clean, safe surface before marking.'],
+  ['03', 'French Photoluminescent Paint', 'A material that stores daylight and glows automatically at night, enhancing road and crossing safety without electricity.'],
 ];
 
 function useReveal() {
@@ -1432,7 +1432,8 @@ function Home() {
                 <a href="#contact" className="group mt-10 inline-flex items-center gap-3 border-b border-[#f3c742] pb-2 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#f3c742]" data-testid="link-fleet-contact">{copy.fleet.contact} <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
               </div>
               <div className="reveal reveal-delay-1">
-                <div className="relative field-frame min-h-[250px] overflow-hidden bg-[#333b3b] p-7 sm:min-h-[320px] sm:p-10">
+                <div className="relative field-frame min-h-[250px] overflow-hidden bg-[#333b3b] bg-cover bg-center p-7 sm:min-h-[320px] sm:p-10" style={{ backgroundImage: "url('/images/services/fleet-line-marking-machine.jpg')" }}>
+                  <div aria-hidden="true" className="absolute inset-0 bg-black/45" />
                   <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'linear-gradient(110deg, transparent 0 48%, #f3c742 48% 48.7%, transparent 48.7% 100%), repeating-linear-gradient(90deg, transparent 0 28px, #f6f1e6 28px 30px, transparent 30px 58px)' }} />
                   <div className="relative flex h-full min-h-[195px] flex-col justify-between">
                     <div className="flex items-center justify-between"><span className="font-mono-site text-[9px] uppercase tracking-[.16em] text-[#b9bbb1]">{copy.fleet.fieldView}</span><Truck size={29} strokeWidth={1.2} className="text-[#f3c742]" /></div>
