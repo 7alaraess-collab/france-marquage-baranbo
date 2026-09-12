@@ -1351,10 +1351,21 @@ function Home() {
 
         <section id="services" className="scroll-mt-20 bg-[#e8e1d3] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
           <div className="mx-auto max-w-[1380px]">
-            <div className="mx-auto max-w-4xl text-center reveal">
-                <div className="flex justify-center"><SectionKicker index="02" children={copy.services.kicker} /></div>
-               <h2 className="font-display text-5xl font-extrabold leading-[.9] tracking-[-.06em] sm:text-7xl">{copy.services.titleFirst}{copy.services.titleSecond && <><br /><span className="text-[#d9673f]">{copy.services.titleSecond}</span></>}</h2>
-               <p className="mx-auto mt-7 max-w-3xl text-base leading-7 text-[#334155]">{copy.services.description}</p>
+            <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_.95fr] lg:gap-20">
+              <figure className="relative overflow-hidden rounded-[3px] opacity-90 reveal">
+                <img
+                  src="/images/services-road.jpg"
+                  alt="Illuminated road winding through a forest at night"
+                  className="block h-auto w-full object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div className="mx-auto max-w-4xl text-center reveal reveal-delay-1 lg:mx-0 lg:text-left">
+                <div className="flex justify-center lg:justify-start"><SectionKicker index="02" children={copy.services.kicker} /></div>
+                <h2 className="font-display text-5xl font-extrabold leading-[.9] tracking-[-.06em] sm:text-7xl">{copy.services.titleFirst}{copy.services.titleSecond && <><br /><span className="text-[#d9673f]">{copy.services.titleSecond}</span></>}</h2>
+                <p className="mx-auto mt-7 max-w-3xl text-base leading-7 text-[#334155] lg:mx-0">{copy.services.description}</p>
+              </div>
             </div>
             <div className="mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {services.map((service, index) => {
