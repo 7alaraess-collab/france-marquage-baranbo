@@ -366,11 +366,12 @@ body { min-width: 320px; overflow-x: hidden; }
 }
 .hero-logo {
   pointer-events: none;
-  top: 49%;
-  left: 40%;
-  width: min(62vw, 720px);
+  top: 42%;
+  left: 53%;
+  width: min(66vw, 760px);
   aspect-ratio: 977 / 1000;
-  transform: translate(-18%, -50%);
+  transform: translate(-8%, -50%);
+  rotate: 0deg;
   opacity: .38;
   mix-blend-mode: screen;
   filter: saturate(.9) brightness(1.08) drop-shadow(0 0 30px rgba(243,199,66,.18));
@@ -403,19 +404,21 @@ body { min-width: 320px; overflow-x: hidden; }
   .field-frame { box-shadow: 8px 8px 0 #f3c742; }
   .hero-road::before { width: 44%; left: 64%; }
   .hero-logo {
-    top: 40%;
-    left: 52%;
-    width: 94vw;
-    transform: translate(-28%, -50%);
+    top: 20%;
+    left: 58%;
+    width: 54vw;
+    transform: translate(-15%, -50%);
+    rotate: 0deg;
     opacity: .3;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .hero-logo {
-    top: 46%;
-    left: 45%;
-    width: min(74vw, 640px);
-    transform: translate(-18%, -50%);
+    top: 40%;
+    left: 52%;
+    width: min(52vw, 440px);
+    transform: translate(-8%, -50%);
+    rotate: 0deg;
   }
 }
 @media (prefers-reduced-motion: reduce) {
