@@ -1389,8 +1389,8 @@ function Home() {
                       >
                         {service.number === '01' && (
                           <>
-                            <img src="/images/services-road.jpg" alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-40" />
-                            <span aria-hidden="true" className="pointer-events-none absolute inset-0 z-[1] bg-[#171b1d]/60" />
+                            <img src="/images/services-road.jpg" alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-55 saturate-75 brightness-75" />
+                            <span aria-hidden="true" className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-r from-[#171b1d]/80 via-[#171b1d]/55 to-[#171b1d]/35" />
                           </>
                         )}
                         <span className="relative z-10">{copy.hero.enquiry}</span>
