@@ -1362,6 +1362,7 @@ function Home() {
                 const serviceCopy = getServiceCopy(service, language);
                 const isDark = service.tone === 'dark';
                 const isYellow = service.tone === 'yellow';
+                const isImageCard = service.number === '02';
                 const cardBackgroundImage = service.number === '01'
                   ? '/images/services-road.jpg'
                   : service.number === '02'
@@ -1370,7 +1371,7 @@ function Home() {
                 return (
                   <article
                     key={service.number}
-                    className={`service-card reveal reveal-delay-${(index % 3) + 1} flex min-h-[390px] cursor-pointer flex-col justify-between p-7 active:scale-[.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9673f] ${isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`}
+                    className={`service-card reveal reveal-delay-${(index % 3) + 1} flex min-h-[390px] cursor-pointer flex-col justify-between p-7 active:scale-[.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9673f] ${isImageCard ? 'bg-[#F59E0B] text-[#F8FAFC]' : isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`}
                     role="button"
                     tabIndex={0}
                     onClick={() => openServiceDetails(service)}
@@ -1389,12 +1390,12 @@ function Home() {
                       </>
                     )}
                     <div className="relative z-10 flex items-start justify-between">
-                      <span className={`text-[10px] font-bold ${service.number === '05' ? 'text-[#FFFFFF]' : isDark ? 'text-[#f3c742]' : isYellow ? 'text-[#1E293B]' : 'text-[#d9673f]'}`}>{service.number}</span>
-                      <span className={`grid h-14 w-14 place-items-center border ${isDark ? 'border-[#59605e] text-[#f3c742]' : isYellow ? 'border-[#1E293B] text-[#1E293B]' : 'border-[#cfc7b8] text-[#d9673f]'}`}><Icon size={29} strokeWidth={1.2} /></span>
+                      <span className={`text-[10px] font-bold ${service.number === '05' || isImageCard ? 'text-[#FFFFFF]' : isDark ? 'text-[#f3c742]' : isYellow ? 'text-[#1E293B]' : 'text-[#d9673f]'}`}>{service.number}</span>
+                      <span className={`grid h-14 w-14 place-items-center border ${isImageCard ? 'border-[#FFFFFF] text-[#FFFFFF]' : isDark ? 'border-[#59605e] text-[#f3c742]' : isYellow ? 'border-[#1E293B] text-[#1E293B]' : 'border-[#cfc7b8] text-[#d9673f]'}`}><Icon size={29} strokeWidth={1.2} /></span>
                     </div>
                     <div className="relative z-10">
                       <h3 className="max-w-xs text-3xl font-extrabold leading-[.95] tracking-[-.05em] sm:text-4xl">{serviceCopy.title}</h3>
-                      <p className={`service-preview mt-5 max-w-md text-sm leading-6 ${isDark ? 'text-[#dbe4ee]' : 'text-[#334155]'}`}>{serviceCopy.text}</p>
+                      <p className={`service-preview mt-5 max-w-md text-sm leading-6 ${isDark || isImageCard ? 'text-[#F8FAFC]' : 'text-[#334155]'}`}>{serviceCopy.text}</p>
                       <a
                         href="#contact"
                         onClick={(event) => { event.preventDefault(); event.stopPropagation(); goTo('#contact'); }}
