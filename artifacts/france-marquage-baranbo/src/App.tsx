@@ -1362,11 +1362,13 @@ function Home() {
                 const serviceCopy = getServiceCopy(service, language);
                 const isDark = service.tone === 'dark';
                 const isYellow = service.tone === 'yellow';
-                const isImageCard = service.number === '02';
+                const isImageCard = service.number === '02' || service.number === '03';
                 const cardBackgroundImage = service.number === '01'
                   ? '/images/services-road.jpg'
                   : service.number === '02'
                     ? '/images/services/parking-lot-card.jpg'
+                    : service.number === '03'
+                      ? '/images/services/accessible-ev-card.jpg'
                     : null;
                 return (
                   <article
