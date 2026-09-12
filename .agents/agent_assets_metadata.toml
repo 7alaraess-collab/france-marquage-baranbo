@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "x9fhrq5XENWwIFWTk4B3L"
+uri = "file://attached_assets/generated_images/service-card-01-product-shot.png"
+type = "image"
+title = "Service Card 01 Product Shot"
+description = "High-resolution isolated service card with the exact copy, a detailed starry-night winding road background, yellow A icon, and REQUEST ENQUIRY button. No hands or extra UI included."
+logical_id = "22fcd2bf-e31b-462f-9383-628e4adf278a"
+content_hash = "sha256:0dcb50ca3951132570549f829b550a451d9b166f5bfd57dfb818842e300a63df"
+size = 1145680
+mtime_ms = 1789215359948
+storage_uri = "gcs://replit-rams-assets-archer/rams/assets/repl:82ba2559-05ad-4f16-be6a-bfe00fa09e62/22fcd2bf-e31b-462f-9383-628e4adf278a/c5f2b85d-5dc1-42b6-be89-58d102973a9f"
+storage_version_token = "1789215387245306"
+content_type = "image/png"
