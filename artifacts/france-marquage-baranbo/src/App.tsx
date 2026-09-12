@@ -22,6 +22,7 @@ import {
   LayoutGrid,
   X,
 } from 'lucide-react';
+import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { useSubmitContactEnquiry } from '@workspace/api-client-react';
 
 type Language = 'EN' | 'FR' | 'AR';
@@ -87,6 +88,12 @@ const navItems = [
   { key: 'fleet', label: 'Equipment & fleet', href: '#fleet' },
   { key: 'certifications', label: 'Certifications', href: '#certifications' },
   { key: 'contact', label: 'Contact', href: '#contact' },
+] as const;
+
+const socialLinks = [
+  { name: 'Instagram', href: 'https://www.instagram.com/baranbo.marquaage?stkn=bTYwc29sOTlyNDJy', icon: FaInstagram },
+  { name: 'Facebook', href: 'https://www.facebook.com/share/1H99SH2HAC/', icon: FaFacebookF },
+  { name: 'YouTube', href: 'https://youtube.com/@baranbomarquaage?si=iIxN6yPMormhu7mk', icon: FaYoutube },
 ] as const;
 
 function CleaningBrushIcon({
@@ -1577,6 +1584,22 @@ function Home() {
                 <a href="tel:+41782497481" className="flex items-start gap-4 text-sm font-bold leading-6 transition-transform hover:translate-x-1" data-testid="link-contact-phone"><Phone size={18} strokeWidth={1.5} className="mt-1 shrink-0" /><span>{copy.contact.tel}<br />{copy.contact.mobile}</span></a>
                 <a href="mailto:momo.bar06160@gmail.com" className="flex items-center gap-4 text-sm font-bold transition-transform hover:translate-x-1" data-testid="link-contact-email"><Mail size={18} strokeWidth={1.5} /> {copy.contact.emailAddress}</a>
                 <p className="flex items-start gap-4 text-sm leading-6"><MapPin size={18} strokeWidth={1.5} className="mt-1 shrink-0" /><span>{copy.contact.company}<br />{copy.contact.owner}<br />{copy.contact.location}</span></p>
+                <div className="flex flex-wrap gap-3 pt-2" aria-label="Social media links">
+                  {socialLinks.map(({ name, href, icon: Icon }) => (
+                    <a
+                      key={name}
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Visit our ${name} page`}
+                      title={name}
+                      className="grid size-11 shrink-0 place-items-center rounded-full border border-[#171b1d] bg-[#171b1d] text-[#f3c742] transition-all duration-200 hover:scale-105 hover:bg-transparent hover:text-[#171b1d] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#171b1d] active:scale-95"
+                      data-testid={`link-contact-${name.toLowerCase()}`}
+                    >
+                      <Icon size={19} aria-hidden="true" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="reveal reveal-delay-1">
