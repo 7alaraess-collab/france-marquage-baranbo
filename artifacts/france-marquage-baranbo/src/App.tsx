@@ -1373,11 +1373,21 @@ function Home() {
                     aria-label={`${copy.viewDetailsFor} ${serviceCopy.title}`}
                     data-testid={`card-service-${service.number}`}
                   >
-                    <div className="flex items-start justify-between">
+                    {service.number === '01' && (
+                      <>
+                        <div
+                          aria-hidden="true"
+                          className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center"
+                          style={{ backgroundImage: "url('/images/services-road.jpg')" }}
+                        />
+                        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-[1] bg-black/50" />
+                      </>
+                    )}
+                    <div className="relative z-10 flex items-start justify-between">
                       <span className={`text-[10px] font-bold ${service.number === '05' ? 'text-[#FFFFFF]' : isDark ? 'text-[#f3c742]' : isYellow ? 'text-[#1E293B]' : 'text-[#d9673f]'}`}>{service.number}</span>
                       <span className={`grid h-14 w-14 place-items-center border ${isDark ? 'border-[#59605e] text-[#f3c742]' : isYellow ? 'border-[#1E293B] text-[#1E293B]' : 'border-[#cfc7b8] text-[#d9673f]'}`}><Icon size={29} strokeWidth={1.2} /></span>
                     </div>
-                    <div>
+                    <div className="relative z-10">
                       <h3 className="max-w-xs text-3xl font-extrabold leading-[.95] tracking-[-.05em] sm:text-4xl">{serviceCopy.title}</h3>
                       <p className={`service-preview mt-5 max-w-md text-sm leading-6 ${isDark ? 'text-[#dbe4ee]' : 'text-[#334155]'}`}>{serviceCopy.text}</p>
                       <a
@@ -1387,12 +1397,6 @@ function Home() {
                         className={`group mt-7 inline-flex w-fit items-center gap-3 border-b pb-2 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 ${service.number === '01' ? 'relative isolate overflow-hidden' : ''} ${isDark ? 'border-[#f3c742] text-[#f3c742] hover:border-[#f6f1e6] hover:text-[#f6f1e6] focus-visible:outline-[#f3c742]' : isYellow ? 'border-[#1E293B] text-[#1E293B] hover:border-[#f8fafc] hover:text-[#f8fafc] focus-visible:outline-[#1E293B]' : 'border-[#d9673f] text-[#d9673f] hover:border-[#1E293B] hover:text-[#1E293B] focus-visible:outline-[#d9673f]'}`}
                         data-testid={`link-service-enquiry-${service.number}`}
                       >
-                        {service.number === '01' && (
-                          <>
-                            <img src="/images/services-road.jpg" alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-55 saturate-75 brightness-75" />
-                            <span aria-hidden="true" className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-r from-[#171b1d]/80 via-[#171b1d]/55 to-[#171b1d]/35" />
-                          </>
-                        )}
                         <span className="relative z-10">{copy.hero.enquiry}</span>
                         <ArrowUpRight size={15} aria-hidden="true" className="relative z-10 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                       </a>
