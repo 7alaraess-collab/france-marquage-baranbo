@@ -933,6 +933,12 @@ const fleet = [
   ['03', 'French Photoluminescent Paint', 'A material that stores daylight and glows automatically at night, enhancing road and crossing safety without electricity.'],
 ];
 
+const fleetImages: Record<string, string> = {
+  '01': '/images/services/fleet-airless-line-marking.jpg',
+  '02': '/images/services/fleet-mechanical-sweeper.jpg',
+  '03': '/images/services/fleet-photoluminescent-paint.jpg',
+};
+
 function useReveal() {
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll<HTMLElement>('.reveal'));
@@ -1432,16 +1438,17 @@ function Home() {
                 <a href="#contact" className="group mt-10 inline-flex items-center gap-3 border-b border-[#f3c742] pb-2 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] text-[#f3c742]" data-testid="link-fleet-contact">{copy.fleet.contact} <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></a>
               </div>
               <div className="reveal reveal-delay-1">
-                <div className="relative field-frame min-h-[250px] overflow-hidden bg-[#333b3b] bg-cover bg-center p-7 sm:min-h-[320px] sm:p-10" style={{ backgroundImage: "url('/images/services/fleet-line-marking-machine.jpg')" }}>
-                  <div aria-hidden="true" className="absolute inset-0 bg-black/45" />
-                  <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'linear-gradient(110deg, transparent 0 48%, #f3c742 48% 48.7%, transparent 48.7% 100%), repeating-linear-gradient(90deg, transparent 0 28px, #f6f1e6 28px 30px, transparent 30px 58px)' }} />
-                  <div className="relative flex h-full min-h-[195px] flex-col justify-between">
-                    <div className="flex items-center justify-between"><span className="font-mono-site text-[9px] uppercase tracking-[.16em] text-[#b9bbb1]">{copy.fleet.fieldView}</span><Truck size={29} strokeWidth={1.2} className="text-[#f3c742]" /></div>
-                    <div><p className="font-display text-4xl font-bold tracking-[-.05em] sm:text-6xl">{copy.fleet.readyFirst}<br />{copy.fleet.readySecond}</p><div className="mt-4 h-1 w-20 bg-[#f3c742]" /></div>
-                  </div>
-                </div>
-                <div className="mt-14">
-                  {fleet.map(([num], index) => <div key={num} className="fleet-line grid grid-cols-[46px_1fr] gap-4 border-b border-[#3b4443] py-6 pl-5 first:pt-0"><span className="font-mono-site text-[10px] text-[#f3c742]">{num}</span><div><h3 className="font-display text-xl font-bold tracking-[-.03em]">{copy.fleet.items[index].title}</h3><p className="mt-2 max-w-md text-sm leading-6 text-[#9ba09a]">{copy.fleet.items[index].text}</p></div></div>)}
+                <div>
+                  {fleet.map(([num], index) => <div key={num} className="fleet-line grid grid-cols-[46px_1fr] gap-4 border-b border-[#3b4443] py-6 pl-5 first:pt-0">
+                    <span className="font-mono-site pt-1 text-[10px] text-[#f3c742]">{num}</span>
+                    <div className="flex items-start gap-4">
+                      <img src={fleetImages[num]} alt={copy.fleet.items[index].title} className="h-20 w-20 shrink-0 rounded-sm object-cover sm:h-24 sm:w-24" />
+                      <div>
+                        <h3 className="font-display text-xl font-bold tracking-[-.03em]">{copy.fleet.items[index].title}</h3>
+                        <p className="mt-2 max-w-md text-sm leading-6 text-[#9ba09a]">{copy.fleet.items[index].text}</p>
+                      </div>
+                    </div>
+                  </div>)}
                 </div>
               </div>
             </div>
