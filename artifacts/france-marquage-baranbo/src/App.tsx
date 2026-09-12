@@ -1351,21 +1351,10 @@ function Home() {
 
         <section id="services" className="scroll-mt-20 bg-[#e8e1d3] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
           <div className="mx-auto max-w-[1380px]">
-            <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_.95fr] lg:gap-20">
-              <figure className="relative overflow-hidden rounded-[3px] opacity-90 reveal">
-                <img
-                  src="/images/services-road.jpg"
-                  alt="Illuminated road winding through a forest at night"
-                  className="block h-auto w-full object-contain"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </figure>
-              <div className="mx-auto max-w-4xl text-center reveal reveal-delay-1 lg:mx-0 lg:text-left">
-                <div className="flex justify-center lg:justify-start"><SectionKicker index="02" children={copy.services.kicker} /></div>
-                <h2 className="font-display text-5xl font-extrabold leading-[.9] tracking-[-.06em] sm:text-7xl">{copy.services.titleFirst}{copy.services.titleSecond && <><br /><span className="text-[#d9673f]">{copy.services.titleSecond}</span></>}</h2>
-                <p className="mx-auto mt-7 max-w-3xl text-base leading-7 text-[#334155] lg:mx-0">{copy.services.description}</p>
-              </div>
+            <div className="mx-auto max-w-4xl text-center reveal">
+              <div className="flex justify-center"><SectionKicker index="02" children={copy.services.kicker} /></div>
+              <h2 className="font-display text-5xl font-extrabold leading-[.9] tracking-[-.06em] sm:text-7xl">{copy.services.titleFirst}{copy.services.titleSecond && <><br /><span className="text-[#d9673f]">{copy.services.titleSecond}</span></>}</h2>
+              <p className="mx-auto mt-7 max-w-3xl text-base leading-7 text-[#334155]">{copy.services.description}</p>
             </div>
             <div className="mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {services.map((service, index) => {
@@ -1395,10 +1384,17 @@ function Home() {
                         href="#contact"
                         onClick={(event) => { event.preventDefault(); event.stopPropagation(); goTo('#contact'); }}
                         onKeyDown={(event) => event.stopPropagation()}
-                        className={`group mt-7 inline-flex w-fit items-center gap-3 border-b pb-2 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 ${isDark ? 'border-[#f3c742] text-[#f3c742] hover:border-[#f6f1e6] hover:text-[#f6f1e6] focus-visible:outline-[#f3c742]' : isYellow ? 'border-[#1E293B] text-[#1E293B] hover:border-[#f8fafc] hover:text-[#f8fafc] focus-visible:outline-[#1E293B]' : 'border-[#d9673f] text-[#d9673f] hover:border-[#1E293B] hover:text-[#1E293B] focus-visible:outline-[#d9673f]'}`}
+                        className={`group mt-7 inline-flex w-fit items-center gap-3 border-b pb-2 font-mono-site text-[10px] font-bold uppercase tracking-[.12em] transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 ${service.number === '01' ? 'relative isolate overflow-hidden' : ''} ${isDark ? 'border-[#f3c742] text-[#f3c742] hover:border-[#f6f1e6] hover:text-[#f6f1e6] focus-visible:outline-[#f3c742]' : isYellow ? 'border-[#1E293B] text-[#1E293B] hover:border-[#f8fafc] hover:text-[#f8fafc] focus-visible:outline-[#1E293B]' : 'border-[#d9673f] text-[#d9673f] hover:border-[#1E293B] hover:text-[#1E293B] focus-visible:outline-[#d9673f]'}`}
                         data-testid={`link-service-enquiry-${service.number}`}
                       >
-                        {copy.hero.enquiry} <ArrowUpRight size={15} aria-hidden="true" className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                        {service.number === '01' && (
+                          <>
+                            <img src="/images/services-road.jpg" alt="" aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-40" />
+                            <span aria-hidden="true" className="pointer-events-none absolute inset-0 z-[1] bg-[#171b1d]/60" />
+                          </>
+                        )}
+                        <span className="relative z-10">{copy.hero.enquiry}</span>
+                        <ArrowUpRight size={15} aria-hidden="true" className="relative z-10 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                       </a>
                     </div>
                   </article>
