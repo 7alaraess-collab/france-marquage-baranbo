@@ -1045,6 +1045,16 @@ function setMetaContent(selector: string, content: string) {
   if (element) element.content = content;
 }
 
+function setCanonicalUrl(url: string) {
+  let element = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+  if (!element) {
+    element = document.createElement('link');
+    element.rel = 'canonical';
+    document.head.appendChild(element);
+  }
+  element.href = url;
+}
+
 function getInitialLanguage(): Language {
   if (typeof window === 'undefined') return 'EN';
   const stored = window.localStorage.getItem('france-marquage-language');
@@ -1122,7 +1132,7 @@ function Home() {
     setMetaContent('meta[property="og:url"]', window.location.href.split('#')[0]);
     setMetaContent('meta[name="twitter:title"]', title);
     setMetaContent('meta[name="twitter:description"]', description);
-    document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', window.location.href.split(/[?#]/)[0]);
+    setCanonicalUrl(window.location.href.split(/[?#]/)[0]);
   }, [language, selectedService]);
 
   useEffect(() => {
