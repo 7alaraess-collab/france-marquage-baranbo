@@ -1362,7 +1362,7 @@ function Home() {
                 const serviceCopy = getServiceCopy(service, language);
                 const isDark = service.tone === 'dark';
                 const isYellow = service.tone === 'yellow';
-                const isImageCard = service.number === '02' || service.number === '03' || service.number === '04' || service.number === '05';
+                const isImageCard = service.number === '02' || service.number === '03' || service.number === '04' || service.number === '05' || service.number === '06';
                 const cardBackgroundImage = service.number === '01'
                   ? '/images/services-road.jpg'
                   : service.number === '02'
@@ -1373,11 +1373,13 @@ function Home() {
                         ? '/images/services/bike-lanes-card.jpg'
                     : service.number === '05'
                       ? '/images/services/schools-sports-specialized-card.jpg'
+                    : service.number === '06'
+                      ? '/images/services/mechanical-street-sweeping-card.jpg'
                     : null;
                 return (
                   <article
                     key={service.number}
-                    className={`service-card reveal reveal-delay-${(index % 3) + 1} ${service.number === '05' ? 'relative' : ''} flex min-h-[390px] cursor-pointer flex-col justify-between p-7 active:scale-[.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9673f] ${isImageCard ? 'bg-[#F59E0B] text-[#F8FAFC]' : isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`}
+                    className={`service-card reveal reveal-delay-${(index % 3) + 1} ${service.number === '05' || service.number === '06' ? 'relative' : ''} flex min-h-[390px] cursor-pointer flex-col justify-between p-7 active:scale-[.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9673f] ${isImageCard ? 'bg-[#F59E0B] text-[#F8FAFC]' : isDark ? 'bg-[#1E293B] text-[#F8FAFC]' : isYellow ? 'bg-[#F59E0B] text-[#1E293B]' : 'bg-[#F8FAFC] text-[#1E293B]'}`}
                     role="button"
                     tabIndex={0}
                     onClick={() => openServiceDetails(service)}
