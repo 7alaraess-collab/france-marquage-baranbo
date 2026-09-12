@@ -364,6 +364,17 @@ body { min-width: 320px; overflow-x: hidden; }
   inset: 0;
   background: linear-gradient(110deg, rgba(23,27,29,.96) 8%, rgba(23,27,29,.54) 48%, rgba(23,27,29,.12) 100%);
 }
+.hero-logo {
+  pointer-events: none;
+  top: 49%;
+  left: 40%;
+  width: min(62vw, 720px);
+  aspect-ratio: 992 / 1058;
+  transform: translate(-18%, -50%) rotate(-6deg);
+  opacity: .38;
+  mix-blend-mode: screen;
+  filter: saturate(.9) brightness(1.08) drop-shadow(0 0 30px rgba(243,199,66,.18));
+}
 .service-card { font-family: var(--app-font-service); transition: transform .35s ease, background-color .35s ease, color .35s ease; }
 .service-card:hover { transform: translateY(-7px); }
 .service-card:hover .service-arrow { transform: translate(4px,-4px); }
@@ -391,6 +402,21 @@ body { min-width: 320px; overflow-x: hidden; }
 @media (max-width: 767px) {
   .field-frame { box-shadow: 8px 8px 0 #f3c742; }
   .hero-road::before { width: 44%; left: 64%; }
+  .hero-logo {
+    top: 40%;
+    left: 52%;
+    width: 94vw;
+    transform: translate(-28%, -50%) rotate(-8deg);
+    opacity: .3;
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .hero-logo {
+    top: 46%;
+    left: 45%;
+    width: min(74vw, 640px);
+    transform: translate(-18%, -50%) rotate(-7deg);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

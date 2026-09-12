@@ -1298,8 +1298,11 @@ function Home() {
 
       <main>
         <section className="relative isolate flex min-h-[720px] items-end overflow-hidden bg-[#171b1d] text-[#f6f1e6] lg:min-h-[calc(100vh-88px)]" aria-labelledby="hero-heading">
-          <div className="hero-road absolute inset-0 overflow-hidden opacity-90" />
-          <div className="absolute inset-0 opacity-[.12]" style={{ backgroundImage: 'linear-gradient(118deg, transparent 0 43%, #f4f0e6 43% 43.3%, transparent 43.3% 100%), linear-gradient(180deg, transparent 0 70%, #f3c742 70% 70.4%, transparent 70.4% 100%)' }} />
+          <div className="hero-logo absolute z-[1]" aria-hidden="true">
+            <img src="/images/brand/hero-logo.png" alt="" className="h-full w-full object-contain" />
+          </div>
+          <div className="hero-road absolute inset-0 z-[2] overflow-hidden opacity-90" />
+          <div className="absolute inset-0 z-[3] opacity-[.12]" style={{ backgroundImage: 'linear-gradient(118deg, transparent 0 43%, #f4f0e6 43% 43.3%, transparent 43.3% 100%), linear-gradient(180deg, transparent 0 70%, #f3c742 70% 70.4%, transparent 70.4% 100%)' }} />
           <div className="relative z-10 mx-auto w-full max-w-[1380px] px-5 pb-14 pt-24 sm:px-8 lg:px-12 lg:pb-20">
             <div className="max-w-4xl reveal">
               <div className="mb-8 flex items-center gap-3 font-mono-site text-[10px] font-bold uppercase tracking-[.22em] text-[#f3c742]"><span className="h-2 w-2 rounded-full bg-[#f3c742]" /> {copy.hero.kicker}</div>
