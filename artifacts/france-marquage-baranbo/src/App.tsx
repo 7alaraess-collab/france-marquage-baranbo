@@ -1362,6 +1362,11 @@ function Home() {
                 const serviceCopy = getServiceCopy(service, language);
                 const isDark = service.tone === 'dark';
                 const isYellow = service.tone === 'yellow';
+                const cardBackgroundImage = service.number === '01'
+                  ? '/images/services-road.jpg'
+                  : service.number === '02'
+                    ? '/images/services/parking-lot-card.jpg'
+                    : null;
                 return (
                   <article
                     key={service.number}
@@ -1373,12 +1378,12 @@ function Home() {
                     aria-label={`${copy.viewDetailsFor} ${serviceCopy.title}`}
                     data-testid={`card-service-${service.number}`}
                   >
-                    {service.number === '01' && (
+                    {cardBackgroundImage && (
                       <>
                         <div
                           aria-hidden="true"
                           className="pointer-events-none absolute inset-0 z-0 bg-cover bg-center"
-                          style={{ backgroundImage: "url('/images/services-road.jpg')" }}
+                          style={{ backgroundImage: `url('${cardBackgroundImage}')` }}
                         />
                         <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-[1] bg-black/50" />
                       </>
