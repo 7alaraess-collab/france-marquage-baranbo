@@ -6,7 +6,8 @@ import {
 
 const router: IRouter = Router();
 const contactRecipient = "momo.bar06160@gmail.com";
-const formSubmitUrl = `https://formsubmit.co/ajax/${contactRecipient}`;
+const formSubmitUrl =
+  process.env.FORMSUBMIT_URL ?? `https://formsubmit.co/ajax/${contactRecipient}`;
 
 router.post("/contact-enquiries", async (req, res): Promise<void> => {
   const parsed = SubmitContactEnquiryBody.safeParse(req.body);
@@ -39,9 +40,19 @@ router.post("/contact-enquiries", async (req, res): Promise<void> => {
         _template: "table",
       }),
     });
+    const deliveryBody = await deliveryResponse.text();
 
     if (!deliveryResponse.ok) {
-      req.log.error({ status: deliveryResponse.status, language }, "Contact enquiry delivery failed");
+      req.log.error(
+        {
+          status: deliveryResponse.status,
+          statusText: deliveryResponse.statusText,
+          responseHeaders: Object.fromEntries(deliveryResponse.headers.entries()),
+          responseBody: deliveryBody,
+          language,
+        },
+        "Contact enquiry delivery failed with full FormSubmit response",
+      );
       res.status(502).json({ error: "The enquiry could not be sent right now." });
       return;
     }
